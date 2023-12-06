@@ -256,7 +256,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/12/04/SpringBoot%E5%AD%A6%E4%B9%A0/" data-id="clpqxsdth0000hwu52ft7d2xn" data-title="SpringBoot学习" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
+      <a data-url="http://example.com/2023/12/04/SpringBoot%E5%AD%A6%E4%B9%A0/" data-id="clptthfbc00012gu5av1v08de" data-title="SpringBoot学习" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
       
       
       
@@ -307,7 +307,64 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/12/04/hello-world/" data-id="clpqxsdtm0001hwu5akpt306n" data-title="Hello World" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
+      <a data-url="http://example.com/2023/12/04/hello-world/" data-id="clptthfbe00022gu58lo26rmw" data-title="Hello World" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-Springboot模块学习2" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/12/04/Springboot%E6%A8%A1%E5%9D%97%E5%AD%A6%E4%B9%A02/" class="article-date">
+  <time class="dt-published" datetime="2023-12-04T08:59:28.628Z" itemprop="datePublished">2023-12-04</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="SpringBoot模块学习-二-—-SpringBoot高级"><a href="#SpringBoot模块学习-二-—-SpringBoot高级" class="headerlink" title="SpringBoot模块学习(二)—-SpringBoot高级"></a>SpringBoot模块学习(二)—-SpringBoot高级</h1><h2 id="1-SpringBoot原理分析"><a href="#1-SpringBoot原理分析" class="headerlink" title="1.SpringBoot原理分析"></a>1.SpringBoot原理分析</h2><h3 id="1-Condition"><a href="#1-Condition" class="headerlink" title="1)Condition"></a>1)Condition</h3><p><img src="/2023/12/04/Springboot%E6%A8%A1%E5%9D%97%E5%AD%A6%E4%B9%A02/image-20231206145641002.png" alt="image-20231206145641002"></p>
+<p>以上是Condition的作用</p>
+<h3 id="2-切换内置web服务器"><a href="#2-切换内置web服务器" class="headerlink" title="2)切换内置web服务器"></a>2)切换内置web服务器</h3><p>SpringBoot的web环境中默认使用tomcat作为内置服务器，其实SpringBoot提供了4种内置服务器供我们选择，我们可以很方便进行切换</p>
+<p><img src="/2023/12/04/Springboot%E6%A8%A1%E5%9D%97%E5%AD%A6%E4%B9%A02/image-20231206205702290.png" alt="image-20231206205702290"></p>
+<p>那么我们如何在这四种服务器之间切换呢？</p>
+<p><strong>只需要在pom.xml文件中引入对应的服务器坐标就可以了</strong></p>
+<p><strong><code>&lt;dependency&gt;</code></strong></p>
+<p><strong><code>&lt;artifactID&gt;spring-boot-starter-tomcat&lt;/artifactID&gt;</code></strong></p>
+<p><strong><code>&lt;groupID&gt;org.springframework.boot&lt;/groupID&gt;</code></strong></p>
+<p><strong><code>&lt;/dependency&gt;</code></strong></p>
+<p><strong>以上是我们的tomcat的坐标</strong></p>
+<p><strong>只需要将tomcat位置替换成jetty就可以了</strong></p>
+<h3 id="3-Enable注解"><a href="#3-Enable注解" class="headerlink" title="3)@Enable注解"></a>3)@Enable注解</h3><p><img src="/2023/12/04/Springboot%E6%A8%A1%E5%9D%97%E5%AD%A6%E4%B9%A02/image-20231206210416016.png" alt="image-20231206210416016"></p>
+<p>下面我们利用项目来加深一下理解</p>
+<p>创建一个叫springboot-enable的模块和为名springboot-enable-other的模块，第二个模块的作用是提供一些Bean来查询。</p>
+<p><img src="/2023/12/04/Springboot%E6%A8%A1%E5%9D%97%E5%AD%A6%E4%B9%A02/image-20231206211815199.png" alt="image-20231206211815199"></p>
+<p><strong>以上是第一个项目需要的代码</strong></p>
+<p>第二个项目我们在包下创建</p>
+<p><img src="/2023/12/04/Springboot%E6%A8%A1%E5%9D%97%E5%AD%A6%E4%B9%A02/image-20231206212626748.png" alt="image-20231206212626748"></p>
+<p>在UserConfig下编写如下代码即可</p>
+<p><img src="/2023/12/04/Springboot%E6%A8%A1%E5%9D%97%E5%AD%A6%E4%B9%A02/image-20231206212647527.png" alt="image-20231206212647527"></p>
+<p>随后我们在springbootenable模块的pom文件中引入springbootenableother的依赖即可</p>
+<p><img src="/2023/12/04/Springboot%E6%A8%A1%E5%9D%97%E5%AD%A6%E4%B9%A02/image-20231206212737274.png" alt="image-20231206212737274"></p>
+<p>运行第一个项目报错为正常情况，然后我们来说@Enable注解的作用。</p>
+<p>我们自己写一个EnableUser注解</p>
+<p><img src="/2023/12/04/Springboot%E6%A8%A1%E5%9D%97%E5%AD%A6%E4%B9%A02/image-20231206212930295.png" alt="image-20231206212930295"></p>
+<p>接下来我们在启动类里面运用上自己写的@EnableUser注解启动</p>
+<p><img src="/2023/12/04/Springboot%E6%A8%A1%E5%9D%97%E5%AD%A6%E4%B9%A02/image-20231206213139508.png" alt="image-20231206213139508"></p>
+<p>成功访问到其他类的Bean！</p>
+<h2 id="2-SpringBoot监控"><a href="#2-SpringBoot监控" class="headerlink" title="2.SpringBoot监控"></a>2.SpringBoot监控</h2><h2 id="3-SpringBoot项目部署"><a href="#3-SpringBoot项目部署" class="headerlink" title="3.SpringBoot项目部署"></a>3.SpringBoot项目部署</h2>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/12/04/Springboot%E6%A8%A1%E5%9D%97%E5%AD%A6%E4%B9%A02/" data-id="clptthfb700002gu58n4tgoea" data-title="" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
       
       
       
@@ -355,6 +412,10 @@
         
           <li>
             <a href="/2023/12/04/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2023/12/04/Springboot%E6%A8%A1%E5%9D%97%E5%AD%A6%E4%B9%A02/">(no title)</a>
           </li>
         
       </ul>

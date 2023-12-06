@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Lizw的学习博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="SpringBoot模块学习(二)—-SpringBoot高级1.SpringBoot原理分析1)Condition 以上是Condition的作用 2)切换内置web服务器SpringBoot的web环境中默认使用tomcat作为内置服务器，其实SpringBoot提供了4种内置服务器供我们选择，我们可以很方便进行切换  那么我们如何在这四种服务器之间切换呢？ 只需要在pom.xml文件中引入对">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Lizw的学习博客">
+<meta property="og:url" content="http://example.com/2023/12/04/Springboot%E6%A8%A1%E5%9D%97%E5%AD%A6%E4%B9%A02/index.html">
+<meta property="og:site_name" content="Lizw的学习博客">
+<meta property="og:description" content="SpringBoot模块学习(二)—-SpringBoot高级1.SpringBoot原理分析1)Condition 以上是Condition的作用 2)切换内置web服务器SpringBoot的web环境中默认使用tomcat作为内置服务器，其实SpringBoot提供了4种内置服务器供我们选择，我们可以很方便进行切换  那么我们如何在这四种服务器之间切换呢？ 只需要在pom.xml文件中引入对">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/2023/12/04/Springboot%E6%A8%A1%E5%9D%97%E5%AD%A6%E4%B9%A02/image-20231206145641002.png">
+<meta property="og:image" content="http://example.com/2023/12/04/Springboot%E6%A8%A1%E5%9D%97%E5%AD%A6%E4%B9%A02/image-20231206205702290.png">
+<meta property="og:image" content="http://example.com/2023/12/04/Springboot%E6%A8%A1%E5%9D%97%E5%AD%A6%E4%B9%A02/image-20231206210416016.png">
+<meta property="og:image" content="http://example.com/2023/12/04/Springboot%E6%A8%A1%E5%9D%97%E5%AD%A6%E4%B9%A02/image-20231206211815199.png">
+<meta property="og:image" content="http://example.com/2023/12/04/Springboot%E6%A8%A1%E5%9D%97%E5%AD%A6%E4%B9%A02/image-20231206212626748.png">
+<meta property="og:image" content="http://example.com/2023/12/04/Springboot%E6%A8%A1%E5%9D%97%E5%AD%A6%E4%B9%A02/image-20231206212647527.png">
+<meta property="og:image" content="http://example.com/2023/12/04/Springboot%E6%A8%A1%E5%9D%97%E5%AD%A6%E4%B9%A02/image-20231206212737274.png">
+<meta property="og:image" content="http://example.com/2023/12/04/Springboot%E6%A8%A1%E5%9D%97%E5%AD%A6%E4%B9%A02/image-20231206212930295.png">
+<meta property="og:image" content="http://example.com/2023/12/04/Springboot%E6%A8%A1%E5%9D%97%E5%AD%A6%E4%B9%A02/image-20231206213139508.png">
+<meta property="article:published_time" content="2023-12-04T08:59:28.628Z">
+<meta property="article:modified_time" content="2023-12-06T13:37:43.174Z">
+<meta property="article:author" content="zewei Li">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2023/12/04/Springboot%E6%A8%A1%E5%9D%97%E5%AD%A6%E4%B9%A02/image-20231206145641002.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Lizw的学习博客" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Lizw的学习博客</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">一个学习代码与技术的记录</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Suche"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Suche"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-Springboot模块学习2" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/12/04/Springboot%E6%A8%A1%E5%9D%97%E5%AD%A6%E4%B9%A02/" class="article-date">
+  <time class="dt-published" datetime="2023-12-04T08:59:28.628Z" itemprop="datePublished">2023-12-04</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="SpringBoot模块学习-二-—-SpringBoot高级"><a href="#SpringBoot模块学习-二-—-SpringBoot高级" class="headerlink" title="SpringBoot模块学习(二)—-SpringBoot高级"></a>SpringBoot模块学习(二)—-SpringBoot高级</h1><h2 id="1-SpringBoot原理分析"><a href="#1-SpringBoot原理分析" class="headerlink" title="1.SpringBoot原理分析"></a>1.SpringBoot原理分析</h2><h3 id="1-Condition"><a href="#1-Condition" class="headerlink" title="1)Condition"></a>1)Condition</h3><p><img src="/2023/12/04/Springboot%E6%A8%A1%E5%9D%97%E5%AD%A6%E4%B9%A02/image-20231206145641002.png" alt="image-20231206145641002"></p>
+<p>以上是Condition的作用</p>
+<h3 id="2-切换内置web服务器"><a href="#2-切换内置web服务器" class="headerlink" title="2)切换内置web服务器"></a>2)切换内置web服务器</h3><p>SpringBoot的web环境中默认使用tomcat作为内置服务器，其实SpringBoot提供了4种内置服务器供我们选择，我们可以很方便进行切换</p>
+<p><img src="/2023/12/04/Springboot%E6%A8%A1%E5%9D%97%E5%AD%A6%E4%B9%A02/image-20231206205702290.png" alt="image-20231206205702290"></p>
+<p>那么我们如何在这四种服务器之间切换呢？</p>
+<p><strong>只需要在pom.xml文件中引入对应的服务器坐标就可以了</strong></p>
+<p><strong><code>&lt;dependency&gt;</code></strong></p>
+<p><strong><code>&lt;artifactID&gt;spring-boot-starter-tomcat&lt;/artifactID&gt;</code></strong></p>
+<p><strong><code>&lt;groupID&gt;org.springframework.boot&lt;/groupID&gt;</code></strong></p>
+<p><strong><code>&lt;/dependency&gt;</code></strong></p>
+<p><strong>以上是我们的tomcat的坐标</strong></p>
+<p><strong>只需要将tomcat位置替换成jetty就可以了</strong></p>
+<h3 id="3-Enable注解"><a href="#3-Enable注解" class="headerlink" title="3)@Enable注解"></a>3)@Enable注解</h3><p><img src="/2023/12/04/Springboot%E6%A8%A1%E5%9D%97%E5%AD%A6%E4%B9%A02/image-20231206210416016.png" alt="image-20231206210416016"></p>
+<p>下面我们利用项目来加深一下理解</p>
+<p>创建一个叫springboot-enable的模块和为名springboot-enable-other的模块，第二个模块的作用是提供一些Bean来查询。</p>
+<p><img src="/2023/12/04/Springboot%E6%A8%A1%E5%9D%97%E5%AD%A6%E4%B9%A02/image-20231206211815199.png" alt="image-20231206211815199"></p>
+<p><strong>以上是第一个项目需要的代码</strong></p>
+<p>第二个项目我们在包下创建</p>
+<p><img src="/2023/12/04/Springboot%E6%A8%A1%E5%9D%97%E5%AD%A6%E4%B9%A02/image-20231206212626748.png" alt="image-20231206212626748"></p>
+<p>在UserConfig下编写如下代码即可</p>
+<p><img src="/2023/12/04/Springboot%E6%A8%A1%E5%9D%97%E5%AD%A6%E4%B9%A02/image-20231206212647527.png" alt="image-20231206212647527"></p>
+<p>随后我们在springbootenable模块的pom文件中引入springbootenableother的依赖即可</p>
+<p><img src="/2023/12/04/Springboot%E6%A8%A1%E5%9D%97%E5%AD%A6%E4%B9%A02/image-20231206212737274.png" alt="image-20231206212737274"></p>
+<p>运行第一个项目报错为正常情况，然后我们来说@Enable注解的作用。</p>
+<p>我们自己写一个EnableUser注解</p>
+<p><img src="/2023/12/04/Springboot%E6%A8%A1%E5%9D%97%E5%AD%A6%E4%B9%A02/image-20231206212930295.png" alt="image-20231206212930295"></p>
+<p>接下来我们在启动类里面运用上自己写的@EnableUser注解启动</p>
+<p><img src="/2023/12/04/Springboot%E6%A8%A1%E5%9D%97%E5%AD%A6%E4%B9%A02/image-20231206213139508.png" alt="image-20231206213139508"></p>
+<p>成功访问到其他类的Bean！</p>
+<h2 id="2-SpringBoot监控"><a href="#2-SpringBoot监控" class="headerlink" title="2.SpringBoot监控"></a>2.SpringBoot监控</h2><h2 id="3-SpringBoot项目部署"><a href="#3-SpringBoot项目部署" class="headerlink" title="3.SpringBoot项目部署"></a>3.SpringBoot项目部署</h2>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/12/04/Springboot%E6%A8%A1%E5%9D%97%E5%AD%A6%E4%B9%A02/" data-id="clptthfb700002gu58n4tgoea" data-title="" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2023/12/04/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Neuer</strong>
+      <div class="article-nav-title">
+        
+          Hello World
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archiv</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/12/">十二月 2023</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">letzter Beitrag</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/12/04/SpringBoot%E5%AD%A6%E4%B9%A0/">SpringBoot学习</a>
+          </li>
+        
+          <li>
+            <a href="/2023/12/04/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2023/12/04/Springboot%E6%A8%A1%E5%9D%97%E5%AD%A6%E4%B9%A02/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2023 zewei Li<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
