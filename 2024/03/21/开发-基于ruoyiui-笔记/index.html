@@ -15,14 +15,14 @@
 <meta property="og:site_name" content="xiaoli的学习博客">
 <meta property="og:description" content="问题（一） 1234567891011121314151617181920212223242526272829*&lt;el-form-item label&#x3D;&quot;项目赛道&quot; prop&#x3D;&quot;proTrack&quot;&gt;*​    *&lt;el-select*​     *v-model&#x3D;&quot;queryParams.proTrack&quot;*​">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://li.me/C:/Users/48531/OneDrive/%E6%A1%8C%E9%9D%A2/hexo-blog/source_posts/%E5%BC%80%E5%8F%91-%E5%9F%BA%E4%BA%8Eruoyiui-%E7%AC%94%E8%AE%B0/image-20240321174607944.png">
-<meta property="og:image" content="http://li.me/C:/Users/48531/OneDrive/%E6%A1%8C%E9%9D%A2/hexo-blog/source_posts/%E5%BC%80%E5%8F%91-%E5%9F%BA%E4%BA%8Eruoyiui-%E7%AC%94%E8%AE%B0/image-20240321174646796.png">
+<meta property="og:image" content="http://li.me/%E5%BC%80%E5%8F%91-%E5%9F%BA%E4%BA%8Eruoyiui-%E7%AC%94%E8%AE%B0%5Cimage-20240321174607944.png">
+<meta property="og:image" content="http://li.me/%E5%BC%80%E5%8F%91-%E5%9F%BA%E4%BA%8Eruoyiui-%E7%AC%94%E8%AE%B0%5Cimage-20240321174646796.png">
 <meta property="article:published_time" content="2024-03-21T07:30:34.000Z">
-<meta property="article:modified_time" content="2024-03-21T10:37:03.428Z">
+<meta property="article:modified_time" content="2024-03-21T10:54:12.201Z">
 <meta property="article:author" content="zewei Li">
 <meta property="article:tag" content="java和vue开发中遇到的错误以及如何改正和对他们的理解整理">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://li.me/C:/Users/48531/OneDrive/%E6%A1%8C%E9%9D%A2/hexo-blog/source_posts/%E5%BC%80%E5%8F%91-%E5%9F%BA%E4%BA%8Eruoyiui-%E7%AC%94%E8%AE%B0/image-20240321174607944.png">
+<meta name="twitter:image" content="http://li.me/%E5%BC%80%E5%8F%91-%E5%9F%BA%E4%BA%8Eruoyiui-%E7%AC%94%E8%AE%B0%5Cimage-20240321174607944.png">
   
     <link rel="alternative" href="/atom.xml" title="xiaoli的学习博客" type="application/atom+xml">
   
@@ -183,8 +183,8 @@
 
 <p>这是一段vue代码,我出现的问题是再前端页面查询的时候无法带入proTrack这个参数。</p>
 <p>解决方法:因为我们proTrackList中没有value这个字段，导致我再绑定的时候:value&#x3D;”item.value”绑定出错，将value更换为proTrack成功在查询时候带入了参数proTrack</p>
-<p><img src="/C:/Users\48531\OneDrive\桌面\hexo-blog\source_posts\开发-基于ruoyiui-笔记\image-20240321174607944.png" alt="image-20240321174607944"></p>
-<p><img src="/C:/Users\48531\OneDrive\桌面\hexo-blog\source_posts\开发-基于ruoyiui-笔记\image-20240321174646796.png" alt="image-20240321174646796"></p>
+<p><img src="/%E5%BC%80%E5%8F%91-%E5%9F%BA%E4%BA%8Eruoyiui-%E7%AC%94%E8%AE%B0%5Cimage-20240321174607944.png" alt="image-20240321174607944"></p>
+<p><img src="/%E5%BC%80%E5%8F%91-%E5%9F%BA%E4%BA%8Eruoyiui-%E7%AC%94%E8%AE%B0%5Cimage-20240321174646796.png" alt="image-20240321174646796"></p>
 <p>问题（二）</p>
 <p>这是一段ruoyi对应的后端代码</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;select id=<span class="string">&quot;selectRecommendationList&quot;</span> parameterType=<span class="string">&quot;Recommendation&quot;</span> resultMap=<span class="string">&quot;RecommendationResult&quot;</span>&gt;</span><br><span class="line">    &lt;include refid=<span class="string">&quot;selectRecommendationVo&quot;</span>/&gt;</span><br><span class="line">    &lt;where&gt;  </span><br><span class="line">        &lt;<span class="keyword">if</span> test=<span class="string">&quot;time != null &quot;</span>&gt; and pro_details3.time = #&#123;time&#125;&lt;/<span class="keyword">if</span>&gt;</span><br><span class="line">        &lt;<span class="keyword">if</span> test=<span class="string">&quot;proName != null  and proName != &#x27;&#x27;&quot;</span>&gt; and pro_name like <span class="title function_">concat</span><span class="params">(<span class="string">&#x27;%&#x27;</span>, #&#123;proName&#125;, <span class="string">&#x27;%&#x27;</span>)</span>&lt;/<span class="keyword">if</span>&gt;</span><br><span class="line">        &lt;<span class="keyword">if</span> test=<span class="string">&quot;proScore != null &quot;</span>&gt; <span class="type">and</span> <span class="variable">pro_score</span> <span class="operator">=</span> #&#123;proScore&#125;&lt;/<span class="keyword">if</span>&gt;</span><br><span class="line">        &lt;<span class="keyword">if</span> test=<span class="string">&quot;proGroup != null  and proGroup != &#x27;&#x27;&quot;</span>&gt; <span class="type">and</span> <span class="variable">pro_group</span> <span class="operator">=</span> #&#123;proGroup&#125;&lt;/<span class="keyword">if</span>&gt;</span><br><span class="line">        &lt;<span class="keyword">if</span> test=<span class="string">&quot;userName != null  and userName != &#x27;&#x27;&quot;</span>&gt; <span class="type">and</span> <span class="variable">user_name</span> <span class="operator">=</span> #&#123;userName&#125;&lt;/<span class="keyword">if</span>&gt;</span><br><span class="line">        &lt;<span class="keyword">if</span> test=<span class="string">&quot;deptName != null  and deptName != &#x27;&#x27;&quot;</span>&gt; <span class="type">and</span> <span class="variable">dept_name</span> <span class="operator">=</span> #&#123;deptName&#125;&lt;/<span class="keyword">if</span>&gt;</span><br><span class="line">        &lt;<span class="keyword">if</span> test=<span class="string">&quot;proTrack !=null   and  proTrack != &#x27;&#x27;&quot;</span>&gt; and  pro_track=#&#123;proTrack&#125;&lt;/<span class="keyword">if</span>&gt;</span><br><span class="line">    &lt;/where&gt;</span><br><span class="line">&lt;/select&gt;</span><br></pre></td></tr></table></figure>
