@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+  
+
+    <head>
+      <meta charset="utf-8" />
+        
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1"
+      />
+      <title>SpringBoot学习 |  Hexo</title>
+  <meta name="generator" content="hexo-theme-ayer">
+      
+      <link rel="shortcut icon" href="/favicon.ico" />
+       
+<link rel="stylesheet" href="/dist/main.css">
+
+      
+<link rel="stylesheet" href="/css/fonts/remixicon.css">
+
+      
+<link rel="stylesheet" href="/css/custom.css">
+ 
+      <script src="https://cdn.staticfile.org/pace/1.2.4/pace.min.js"></script>
+       
+ 
+
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bulma@5.0.1/bulma.min.css"
+      />
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
+
+      <!-- mermaid -->
+      
+      <style>
+        .swal2-styled.swal2-confirm {
+          font-size: 1.6rem;
+        }
+      </style>
+    </head>
+  </html>
+</html>
+
+
+<body>
+  <div id="app">
+    
+      
+    <main class="content on">
+      <section class="outer">
+  <article
+  id="post-SpringBoot学习"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  SpringBoot学习
+</h1>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2023/12/04/SpringBoot%E5%AD%A6%E4%B9%A0/" class="article-date">
+  <time datetime="2023-12-04T10:27:49.000Z" itemprop="datePublished">2023-12-04</time>
+</a>   
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> Word count:</span>
+            <span class="post-count">1.2k</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> Reading time≈</span>
+            <span class="post-count">4 min</span>
+        </span>
+    </span>
+</div>
+ 
+    </div>
+      
+    <div class="tocbot"></div>
+
+
+
+
+  
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="Springboot模块学习笔记-一"><a href="#Springboot模块学习笔记-一" class="headerlink" title="Springboot模块学习笔记(一)"></a><em>Springboot模块学习笔记</em>(一)</h1><h2 id="1-SpringBoot的目标既是提供了一种快速使用Spring的方式，提高开发效率。"><a href="#1-SpringBoot的目标既是提供了一种快速使用Spring的方式，提高开发效率。" class="headerlink" title="1.SpringBoot的目标既是提供了一种快速使用Spring的方式，提高开发效率。"></a>1.<em>SpringBoot的目标既是提供了一种快速使用Spring的方式，提高开发效率</em>。</h2><p>那么Spring有什么缺点呢？</p>
+<p>1.配置繁琐</p>
+<p>2.依赖繁琐</p>
+<p>这样就引出了SpringBoot技术，下面介绍一下SpringBoot功能</p>
+<p>（1）自动配置</p>
+<p><img src="/./SpringBoot%E5%AD%A6%E4%B9%A0/image-20231127121051118.png" alt="image-20231127121051118"></p>
+<p>（2）起步依赖</p>
+<p><img src="/./SpringBoot%E5%AD%A6%E4%B9%A0/image-20231127121111083.png" alt="image-20231127121111083"></p>
+<p>（3）辅助功能</p>
+<p><img src="/./SpringBoot%E5%AD%A6%E4%B9%A0/image-20231127121129264.png" alt="image-20231127121129264"></p>
+<p> <strong>SpringBoot并不是对Spring功能上的增强，而是提供了一种快速使用Spring的方式</strong></p>
+<h2 id="2-SpringBoot快速入门"><a href="#2-SpringBoot快速入门" class="headerlink" title="2.SpringBoot快速入门"></a>2.SpringBoot快速入门</h2><p>利用一个简单的小项目来入门一下</p>
+<ul>
+<li>SpringBoot在创建项目时，使用jar的打包方式。</li>
+<li>SpringBoot的引导类，是项目入口，运行main方法就可以启动项目。</li>
+<li>使用SpringBoot和Spring构建的项目，业务代码编写方式完全一样。</li>
+</ul>
+<p><img src="/./SpringBoot%E5%AD%A6%E4%B9%A0/image-20231127124611176.png" alt="image-20231127124611176"></p>
+<p><img src="/./SpringBoot%E5%AD%A6%E4%B9%A0/image-20231127124630645.png" alt="image-20231127124630645"></p>
+<p><img src="/./SpringBoot%E5%AD%A6%E4%B9%A0/image-20231127124650281.png" alt="image-20231127124650281"></p>
+<p>同时利用idea工具可实现快速构建</p>
+<p>在new–&gt;Module下的Spring Initializr选项卡中实现快速构建项目</p>
+<p><img src="/./SpringBoot%E5%AD%A6%E4%B9%A0/image-20231127165625244.png" alt="image-20231127165625244"></p>
+<h2 id="3-Spring-Boot-起步依赖原理"><a href="#3-Spring-Boot-起步依赖原理" class="headerlink" title="3.Spring Boot 起步依赖原理"></a>3.Spring Boot 起步依赖原理</h2><p>（1）spring-boot-starter-parent</p>
+<p>（2）spring-boot-starter-web</p>
+<p><img src="/./SpringBoot%E5%AD%A6%E4%B9%A0/image-20231127170537725.png" alt="image-20231127170537725"></p>
+<h2 id="4-Spring-Boot配置原理"><a href="#4-Spring-Boot配置原理" class="headerlink" title="4.Spring Boot配置原理"></a>4.Spring Boot配置原理</h2><p><strong>配置文件分类:</strong></p>
+<p><img src="/./SpringBoot%E5%AD%A6%E4%B9%A0/image-20231127170743378.png" alt="image-20231127170743378"></p>
+<p>在<strong>application.properties</strong>下编写如下代码:</p>
+<p><strong>server.port &#x3D;8080</strong></p>
+<p>或者yml方式(在idea中的<strong>resources</strong>下创建<strong>application.yml</strong>或<strong>application.yaml</strong>文件里面编写如下配置):</p>
+<p><strong>server:</strong></p>
+<p>​	<strong>port: 8080</strong></p>
+<p>以上三个配置文件的优先级(按照后缀来排序):</p>
+<p><em><strong>.properties&gt;.yml&gt;.yaml</strong></em></p>
+<ul>
+<li><p>yaml</p>
+<p><img src="/./SpringBoot%E5%AD%A6%E4%B9%A0/image-20231127171638640.png" alt="image-20231127171638640"></p>
+<p><strong>yaml:基本语法</strong>:joy:</p>
+<p><strong><img src="/./SpringBoot%E5%AD%A6%E4%B9%A0/image-20231127171856985.png" alt="image-20231127171856985"></strong></p>
+<p><strong>yaml:数据格式</strong>:</p>
+<ul>
+<li>对象(map):键值对的集合。</li>
+</ul>
+<p><img src="/./SpringBoot%E5%AD%A6%E4%B9%A0/image-20231127172159576.png" alt="image-20231127172159576"></p>
+<ul>
+<li>数组:一组按次序排列的值。</li>
+</ul>
+<p><img src="/./SpringBoot%E5%AD%A6%E4%B9%A0/image-20231127172231099.png" alt="image-20231127172231099"></p>
+<ul>
+<li><p>纯量:单个的、不可再分的值。</p>
+<p><img src="/./SpringBoot%E5%AD%A6%E4%B9%A0/image-20231127172305038.png" alt="image-20231127172305038"></p>
+</li>
+</ul>
+<p>以上注意 <strong>属性名称:(空格)+属性值</strong></p>
+<p><strong>yaml:参数引用</strong></p>
+<p><img src="/./SpringBoot%E5%AD%A6%E4%B9%A0/image-20231127172922753.png" alt="image-20231127172922753"></p>
+<p><strong>YAML:小结</strong></p>
+<p><img src="/C:/Users\48531\OneDrive\桌面\hexo-blog\source_posts\SpringBoot学习\image-20231127173040450.png" alt="image-20231127173040450"></p>
+</li>
+<li><p>读取配置文件内容</p>
+<p>(1)@Value</p>
+<p><img src="/./SpringBoot%E5%AD%A6%E4%B9%A0/image-20231130144357066.png" alt="image-20231130144357066"></p>
+<p><strong>@Value(“${name}”)</strong></p>
+<p>​	<strong>private String name</strong></p>
+<p>​	采用这样的方式来获取<strong>application.yaml</strong>里对应的<strong>name</strong>的值</p>
+<p>​	如果获取数组的值我们在@Value中取得是数组的<strong>下标</strong></p>
+<p>(2)Environment</p>
+<p>使用Environment获取值时的步骤如下:</p>
+<p>1)使用**@Autowired<strong>注解让Springboot启动时注入一个对象</strong>env**</p>
+<p><img src="/./SpringBoot%E5%AD%A6%E4%B9%A0/image-20231130150414772.png" alt="image-20231130150414772"></p>
+<p>2)直接在输出这一行利用env.getProperty(“”)输入你要获取的值的属性名字即可</p>
+<p><img src="/./SpringBoot%E5%AD%A6%E4%B9%A0/image-20231130150424354.png" alt="image-20231130150424354"></p>
+<p>(3)@ConfigurationProperties</p>
+<p>创建一个你需要用到的对象类(如我图中的person类):</p>
+<p>两个注解:</p>
+<p>​	@Component:让Spring识别</p>
+<p>​	@ConfigurationProperties</p>
+<p>注意了!!!!</p>
+<p>如果此时你的@ConfigurationProperties并没有写前缀，那么它会读取配置文件中你所配置的属性名的属性值</p>
+<p><img src="/./SpringBoot%E5%AD%A6%E4%B9%A0/image-20231130151741953.png" alt="image-20231130151741953"></p>
+<p>如下<img src="/./SpringBoot%E5%AD%A6%E4%B9%A0/image-20231130151702681.png" alt="image-20231130151702681"><img src="/./SpringBoot%E5%AD%A6%E4%B9%A0/image-20231130151723394.png" alt="image-20231130151723394"></p>
+<p>但是如果你加了前缀@ConfigurationProperties(<strong>prefix &#x3D; “person”</strong>)那么它读取的是你在.yaml文件里前缀为person：下的属性名的属性值</p>
+<p><img src="/./SpringBoot%E5%AD%A6%E4%B9%A0/image-20231130151805714.png" alt="image-20231130151805714"></p>
+<p><img src="/./SpringBoot%E5%AD%A6%E4%B9%A0/image-20231130151825782.png" alt="image-20231130151825782"></p>
+</li>
+<li><p>profile</p>
+<p>1)profile配置方式</p>
+<ul>
+<li><p>多profile文件方式</p>
+<p>一般来讲结构是这样的</p>
+<p><img src="/./SpringBoot%E5%AD%A6%E4%B9%A0/image-20231130154714615.png" alt="image-20231130154714615"></p>
+<p>我们分别在dev、pro、test里面配置需要的属性</p>
+<p>然后再主要文件<strong>application.properties</strong>里面加上</p>
+<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">spring.profiles.active=dev/<span class="keyword">pro</span>/<span class="keyword">test</span></span><br><span class="line">这就是启动dev/<span class="keyword">pro</span>/<span class="keyword">test</span>配置文件</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>yml多文档方式</p>
+<p>在yml中用—分割即可</p>
+<p>2)profile激活方式</p>
+<p><img src="/./SpringBoot%E5%AD%A6%E4%B9%A0/image-20231130155050196.png" alt="image-20231130155050196"></p>
+<p>在运行位置编辑运行设置找到这两个;</p>
+<p>虚拟机参数:-Dspring.profiles.active&#x3D;pro</p>
+<p>命令行参数:–spring.profiles.active&#x3D;pro</p>
+<p><strong><img src="/./SpringBoot%E5%AD%A6%E4%B9%A0/image-20231130155606679.png" alt="image-20231130155606679"></strong></p>
+</li>
+</ul>
+</li>
+<li><p>内部配置加载顺序</p>
+<p><img src="/./SpringBoot%E5%AD%A6%E4%B9%A0/image-20231202194402571.png" alt="image-20231202194402571"></p>
+</li>
+<li><p>外部配置加载顺序</p>
+</li>
+</ul>
+<p><img src="/./SpringBoot%E5%AD%A6%E4%B9%A0/image-20231202195819000.png" alt="image-20231202195819000"></p>
+<h2 id="3-SpringBoot整合其他框架"><a href="#3-SpringBoot整合其他框架" class="headerlink" title="3.SpringBoot整合其他框架"></a>3.SpringBoot整合其他框架</h2><h3 id="1-SpringBoot整合Junit。"><a href="#1-SpringBoot整合Junit。" class="headerlink" title="(1)SpringBoot整合Junit。"></a>(1)SpringBoot整合Junit。</h3><p><img src="/./SpringBoot%E5%AD%A6%E4%B9%A0/image-20231202200030447.png" alt="image-20231202200030447"></p>
+<p>1.在搭建的com&#x2F;itheima&#x2F;Springboottest&#x2F;下创建类UserService</p>
+<p>并编写以下内容</p>
+<p><img src="/./SpringBoot%E5%AD%A6%E4%B9%A0/image-20231202201519254.png" alt="image-20231202201519254"></p>
+<p>这里我们编写了一个名为add()的方法，作用是打印add……</p>
+<p>在test包下的com&#x2F;itheima&#x2F;目录下创建test目录，在test下创建UserServiceTest类作为测试类</p>
+<p><img src="/./SpringBoot%E5%AD%A6%E4%B9%A0/image-20231202201650084.png" alt="image-20231202201650084"></p>
+<p><img src="/./SpringBoot%E5%AD%A6%E4%B9%A0/image-20231202201659097.png" alt="image-20231202201659097"></p>
+<p>利用@Autowired注入一个类的对象userService</p>
+<p>@Test下创建一个test()函数，通过对象去访问UserService下的add方法即</p>
+<p><strong>userService.add()</strong></p>
+<p>以上注意点有:</p>
+<p>当你的测试路径和的包名和上面主目录的包名一致时,@SpringBootTest(classes &#x3D; SpringbootTestApplication.class)中的classes &#x3D; SpringbootTestApplication.class可以省略不写</p>
+<p><img src="/./SpringBoot%E5%AD%A6%E4%B9%A0/1.png" alt="1"></p>
+<h3 id="2-SpringBoot整合Redis"><a href="#2-SpringBoot整合Redis" class="headerlink" title="(2)SpringBoot整合Redis"></a>(2)SpringBoot整合Redis</h3><p><img src="/./SpringBoot%E5%AD%A6%E4%B9%A0/image-20231202202259105.png" alt="image-20231202202259105"></p>
+<h3 id="3-SpringBoot整合mybaits"><a href="#3-SpringBoot整合mybaits" class="headerlink" title="(3)SpringBoot整合mybaits"></a>(3)SpringBoot整合mybaits</h3><p><img src="/./SpringBoot%E5%AD%A6%E4%B9%A0/image-20231202204301365.png" alt="image-20231202204301365"></p>
+<p>按步骤如下排列:</p>
+<p>在主目录domain下创建类User</p>
+<p><img src="/./SpringBoot%E5%AD%A6%E4%B9%A0/image-20231202214054020.png" alt="image-20231202214054020"></p>
+<p>并且写好get，set方法最后写上toString()</p>
+<p>在com&#x2F;itheima&#x2F;springbiittestmybaits&#x2F;下创建UserMapper文件</p>
+<p>内容如下</p>
+<p><img src="/./SpringBoot%E5%AD%A6%E4%B9%A0/image-20231202214211600.png" alt="image-20231202214211600"></p>
+<p><strong>注意写好@Mpper注解,@Repository注解，@Select(“”)里面写好查询语句(select * from t_user)</strong></p>
+<p>来到test目录下操作</p>
+<p><img src="/./SpringBoot%E5%AD%A6%E4%B9%A0/image-20231202214343730.png" alt="image-20231202214343730"></p>
+<p><strong>在测试类中编写如下代码，其中@Autowired注解注入了UserMapper的对象userMapper</strong></p>
+<p><strong>@Test注解中编写了testFindAll()方法来调用对象userMapper中的findAll()方法并打印输出列表list</strong></p>
+<p><img src="/./SpringBoot%E5%AD%A6%E4%B9%A0/image-20231202223054341.png" alt="image-20231202223054341"></p>
+<p>我们的<strong>application.yaml</strong>文件的内容如下</p>
+<p><img src="/./SpringBoot%E5%AD%A6%E4%B9%A0/image-20231202214536961.png" alt="image-20231202214536961"></p>
+<h3 id="下面来看第二种方法"><a href="#下面来看第二种方法" class="headerlink" title="下面来看第二种方法"></a>下面来看第二种方法</h3><p>在主目录下创建mapper目录，目录下创建UserXmlMapper接口并编写里面的内容</p>
+<p><img src="/./SpringBoot%E5%AD%A6%E4%B9%A0/image-20231202215945150.png" alt="image-20231202215945150"></p>
+<p>在resources目录下创建mapper文件，在里面创建UserMapper.xml文件并且编写如下</p>
+<p><img src="/./SpringBoot%E5%AD%A6%E4%B9%A0/image-20231202220056745.png" alt="image-20231202220056745"></p>
+<p><strong>这一步注意:一定要指定namespace的路径(其实是UserMapper的路径)</strong></p>
+<p>在applications.yaml里面编写</p>
+<p><img src="/./SpringBoot%E5%AD%A6%E4%B9%A0/image-20231202220208781.png" alt="image-20231202220208781"></p>
+<p>在主要测试类中添加@Autowired注解注入UserXmlMapper的对象userXmlMapper，并且添加对象对应的findAll()方法</p>
+<p><img src="/./SpringBoot%E5%AD%A6%E4%B9%A0/image-20231202220322506.png" alt="image-20231202220322506"></p>
+<p>运行测试的结果</p>
+<p><img src="/./SpringBoot%E5%AD%A6%E4%B9%A0/image-20231202223058753.png" alt="image-20231202223058753"></p>
+<p>&#x3D;</p>
+ 
+      <!-- reward -->
+      
+      <div id="reword-out">
+        <div id="reward-btn">
+          Donate
+        </div>
+      </div>
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <div class="declare">
+      <ul class="post-copyright">
+        <li>
+          <i class="ri-copyright-line"></i>
+          <strong>Copyright： </strong>
+          
+          Copyright is owned by the author. For commercial reprints, please contact the author for authorization. For non-commercial reprints, please indicate the source.
+          
+        </li>
+      </ul>
+    </div>
+    
+    <footer class="article-footer">
+       
+<div class="share-btn">
+      <span class="share-sns share-outer">
+        <i class="ri-share-forward-line"></i>
+        分享
+      </span>
+      <div class="share-wrap">
+        <i class="arrow"></i>
+        <div class="share-icons">
+          
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="ri-weibo-fill"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="ri-wechat-fill"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="ri-qq-fill"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="ri-douban-line"></i>
+          </a>
+          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a> -->
+          
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="ri-facebook-circle-fill"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="ri-twitter-fill"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="ri-google-fill"></i>
+          </a>
+        </div>
+      </div>
+</div>
+
+<div class="wx-share-modal">
+    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2023/12/04/SpringBoot%E5%AD%A6%E4%B9%A0/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div id="share-mask"></div>  
+    </footer>
+  </div>
+
+   
+  <nav class="article-nav">
+    
+      <a href="/2023/12/06/%E5%9F%BA%E4%BA%8Eruoyi%E6%A1%86%E6%9E%B6%E7%9A%84%E5%BC%80%E5%8F%91%E7%AC%94%E8%AE%B0/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            后端获取图片数据的开发文档
+          
+        </div>
+      </a>
+    
+    
+      <a href="/2023/12/04/hello-world/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">Hello World</div>
+      </a>
+    
+  </nav>
+
+  
+   
+  
+   
+    <script src="https://cdn.staticfile.org/twikoo/1.4.18/twikoo.all.min.js"></script>
+    <div id="twikoo" class="twikoo"></div>
+    <script>
+        twikoo.init({
+            envId: ""
+        })
+    </script>
+ 
+</article>
+
+</section>
+      <footer class="footer">
+  <div class="outer">
+    <ul>
+      <li>
+        Copyrights &copy;
+        2015-2024
+        <i class="ri-heart-fill heart_icon"></i> John Doe
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+        
+        <span>
+  <span><i class="ri-user-3-fill"></i>Visitors:<span id="busuanzi_value_site_uv"></span></span>
+  <span class="division">|</span>
+  <span><i class="ri-eye-fill"></i>Views:<span id="busuanzi_value_page_pv"></span></span>
+</span>
+        
+      </li>
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      <li>
+        <!-- cnzz统计 -->
+        
+        <script type="text/javascript" src='https://s9.cnzz.com/z_stat.php?id=1278069914&amp;web_id=1278069914'></script>
+        
+      </li>
+    </ul>
+  </div>
+</footer>    
+    </main>
+    <div class="float_btns">
+      <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+    </div>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/ayer-side.svg" alt="Hexo"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">归档</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories">分类</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">标签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags/%E6%97%85%E8%A1%8C/">旅行</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" target="_blank" rel="noopener" href="http://shenyu-vip.lofter.com">摄影</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/friends">友链</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/2019/about">关于我</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="Search">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+        <i class="ri-rss-line"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/alipay.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/wechat.jpg">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-3.6.0.min.js"></script>
+ 
+<script src="/js/lazyload.min.js"></script>
+
+<!-- Tocbot -->
+ 
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  tocbot.init({
+    tocSelector: ".tocbot",
+    contentSelector: ".article-entry",
+    headingSelector: "h1, h2, h3, h4, h5, h6",
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: "main",
+    positionFixedSelector: ".tocbot",
+    positionFixedClass: "is-position-fixed",
+    fixedSidebarOffset: "auto",
+  });
+</script>
+
+<script src="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.css"
+/>
+<script src="https://cdn.staticfile.org/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
+
+<!-- ImageViewer -->
+ <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/default-skin/default-skin.min.css">
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.js"></script>
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script> 
+<!-- MathJax -->
+
+<!-- Katex -->
+
+<!-- busuanzi  -->
+ 
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+ 
+<!-- ClickLove -->
+
+<!-- ClickBoom1 -->
+
+<!-- ClickBoom2 -->
+
+<!-- CodeCopy -->
+ 
+<link rel="stylesheet" href="/css/clipboard.css">
+ <script src="https://cdn.staticfile.org/clipboard.js/2.0.10/clipboard.min.js"></script>
+<script>
+  function wait(callback, seconds) {
+    var timelag = null;
+    timelag = window.setTimeout(callback, seconds);
+  }
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="ri-file-copy-2-line"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      $(".article pre code").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copied');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-checkbox-circle-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPIED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-checkbox-circle-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-time-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-time-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+    }
+    initCopyCode();
+  }(window, document);
+</script>
+ 
+<!-- CanvasBackground -->
+
+<script>
+  if (window.mermaid) {
+    mermaid.initialize({ theme: "forest" });
+  }
+</script>
+
+
+    
+    
+
+  </div>
+</body>
+
+</html>

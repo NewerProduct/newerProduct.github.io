@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+  
+
+    <head>
+      <meta charset="utf-8" />
+        
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1"
+      />
+      <title>开发(基于ruoyiui)笔记 |  Hexo</title>
+  <meta name="generator" content="hexo-theme-ayer">
+      
+      <link rel="shortcut icon" href="/favicon.ico" />
+       
+<link rel="stylesheet" href="/dist/main.css">
+
+      
+<link rel="stylesheet" href="/css/fonts/remixicon.css">
+
+      
+<link rel="stylesheet" href="/css/custom.css">
+ 
+      <script src="https://cdn.staticfile.org/pace/1.2.4/pace.min.js"></script>
+       
+ 
+
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bulma@5.0.1/bulma.min.css"
+      />
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
+
+      <!-- mermaid -->
+      
+      <style>
+        .swal2-styled.swal2-confirm {
+          font-size: 1.6rem;
+        }
+      </style>
+    </head>
+  </html>
+</html>
+
+
+<body>
+  <div id="app">
+    
+      
+    <main class="content on">
+      <section class="outer">
+  <article
+  id="post-开发-基于ruoyiui-笔记"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  开发(基于ruoyiui)笔记
+</h1>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2024/03/21/%E5%BC%80%E5%8F%91-%E5%9F%BA%E4%BA%8Eruoyiui-%E7%AC%94%E8%AE%B0/" class="article-date">
+  <time datetime="2024-03-21T07:30:34.000Z" itemprop="datePublished">2024-03-21</time>
+</a>   
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> Word count:</span>
+            <span class="post-count">4.6k</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> Reading time≈</span>
+            <span class="post-count">20 min</span>
+        </span>
+    </span>
+</div>
+ 
+    </div>
+      
+    <div class="tocbot"></div>
+
+
+
+
+  
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="问题（一）在查询时参数没有带入"><a href="#问题（一）在查询时参数没有带入" class="headerlink" title="问题（一）在查询时参数没有带入"></a>问题（一）在查询时参数没有带入</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">*&lt;el-form-item label=&quot;项目赛道&quot; prop=&quot;proTrack&quot;&gt;*</span><br><span class="line"></span><br><span class="line">​    *&lt;el-select*</span><br><span class="line"></span><br><span class="line">​     *v-model=&quot;queryParams.proTrack&quot;*</span><br><span class="line"></span><br><span class="line">​     *placeholder=&quot;请选择项目赛道&quot;*</span><br><span class="line"></span><br><span class="line">​     *clearable*</span><br><span class="line"></span><br><span class="line">​     *@keyup.enter.native=&quot;handleQuery&quot;*</span><br><span class="line"></span><br><span class="line">​    *\&gt;*</span><br><span class="line"></span><br><span class="line">​    *&lt;el-option v-for=&quot;item in proTrackList&quot;*</span><br><span class="line"></span><br><span class="line">​    *:key=&quot;item.key&quot;*</span><br><span class="line"></span><br><span class="line">​    *:label=&quot;item.proTrack&quot;*</span><br><span class="line"></span><br><span class="line">​    *:value=&quot;item.proTrack&quot;*</span><br><span class="line"></span><br><span class="line">​    *\&gt;*</span><br><span class="line"></span><br><span class="line">​    *&lt;/el-option&gt;*</span><br><span class="line"></span><br><span class="line">​    *&lt;/el-select&gt;*</span><br><span class="line"></span><br><span class="line">   *&lt;/el-form-item&gt;*</span><br></pre></td></tr></table></figure>
+
+<p>这是一段vue代码,我出现的问题是再前端页面查询的时候无法带入proTrack这个参数。</p>
+<p>解决方法:因为我们proTrackList中没有value这个字段，导致我再绑定的时候:value&#x3D;”item.value”绑定出错，将value更换为proTrack成功在查询时候带入了参数proTrack</p>
+<p><img src="/C:/Users\48531\OneDrive\桌面\hexo-blog\source_posts\开发-基于ruoyiui-笔记\image-20240321174607944.png" alt="image-20240321174607944"></p>
+<p><img src="/C:/Users\48531\OneDrive\桌面\hexo-blog\source_posts\开发-基于ruoyiui-笔记\image-20240321174646796.png" alt="image-20240321174646796"></p>
+<p><code>还有一种没有带入参数的情况就是，有些需要参数的函数，你可能没有传入函数或者定义接受函数的变量。</code>那这时候我们就需要去定义这个函数对于变量的传与接。下面来举一个我的错误例子</p>
+<p>先来看我原本的写法</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">  <span class="comment">//查询小组列表</span></span><br><span class="line"></span><br><span class="line">  <span class="title function_">selectGroup</span>(<span class="params"></span>)&#123;</span><br><span class="line"></span><br><span class="line">   <span class="variable language_">this</span>.<span class="property">loading</span>=<span class="literal">true</span>;</span><br><span class="line"></span><br><span class="line">   <span class="title function_">selectGroupList</span>(<span class="variable language_">this</span>.<span class="property">queryParams</span>).<span class="title function_">then</span>(<span class="function"><span class="params">response</span> =&gt;</span>&#123;</span><br><span class="line"></span><br><span class="line">​    <span class="variable language_">this</span>.<span class="property">tableList</span> = response.<span class="property">rows</span>;</span><br><span class="line"></span><br><span class="line">​    <span class="variable language_">this</span>.<span class="property">total</span> = response.<span class="property">total</span>;</span><br><span class="line"></span><br><span class="line">​    <span class="variable language_">this</span>.<span class="property">loading</span>=<span class="literal">false</span>;</span><br><span class="line"></span><br><span class="line">   &#125;)</span><br><span class="line"></span><br><span class="line">  &#125;,</span><br><span class="line"></span><br><span class="line">  <span class="comment">//赛道改变清空组列表</span></span><br><span class="line"></span><br><span class="line">  <span class="title function_">selectOnChangeTrack</span>(<span class="params"></span>)&#123;</span><br><span class="line"></span><br><span class="line">   <span class="variable language_">this</span>.<span class="property">tableList</span> = [];</span><br><span class="line"></span><br><span class="line">   <span class="variable language_">this</span>.<span class="title function_">selectGroup</span>(<span class="variable language_">this</span>.<span class="property">Track</span>);</span><br><span class="line"></span><br><span class="line">  &#125;,</span><br></pre></td></tr></table></figure>
+
+<p>可以看<code>selectOnChangeTrack</code>这个函数里，我在调用 <code>this.selectGroup(this.Track);</code>时，我传入了参数<code>this.Track</code>，<code>this.Track</code>是选择框的数据，<code>proTrack</code>是查询参数。而我在上面的函数时，却没有接收传过来的参数<code>this.Track</code>	,在vue中，<code>通常定义一个形参，在作为传来参数的载体，然后再将这个形参的值赋值给查询变量，这样就能完成参数的传递</code>，改动如下</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//查询小组列表</span></span><br><span class="line"></span><br><span class="line"><span class="title function_">selectGroup</span>(<span class="params">tempdata</span>)&#123;</span><br><span class="line">    <span class="comment">//将形参tempdata赋值给查询参数proTrack，这样在查询时就会携带proTrack这个参数.</span></span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">queryParams</span>.<span class="property">proTrack</span> = tempdata</span><br><span class="line"></span><br><span class="line"> <span class="variable language_">this</span>.<span class="property">loading</span>=<span class="literal">true</span>;</span><br><span class="line"></span><br><span class="line"> <span class="title function_">selectGroupList</span>(<span class="variable language_">this</span>.<span class="property">queryParams</span>).<span class="title function_">then</span>(<span class="function"><span class="params">response</span> =&gt;</span>&#123;</span><br><span class="line"></span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">tableList</span> = response.<span class="property">rows</span>;</span><br><span class="line">  </span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">total</span> = response.<span class="property">total</span>;</span><br><span class="line">  </span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">loading</span>=<span class="literal">false</span>;</span><br><span class="line"></span><br><span class="line"> &#125;)</span><br><span class="line"></span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
+<p>以上即是改正后的。改正后可以带入要传的参数了。</p>
+<h1 id="问题（二）数据库字段名称与后端java应该对应"><a href="#问题（二）数据库字段名称与后端java应该对应" class="headerlink" title="问题（二）数据库字段名称与后端java应该对应"></a>问题（二）数据库字段名称与后端java应该对应</h1><p>这是一段ruoyi对应的后端代码</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;select id=<span class="string">&quot;selectRecommendationList&quot;</span> parameterType=<span class="string">&quot;Recommendation&quot;</span> resultMap=<span class="string">&quot;RecommendationResult&quot;</span>&gt;</span><br><span class="line">    &lt;include refid=<span class="string">&quot;selectRecommendationVo&quot;</span>/&gt;</span><br><span class="line">    &lt;where&gt;  </span><br><span class="line">        &lt;<span class="keyword">if</span> test=<span class="string">&quot;time != null &quot;</span>&gt; and pro_details3.time = #&#123;time&#125;&lt;/<span class="keyword">if</span>&gt;</span><br><span class="line">        &lt;<span class="keyword">if</span> test=<span class="string">&quot;proName != null  and proName != &#x27;&#x27;&quot;</span>&gt; and pro_name like <span class="title function_">concat</span><span class="params">(<span class="string">&#x27;%&#x27;</span>, #&#123;proName&#125;, <span class="string">&#x27;%&#x27;</span>)</span>&lt;/<span class="keyword">if</span>&gt;</span><br><span class="line">        &lt;<span class="keyword">if</span> test=<span class="string">&quot;proScore != null &quot;</span>&gt; <span class="type">and</span> <span class="variable">pro_score</span> <span class="operator">=</span> #&#123;proScore&#125;&lt;/<span class="keyword">if</span>&gt;</span><br><span class="line">        &lt;<span class="keyword">if</span> test=<span class="string">&quot;proGroup != null  and proGroup != &#x27;&#x27;&quot;</span>&gt; <span class="type">and</span> <span class="variable">pro_group</span> <span class="operator">=</span> #&#123;proGroup&#125;&lt;/<span class="keyword">if</span>&gt;</span><br><span class="line">        &lt;<span class="keyword">if</span> test=<span class="string">&quot;userName != null  and userName != &#x27;&#x27;&quot;</span>&gt; <span class="type">and</span> <span class="variable">user_name</span> <span class="operator">=</span> #&#123;userName&#125;&lt;/<span class="keyword">if</span>&gt;</span><br><span class="line">        &lt;<span class="keyword">if</span> test=<span class="string">&quot;deptName != null  and deptName != &#x27;&#x27;&quot;</span>&gt; <span class="type">and</span> <span class="variable">dept_name</span> <span class="operator">=</span> #&#123;deptName&#125;&lt;/<span class="keyword">if</span>&gt;</span><br><span class="line">        &lt;<span class="keyword">if</span> test=<span class="string">&quot;proTrack !=null   and  proTrack != &#x27;&#x27;&quot;</span>&gt; and  pro_track=#&#123;proTrack&#125;&lt;/<span class="keyword">if</span>&gt;</span><br><span class="line">    &lt;/where&gt;</span><br><span class="line">&lt;/select&gt;</span><br></pre></td></tr></table></figure>
+
+<p>mybaits中数据查询mapper文件中，值得注意的是在and后的字段名称**(比如uesr_name,dept_name,pro_track,pro_group等等)**要和数据库中的字段对应而前面的proGroup是实体类中我们自己定义的属性。</p>
+<p>不对应，就会报错</p>
+<p>以下这段代码是同样的道理，请注意数据字段是column后面的而实体类是property后面的，数据库字段要和自己的数据库中的字段一致(完全一致)</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;resultMap type=<span class="string">&quot;Recommendation&quot;</span> id=<span class="string">&quot;RecommendationResult&quot;</span>&gt;</span><br><span class="line">    &lt;result property=<span class="string">&quot;proId&quot;</span>    column=<span class="string">&quot;pro_id&quot;</span>    /&gt;</span><br><span class="line">    &lt;result property=<span class="string">&quot;proName&quot;</span>    column=<span class="string">&quot;pro_name&quot;</span>    /&gt;</span><br><span class="line">    &lt;result property=<span class="string">&quot;proScore&quot;</span>    column=<span class="string">&quot;pro_score&quot;</span>    /&gt;</span><br><span class="line">    &lt;result property=<span class="string">&quot;proGroup&quot;</span>    column=<span class="string">&quot;pro_group&quot;</span>    /&gt;</span><br><span class="line">    &lt;result property=<span class="string">&quot;userName&quot;</span>    column=<span class="string">&quot;user_name&quot;</span>    /&gt;</span><br><span class="line">    &lt;result property=<span class="string">&quot;deptName&quot;</span>    column=<span class="string">&quot;dept_name&quot;</span>    /&gt;</span><br><span class="line">    &lt;result property=<span class="string">&quot;proTrack&quot;</span>     column=<span class="string">&quot;pro_track&quot;</span>/&gt;</span><br><span class="line">    &lt;result property=<span class="string">&quot;proGroupId&quot;</span> column=<span class="string">&quot;pro_group_Id&quot;</span>/&gt;</span><br><span class="line">    &lt;result property=<span class="string">&quot;proGroupName&quot;</span> column=<span class="string">&quot;pro_group_name&quot;</span>/&gt;</span><br><span class="line">    &lt;result property=<span class="string">&quot;time&quot;</span>     column=<span class="string">&quot;time&quot;</span>/&gt;</span><br><span class="line">&lt;/resultMap&gt;</span><br></pre></td></tr></table></figure>
+
+<h1 id="问题-三-对vue中v-for的理解"><a href="#问题-三-对vue中v-for的理解" class="headerlink" title="问题(三)对vue中v-for的理解"></a>问题(三)对vue中v-for的理解</h1><p>在Vue的<code>v-for</code>循环中，<code>:key</code>、<code>:label</code>和<code>:value</code>是用于绑定循环中每个元素的属性的特殊语法。</p>
+<ul>
+<li><strong><code>:key</code>用于指定循环中每个元素的唯一标识符。它是必需的，用于帮助Vue跟踪每个元素的身份，以便在更新DOM时进行高效的重用和重新排序。通常，你可以使用一个唯一的属性或索引作为<code>key</code>，确保在循环中的元素之间具有唯一性。</strong></li>
+<li><strong><code>:label</code>用于指定循环中每个选项的显示文本。它绑定了每个选项的显示值，这将在选择框中显示给用户。</strong></li>
+<li><strong>:value&#96;用于指定循环中每个选项的实际值。它绑定了每个选项的实际值，当用户选择某个选项时，该值将被传递给绑定的数据模型。</strong></li>
+</ul>
+<p>这些特殊语法（<code>:key</code>、<code>:label</code>和<code>:value</code>）是Vue中用于在循环中绑定属性的常见约定，但你也可以根据需要选择其他属性名称。重要的是确保在循环中的每个元素都有唯一的标识符作为<code>key</code>，以及适当的属性用于<code>label</code>和<code>value</code>。这样可以确保循环中的每个元素都能正确地显示和处理。</p>
+<h1 id="问题（四）理解一段代码的含义-以获取学院名称列表为例"><a href="#问题（四）理解一段代码的含义-以获取学院名称列表为例" class="headerlink" title="问题（四）理解一段代码的含义(以获取学院名称列表为例)"></a>问题（四）理解一段代码的含义(以获取学院名称列表为例)</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">/**获取学院名称函数 */</span><br><span class="line"></span><br><span class="line">  getDeptNameList()&#123;</span><br><span class="line"></span><br><span class="line">  this.loading = true;</span><br><span class="line"></span><br><span class="line">   listRecommendation(this.queryParams).then(response =&gt; &#123;</span><br><span class="line"></span><br><span class="line">​     this.deptNameList = response.rows;</span><br><span class="line"></span><br><span class="line">​     console.log(this.deptNameList)</span><br><span class="line"></span><br><span class="line">​     this.total = response.total;</span><br><span class="line"></span><br><span class="line">​     this.loading = false;</span><br><span class="line"></span><br><span class="line">​    &#125;)</span><br><span class="line"></span><br><span class="line">  &#125;,</span><br></pre></td></tr></table></figure>
+
+<p>下面对这段代码剖析：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">getDeptNameList</span>(<span class="params"></span>) &#123;  <span class="variable language_">this</span>.<span class="property">loading</span> = <span class="literal">true</span>; *<span class="comment">// 设置 loading 状态为 true，表示正在加载数据*  </span></span><br><span class="line"></span><br><span class="line"> *<span class="comment">// 调用 listRecommendation 函数，并传递 this.queryParams 参数*  </span></span><br><span class="line"></span><br><span class="line"><span class="title function_">listRecommendation</span>(<span class="variable language_">this</span>.<span class="property">queryParams</span>).<span class="title function_">then</span>(<span class="function"><span class="params">response</span> =&gt;</span> &#123; </span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">deptNameList</span> = response.<span class="property">rows</span>; *<span class="comment">// 将返回的学院名称列表赋值给 this.deptNameList*    </span></span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>.<span class="property">deptNameList</span>); *<span class="comment">// 打印学院名称列表到控制台*    </span></span><br><span class="line"></span><br><span class="line"><span class="variable language_">this</span>.<span class="property">total</span> = response.<span class="property">total</span>; *<span class="comment">// 设置总数为返回结果的总数*    </span></span><br><span class="line"></span><br><span class="line"><span class="variable language_">this</span>.<span class="property">loading</span> = <span class="literal">false</span>; *<span class="comment">// 设置 loading 状态为 false，表示加载数据完成* </span></span><br><span class="line"></span><br><span class="line"> &#125;); &#125;,</span><br></pre></td></tr></table></figure>
+
+<p>帮助理解</p>
+<h1 id="思路（一）选择框一限定选择框二的内容"><a href="#思路（一）选择框一限定选择框二的内容" class="headerlink" title="思路（一）选择框一限定选择框二的内容"></a>思路（一）选择框一限定选择框二的内容</h1><p>如果想实现两个选择框第一个选择框里面的所选择的内容可以改变第二个选择框里面的数据（比如选择了第一个框里面的2021年，那第二个选择框就会显示在2021里面有什么内容)</p>
+<p>可以考虑使用@change&#x3D;””来绑定一个变化，只要第一个选择框里面的内容变了，那么就会执行@change绑定的事件比如</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"> //选择框一</span><br><span class="line">&lt;el-form-item label=&quot;选择赛事:&quot; prop=&quot;time&quot;&gt;</span><br><span class="line"></span><br><span class="line">​     &lt;el-select</span><br><span class="line"></span><br><span class="line">​      v-model=&quot;queryParams.time&quot;</span><br><span class="line"></span><br><span class="line">​      placeholder=&quot;请选择参赛时间&quot;</span><br><span class="line"></span><br><span class="line">​      clearable //表示是否可以清除选择框内容</span><br><span class="line"></span><br><span class="line">​      @change=&quot;handleSelectionChange1&quot;</span><br><span class="line"></span><br><span class="line">​     \&gt;</span><br><span class="line"></span><br><span class="line">​      &lt;el-option v-for=&quot;dict in 		 dict.type.events_year&quot; </span><br><span class="line"></span><br><span class="line">​      :key=&quot;dict.key&quot; </span><br><span class="line"></span><br><span class="line">​      :label=&quot;dict.value&quot; </span><br><span class="line"></span><br><span class="line">​      :value=&quot;dict.value&quot;&gt;</span><br><span class="line"></span><br><span class="line">​      &lt;/el-option&gt;</span><br><span class="line"></span><br><span class="line">​     &lt;/el-select&gt;</span><br><span class="line"></span><br><span class="line">   &lt;/el-form-item&gt;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">//选择框二</span><br><span class="line">el-form-item label=&quot;&quot; prop=&quot;selectCompetition&quot;&gt;</span><br><span class="line"></span><br><span class="line">​    &lt;el-select</span><br><span class="line"></span><br><span class="line">​     class=&quot;custom-select&quot;</span><br><span class="line"></span><br><span class="line">​     v-model=&quot;queryParams.selectCompetition&quot;</span><br><span class="line"></span><br><span class="line">​     placeholder=&quot;请选择赛事&quot;</span><br><span class="line"></span><br><span class="line">​     clearable</span><br><span class="line"></span><br><span class="line">​     @keyup.enter.native=&quot;handleQuery&quot; //回车</span><br><span class="line"></span><br><span class="line">​    \&gt;</span><br><span class="line"></span><br><span class="line">​    &lt;el-option v-for=&quot; item in competitionList&quot; </span><br><span class="line"></span><br><span class="line">​    :key=&quot;item.key&quot;</span><br><span class="line"></span><br><span class="line">​    :label=&quot;item.eventName&quot;</span><br><span class="line"></span><br><span class="line">​    :value=&quot;item.value&quot;&gt;</span><br><span class="line"></span><br><span class="line">​    &lt;/el-option&gt;</span><br><span class="line"></span><br><span class="line">   &lt;/el-select&gt;</span><br><span class="line"></span><br><span class="line">   &lt;/el-form-item&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//@change的所绑定事件的功能</span></span><br><span class="line"> <span class="title function_">handleSelectionChange1</span>(<span class="params"></span>) &#123;</span><br><span class="line"></span><br><span class="line"> <span class="variable language_">this</span>.<span class="property">queryParams</span>.<span class="property">startTime</span> = <span class="variable language_">this</span>.<span class="property">queryParams</span>.<span class="property">time</span>; <span class="comment">// Update the query parameter</span></span><br><span class="line"></span><br><span class="line"> <span class="variable language_">this</span>.<span class="property">queryParams</span>.<span class="property">selectCompetition</span> = <span class="literal">null</span>; <span class="comment">// Clear the competition dropdown</span></span><br><span class="line"></span><br><span class="line"> <span class="variable language_">this</span>.<span class="property">competitionList</span> = []; <span class="comment">// Clear the competition list</span></span><br><span class="line"></span><br><span class="line"> <span class="variable language_">this</span>.<span class="title function_">getEventsList</span>(); <span class="comment">// Call the function to fetch the updated competition list</span></span><br><span class="line"></span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
+<h1 id="问题（五）-在今天编写代码时候遇到了这么一个问题，就是关于添加数据前端页面他不给我显示。"><a href="#问题（五）-在今天编写代码时候遇到了这么一个问题，就是关于添加数据前端页面他不给我显示。" class="headerlink" title="问题（五）:在今天编写代码时候遇到了这么一个问题，就是关于添加数据前端页面他不给我显示。"></a>问题（五）:在今天编写代码时候遇到了这么一个问题，就是关于添加数据前端页面他不给我显示。</h1><p><img src="/C:/Users\48531\OneDrive\桌面\hexo-blog\source_posts\开发-基于ruoyiui-笔记\image-20240327175415722.png" alt="image-20240327175415722"></p>
+<p>查看发现是getfilename函数作怪，因为我的这个函数是要获取路径去分割，然而我并没有在数据库给出路径，所以这两个数据显示不出来，更改函数后成功显示，函数更改如下</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">  <span class="title function_">getfileName</span>(<span class="params">path</span>)&#123;</span><br><span class="line"></span><br><span class="line">   <span class="keyword">if</span>(path)&#123;</span><br><span class="line"></span><br><span class="line">​    <span class="keyword">return</span> path.<span class="title function_">split</span>(<span class="string">&#x27;/&#x27;</span>).<span class="title function_">pop</span>();</span><br><span class="line"></span><br><span class="line">   &#125;<span class="keyword">else</span>&#123;</span><br><span class="line"></span><br><span class="line">​    <span class="keyword">return</span> <span class="string">&quot;暂无资料&quot;</span>;</span><br><span class="line"></span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">  &#125;,</span><br></pre></td></tr></table></figure>
+
+<h1 id="方法1-在数据库中呢，我删除一个数据，由于这个数据关联很多表，那就需要一同删除，这可以利用触发器，以下是我在该项目中写道的触发器"><a href="#方法1-在数据库中呢，我删除一个数据，由于这个数据关联很多表，那就需要一同删除，这可以利用触发器，以下是我在该项目中写道的触发器" class="headerlink" title="方法1:在数据库中呢，我删除一个数据，由于这个数据关联很多表，那就需要一同删除，这可以利用触发器，以下是我在该项目中写道的触发器"></a>方法1:在数据库中呢，我删除一个数据，由于这个数据关联很多表，那就需要一同删除，这可以利用触发器，以下是我在该项目中写道的触发器</h1><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">BEGIN</span></span><br><span class="line">    <span class="keyword">DELETE</span> <span class="keyword">FROM</span> pro_coreteam <span class="keyword">WHERE</span> pro_id <span class="operator">=</span> OLD.pro_id;</span><br><span class="line"><span class="keyword">END</span></span><br></pre></td></tr></table></figure>
+
+<p>该触发器是当我们根据项目id（pro_id）删除数据时，他会带着通过项目id关联的id里面的内容一同删除,删除的表名称、是<code>pro_coreteam</code></p>
+<p>4.2新添加了一个触发器代码如下</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">DELIMITER <span class="operator">/</span><span class="operator">/</span></span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TRIGGER</span> update_group_id</span><br><span class="line">AFTER <span class="keyword">INSERT</span> <span class="keyword">ON</span> pro_mapping_group</span><br><span class="line"><span class="keyword">FOR</span> <span class="keyword">EACH</span> <span class="type">ROW</span></span><br><span class="line"><span class="keyword">BEGIN</span></span><br><span class="line">    <span class="keyword">UPDATE</span> pro_details3</span><br><span class="line">    <span class="keyword">SET</span> pro_group_id <span class="operator">=</span> NEW.group_id</span><br><span class="line">    <span class="keyword">WHERE</span> pro_id <span class="operator">=</span> NEW.pro_id;</span><br><span class="line"><span class="keyword">END</span>;</span><br><span class="line"><span class="operator">/</span><span class="operator">/</span></span><br><span class="line">DELIMITER ;</span><br></pre></td></tr></table></figure>
+
+<p>解释</p>
+<p>在这个触发器中，当在 <code>pro_mapping_group</code> 表中插入新的记录时，将会更新 <code>pro_details3</code> 表中对应 <code>pro_id</code> 的 <code>pro_group_id</code> 字段。这里假设 <code>pro_mapping_group</code> 表和 <code>pro_details3</code> 表通过 <code>pro_id</code> 字段关联。如果你的实际情况不同，请根据实际情况修改 <code>WHERE</code> 子句。</p>
+<p>请注意，这个触发器只在插入新的记录时触发，如果你更新 <code>pro_mapping_group</code> 表中的 <code>group_id</code> 字段，这个触发器不会触发。如果你希望在更新 <code>group_id</code> 时也触发，你需要创建一个额外的 <code>AFTER UPDATE</code> 触发器</p>
+<h1 id="方法2-如何写一个对话框即点击按钮弹出对话框？"><a href="#方法2-如何写一个对话框即点击按钮弹出对话框？" class="headerlink" title="方法2:如何写一个对话框即点击按钮弹出对话框？"></a>方法2:如何写一个对话框即点击按钮弹出对话框？</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;!-- ... --&gt;</span><br><span class="line">  &lt;el-button type=&quot;success&quot; @click=&quot;showDialog&quot;&gt;导入互联网+大赛官网（大创网）项目资料&lt;/el-button&gt;</span><br><span class="line">  &lt;el-dialog title=&quot;导入互联网+大赛官网（大创网）项目资料&quot; :visible.sync=&quot;dialogVisible&quot; width=&quot;800px&quot; top=&quot;5vh&quot; append-to-body&gt;</span><br><span class="line">    &lt;!-- 对话框内容 --&gt;</span><br><span class="line">    &lt;!-- ... --&gt;</span><br><span class="line">  &lt;/el-dialog&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">export default &#123;</span><br><span class="line">  // ...</span><br><span class="line">  data() &#123;</span><br><span class="line">    return &#123;</span><br><span class="line">      dialogVisible: false, // 对话框可见性</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;,</span><br><span class="line">  methods: &#123;</span><br><span class="line">    showDialog() &#123;</span><br><span class="line">      this.dialogVisible = true; // 点击按钮时显示对话框</span><br><span class="line">    &#125;,</span><br><span class="line">    // 其他方法</span><br><span class="line">    // ...</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+
+<h1 id="方法3-如何在插入数据时携带其他参数"><a href="#方法3-如何在插入数据时携带其他参数" class="headerlink" title="方法3:如何在插入数据时携带其他参数"></a>方法3:如何在插入数据时携带其他参数</h1><p>新建你要插入的属性比如我下面的</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Excel(name = &quot;学生账号&quot;)</span></span><br><span class="line"><span class="keyword">private</span> Long StuNumber;</span><br><span class="line"></span><br><span class="line"><span class="comment">/** 学生id*/</span></span><br><span class="line"><span class="keyword">private</span> Long userId;</span><br></pre></td></tr></table></figure>
+
+<p>在服务层写好定义的方法</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="type">int</span> <span class="title function_">insertCore</span><span class="params">(ProCoreteam proCoreteam)</span>;</span><br></pre></td></tr></table></figure>
+
+<p>实现类中实现方法</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="keyword">public</span> <span class="type">int</span> <span class="title function_">insertCore</span><span class="params">(ProCoreteam proCoreteam)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">return</span> proManagerMapper.insertCore(proCoreteam);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>在<code>mapper</code>中定义方法</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="type">int</span> <span class="title function_">insertCore</span><span class="params">(ProCoreteam proCoreteam)</span>;</span><br></pre></td></tr></table></figure>
+
+<p>在<code>xml</code>文件中使用方法</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">insert</span> <span class="attr">id</span>=<span class="string">&quot;insertCore&quot;</span> <span class="attr">parameterType</span>=<span class="string">&quot;ProCoreteam&quot;</span>  &gt;</span></span><br><span class="line">    insert into pro_coreteam</span><br><span class="line">        (pro_id,student_id) value (#&#123;proId&#125;,#&#123;studentId&#125;)</span><br><span class="line"><span class="tag">&lt;/<span class="name">insert</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>同理按照以上步骤创建<code>stuNumber</code>的方法</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">&quot;selectstuIdBystuNumber&quot;</span> <span class="attr">parameterType</span>=<span class="string">&quot;long&quot;</span> <span class="attr">resultMap</span>=<span class="string">&quot;ProManagerResult&quot;</span>&gt;</span></span><br><span class="line">    select user_id from sys_user where phonenumber = #&#123;stuNumber&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>关键点在下面，我们要先获取插入完成以后的proid</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">--      </span><br><span class="line"><span class="tag">&lt;<span class="name">insert</span>&gt;</span></span><br><span class="line">//获取插入完以后的proid</span><br><span class="line">        <span class="tag">&lt;<span class="name">selectKey</span> <span class="attr">resultType</span>=<span class="string">&quot;Long&quot;</span> <span class="attr">keyProperty</span>=<span class="string">&quot;proId&quot;</span> <span class="attr">order</span>=<span class="string">&quot;AFTER&quot;</span>&gt;</span></span><br><span class="line">            select LAST_INSERT_ID()</span><br><span class="line">        <span class="tag">&lt;/<span class="name">selectKey</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">insert</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li>1.最外层的<code>&lt;insert&gt;&lt;/insert&gt;</code>没有返回属性<code>（resultType）</code>，但是里面的<code>&lt;selectKey&gt;&lt;/selectKey&gt;</code>是有返回值类型的。</li>
+<li>2.<code>order=&quot;AFTER&quot;</code>表示先执行插入，之后才执行<code>selectkey</code>语句的。</li>
+<li>3.<code>select @@identity</code>和<code>select LAST_INSERT_ID()</code>都表示选出刚刚插入的最后一条数据的id。</li>
+<li>4.实体类中id属性字段一定需要set以及get方法</li>
+<li>5.此时，接口中仍不需要有返回值，框架会自动将值注入到我们<code>insert</code>的那个对象中，我们可以直接使用就可以了。</li>
+</ul>
+<p>其实，我们的接口中可以有返回值，但是这个返回值不是id,而是表示<strong>插入后影响的行数</strong>，此时sql中仍和上面一样，不需要写返回值。</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">insert</span> <span class="attr">id</span>=<span class="string">&quot;insertStudentCacheId&quot;</span> <span class="attr">parameterType</span>=<span class="string">&quot;Student&quot;</span>&gt;</span></span><br><span class="line">    insert into student(name,age,score) values(#&#123;name&#125;,#&#123;age&#125;,#&#123;score&#125;)</span><br><span class="line">    <span class="comment">&lt;!-- 指定结果类型resultType，keyProperty是属性，自动返回到属性id中，order是次序，after是指获取id是在于插入后 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">selectKey</span> <span class="attr">resultType</span>=<span class="string">&quot;int&quot;</span> <span class="attr">keyProperty</span>=<span class="string">&quot;id&quot;</span> <span class="attr">order</span>=<span class="string">&quot;AFTER&quot;</span>&gt;</span></span><br><span class="line">        select @@identity</span><br><span class="line">    <span class="tag">&lt;/<span class="name">selectKey</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">insert</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>最最最核心的一步</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//执行完以后主键自增，获取到自增的proId所以要先执行</span></span><br><span class="line">proManagerMapper.insertProManager(proManager);</span><br><span class="line"><span class="comment">//创建实体类ProManager的对象S存储通过学生账号获得stuid</span></span><br><span class="line"><span class="type">ProManager</span> <span class="variable">S</span> <span class="operator">=</span>  proManagerMapper.selectstuIdBystuNumber(proManager.getStuNumber());</span><br><span class="line"><span class="comment">//带参数的构建对象方法,上面已经获取到了proId和studentId所以下面创建ProCoreteam的对象p_core存储这两个id</span></span><br><span class="line">ProCoreteam p_core=<span class="keyword">new</span> <span class="title class_">ProCoreteam</span>(proManager.getProId(),S.getUserId());</span><br><span class="line"><span class="comment">//调用插入方法插入id，由于是个导入过程所以会在导入过程中执行以上内容自动插入，这样就携带了其他参数</span></span><br><span class="line">proManagerMapper.insertCore(p_core);</span><br></pre></td></tr></table></figure>
+
+<h1 id="问题（六）基于ruoyiUI新建对话框的一些属性问题"><a href="#问题（六）基于ruoyiUI新建对话框的一些属性问题" class="headerlink" title="问题（六）基于ruoyiUI新建对话框的一些属性问题"></a>问题（六）基于<code>ruoyiUI</code>新建对话框的一些属性问题</h1><p>我们首先新建一个对话框，代码如下(我这个时<code>ruoyiUI</code>的对话框建法)</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;el-dialog  :title=&quot;title&quot;    :visible.sync=&quot;open&quot; width=&quot;1500px&quot; append-to-body&gt; &lt;/el-dialog&gt;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>:title=&quot;title&quot;</code>：此属性设置对话框的标题。<code>title</code> 应该是你的 Vue 实例的 data 属性之一，用来存放对话框的标题。<code>:</code> 前缀表示这是一个动态属性，它的值会被解析为 JavaScript 表达式。</li>
+<li><code>:visible.sync=&quot;open&quot;</code>：此属性控制对话框的可见性。如果 <code>open</code> 是 <code>true</code>，对话框就会显示；如果 <code>open</code> 是 <code>false</code>，对话框就会隐藏。<code>.sync</code> 修饰符表示这个属性是双向绑定的：当对话框的可见性改变时，<code>open</code> 的值也会相应地改变（对话框自带的<code>×</code>）。</li>
+<li><code>width=&quot;1500px&quot;</code>：此属性设置对话框的宽度。在这个例子中，对话框的宽度被设置为 1500 像素。</li>
+<li><code>append-to-body</code>：此属性表示对话框将被附加到 <code>body</code> 元素。这可以防止对话框被其他 CSS 影响，确保它能正确地显示在其他元素之上。这是一个布尔属性，如果存在，其值就是 <code>true</code>。</li>
+</ul>
+<h1 id="方法4-如何获取当前行id？"><a href="#方法4-如何获取当前行id？" class="headerlink" title="方法4: 如何获取当前行id？"></a>方法4: 如何获取<code>当前行id</code>？</h1><p>面对这个问题我只想说，这可真是让我想的酣畅淋漓的一次啊，为什么这么说？先来看看我犯了什么错误把<br>首先，我当时一心只想着获取<code>当前行id</code>，但是却忽视了原表格是一个静态表格这个前提。所以我花了快一个小时，唉还好脑子转得快(快什么，要是快的话早想到了)突然意识到了，这是<code>一个静态表格</code>，我去哪里动态获取当前行？</p>
+<p>其次，因为脑子当时很热，一点思路也没有，所以就乱撞，白白荒废了时间。</p>
+<p>接下来，让我来整理获取当前行id的一个思路</p>
+<p>首先想，你要在哪一行操作，好的定位到这一行，要用<code>&lt;template&gt;&lt;/template&gt;</code>标签，具体写法如下:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&lt;el-table-column prop=&quot;selectPro&quot; label=&quot;查看项目&quot; width=&quot;208&quot;&gt;</span><br><span class="line"></span><br><span class="line"> &lt;template slot-scope=&quot;scope&quot;&gt;</span><br><span class="line"></span><br><span class="line">  &lt;el-button </span><br><span class="line"></span><br><span class="line">   class=&quot;ebtn1&quot; </span><br><span class="line"></span><br><span class="line">   style=&quot;color: white;&quot;</span><br><span class="line"></span><br><span class="line">   @click=&quot;getAllocationList(scope.row.groupId)&quot;</span><br><span class="line"></span><br><span class="line">   \&gt;查看&lt;/el-button&gt;</span><br><span class="line"></span><br><span class="line"> &lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;/el-table-column&gt;</span><br></pre></td></tr></table></figure>
+
+<p>比如我就是这一行要注意了，绑定点击事件的时候，必须加<code>scope.row.xxxx</code>其中的<code>xxxx</code>是你要<code>获取的什么什么id</code>，那么这样你就可以获取到当前行的id了</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">getAllocationList</span>(<span class="params">groupId</span>)&#123;</span><br><span class="line"></span><br><span class="line">   <span class="variable language_">console</span>.<span class="title function_">log</span>(groupId)</span><br><span class="line"></span><br><span class="line">   <span class="variable language_">this</span>.<span class="property">loading</span> = <span class="literal">true</span>;</span><br><span class="line"></span><br><span class="line">   <span class="title function_">alreadyAllocation</span>(groupId).<span class="title function_">then</span>(<span class="function"><span class="params">response</span> =&gt;</span>&#123;</span><br><span class="line"></span><br><span class="line">   <span class="variable language_">this</span>.<span class="property">alAllocationList</span> = response.<span class="property">rows</span>;</span><br><span class="line"></span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">total</span> = response.<span class="property">total</span>;</span><br><span class="line">   <span class="variable language_">this</span>.<span class="property">loading</span>=<span class="literal">false</span>;</span><br><span class="line"></span><br><span class="line">   &#125;)</span><br><span class="line"></span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+
+<p>可以在你所用的时间<code>console.log(groupId)</code>你获取的id然后查看控制台有没有对应的id输出，然后传递参数就可以了。</p>
+<p>你甚至还可以这么写</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">getAllocationList</span>(<span class="params">groupId</span>)&#123;</span><br><span class="line">	<span class="comment">// 输出传入的 groupId</span></span><br><span class="line">   <span class="variable language_">console</span>.<span class="title function_">log</span>(groupId)</span><br><span class="line">    <span class="comment">// 创建一个新对象，包含 groupId</span></span><br><span class="line">	<span class="keyword">const</span> params = &#123;groupId&#125;</span><br><span class="line">   <span class="variable language_">this</span>.<span class="property">loading</span> = <span class="literal">true</span>;</span><br><span class="line">	<span class="comment">//传递参数</span></span><br><span class="line">   <span class="title function_">alreadyAllocation</span>(params).<span class="title function_">then</span>(<span class="function"><span class="params">response</span> =&gt;</span>&#123;</span><br><span class="line"></span><br><span class="line">   <span class="variable language_">this</span>.<span class="property">alAllocationList</span> = response.<span class="property">rows</span>;</span><br><span class="line"></span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">total</span> = response.<span class="property">total</span>;</span><br><span class="line">   <span class="variable language_">this</span>.<span class="property">loading</span>=<span class="literal">false</span>;</span><br><span class="line"></span><br><span class="line">   &#125;)</span><br><span class="line"></span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+
+<p>也是可以的，ok今天就写这么多0.0</p>
+<h1 id="问题6-在传入参数时的错误"><a href="#问题6-在传入参数时的错误" class="headerlink" title="问题6:在传入参数时的错误"></a>问题6:在传入参数时的错误</h1><p>报错是这样对的</p>
+<p> <code>Error: nested exception is org.apache.ibatis.binding.BindingException: Parameter &#39;groupId&#39; not found. Available parameters are [arg1, arg0, param1, param2]</code> 翻译一下就是</p>
+<p><code>错误：嵌套异常是 org.apache.ibatis.binding.BindingException：找不到参数“groupId”。可用参数为 [arg1， arg0， param1， param2]</code></p>
+<p>这是我传入参数的函数</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">getAllocationList</span>(<span class="params">row</span>)&#123;</span><br><span class="line"></span><br><span class="line">   <span class="keyword">const</span> proTrack = <span class="variable language_">this</span>.<span class="property">Track</span>;</span><br><span class="line"></span><br><span class="line">   <span class="keyword">const</span> groupId=row.<span class="property">groupId</span>;</span><br><span class="line"></span><br><span class="line">   <span class="keyword">const</span> groupName=row.<span class="property">groupName</span>;</span><br><span class="line"></span><br><span class="line">   <span class="variable language_">this</span>.<span class="property">loading</span> = <span class="literal">true</span>;</span><br><span class="line"></span><br><span class="line">   <span class="title function_">alreadyAllocation</span>(groupId,proTrack).<span class="title function_">then</span>(<span class="function"><span class="params">response</span> =&gt;</span>&#123;</span><br><span class="line"></span><br><span class="line">​    <span class="variable language_">this</span>.<span class="property">alAllocationList</span> = response.<span class="property">data</span>;</span><br><span class="line"></span><br><span class="line">​    <span class="comment">// console.log(this.alAllocationList)</span></span><br><span class="line"></span><br><span class="line">​    <span class="variable language_">this</span>.<span class="title function_">sendArrayToParent</span>(<span class="variable language_">this</span>.<span class="property">alAllocationList</span>);</span><br><span class="line"></span><br><span class="line">​    <span class="variable language_">this</span>.<span class="title function_">sendArrayToParent2</span>(groupName);</span><br><span class="line"></span><br><span class="line">​    <span class="comment">// console.log(tableList);</span></span><br><span class="line"></span><br><span class="line">​    <span class="variable language_">this</span>.<span class="property">total</span> = response.<span class="property">total</span>;</span><br><span class="line"></span><br><span class="line">​    <span class="variable language_">this</span>.<span class="property">loading</span>=<span class="literal">false</span>;</span><br><span class="line"></span><br><span class="line">   &#125;)</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+
+<p>这是js里面对应的接口</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">function</span> <span class="title function_">alreadyAllocation</span>(<span class="params">groupId,proTrack</span>)&#123;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> <span class="title function_">request</span>(&#123;</span><br><span class="line"></span><br><span class="line">​    <span class="attr">url</span>:  <span class="string">&#x27;/project/csxmfp/group/&#x27;</span> + groupId +<span class="string">&#x27;/&#x27;</span>+ proTrack,</span><br><span class="line"></span><br><span class="line">​    <span class="attr">method</span>: <span class="string">&#x27;get&#x27;</span></span><br><span class="line"></span><br><span class="line">  &#125;)</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>报错问题是<code>gruopId</code>找不到，可用参数给出了<code>[arg1, arg0, param1, param2]</code> 这四个参数，这时我就在想，那是不是传入的参数得用这四个中的几个呢？于是我检查了后端，在处理器(proAllocationController)中打印了我从前端带过来的两个参数</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 通过赛道名称和小组获取参赛项目分配详细信息</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@PreAuthorize(&quot;@ss.hasPermi(&#x27;project:csxmfp:querybygroupId&#x27;)&quot;)</span></span><br><span class="line">    <span class="meta">@GetMapping(value = &quot;group/&#123;groupId&#125;/&#123;trackName&#125;&quot;)</span></span><br><span class="line">    <span class="keyword">public</span> AjaxResult <span class="title function_">getInfoByGroupId</span><span class="params">(<span class="meta">@PathVariable(&quot;groupId&quot;)</span> Long groupId,<span class="meta">@PathVariable(&quot;trackName&quot;)</span> String trackName)</span></span><br><span class="line">    &#123;</span><br><span class="line">        System.out.println(groupId);</span><br><span class="line">        System.out.println(<span class="string">&quot;aaaa&quot;</span>+trackName);</span><br><span class="line">        <span class="keyword">return</span> success(proAllocationService.selectGroupProjectByGroupId(groupId,trackName));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>控制台输出</p>
+<p><img src="/C:/Users\48531\OneDrive\桌面\hexo-blog\source_posts\开发-基于ruoyiui-笔记\image-20240403220611894.png" alt="image-20240403220611894"></p>
+<p>可以看到控制台是有<code>groupId</code>的输出<code>1</code>这就是说拿到了前端数据那为什么后端确说我没有定义呢？检查xml文件</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">&quot;selectGroupProjectByGroupId&quot;</span> <span class="attr">parameterType</span>=<span class="string">&quot;GroupProject&quot;</span> <span class="attr">resultMap</span>=<span class="string">&quot;GroupProjectresultMap&quot;</span>&gt;</span></span><br><span class="line">    SELECT</span><br><span class="line">        pro_details3.pro_id,</span><br><span class="line">        pro_details3.pro_name,</span><br><span class="line">        pro_details3.pro_logo,</span><br><span class="line">        pro_details3.pro_track,</span><br><span class="line">        pro_details3.pro_group_id</span><br><span class="line">    FROM</span><br><span class="line">        pro_details3</span><br><span class="line">            INNER JOIN</span><br><span class="line">        pro_mapping_group ON pro_details3.pro_id = pro_mapping_group.pro_id</span><br><span class="line">    <span class="tag">&lt;<span class="name">where</span>&gt;</span></span><br><span class="line">        pro_mapping_group.group_id = #&#123;group_id&#125;</span><br><span class="line"></span><br><span class="line">       <span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;proTrack != &#x27;null&#x27; and proTrack != &#x27;&#x27; and arg1!= null&quot;</span>&gt;</span> and pro_details3.pro_track = #&#123;proTrack&#125;<span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">where</span>&gt;</span></span><br><span class="line">    ORDER BY</span><br><span class="line">        pro_details3.pro_id;</span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>于是就想到会不会是参数的传递问题呢？于是我就尝试用<code>arg0</code>代替<code>groupId</code>，用<code>age1</code>代替了<code>proTrack</code>,下面是更新完xml文件</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">&quot;selectGroupProjectByGroupId&quot;</span> <span class="attr">parameterType</span>=<span class="string">&quot;GroupProject&quot;</span> <span class="attr">resultMap</span>=<span class="string">&quot;GroupProjectresultMap&quot;</span>&gt;</span></span><br><span class="line">    SELECT</span><br><span class="line">        pro_details3.pro_id,</span><br><span class="line">        pro_details3.pro_name,</span><br><span class="line">        pro_details3.pro_logo,</span><br><span class="line">        pro_details3.pro_track,</span><br><span class="line">        pro_details3.pro_group_id</span><br><span class="line">    FROM</span><br><span class="line">        pro_details3</span><br><span class="line">            INNER JOIN</span><br><span class="line">        pro_mapping_group ON pro_details3.pro_id = pro_mapping_group.pro_id</span><br><span class="line">    <span class="tag">&lt;<span class="name">where</span>&gt;</span></span><br><span class="line">        pro_mapping_group.group_id = #&#123;arg0&#125;</span><br><span class="line"></span><br><span class="line">       <span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;arg1 != &#x27;null&#x27; and arg1 != &#x27;&#x27; and arg1!= null&quot;</span>&gt;</span> and pro_details3.pro_track = #&#123;arg1&#125;<span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">where</span>&gt;</span></span><br><span class="line">    ORDER BY</span><br><span class="line">        pro_details3.pro_id;</span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>运行代码，成功传递了数据，问题解决了。你要是问我为什么这样做，其实我也不清楚，但是通过报错信息给出了<code>可用的</code>四个参数，所以说有错误还是要从报错信息入手啊 </p>
+ 
+      <!-- reward -->
+      
+      <div id="reword-out">
+        <div id="reward-btn">
+          Donate
+        </div>
+      </div>
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <div class="declare">
+      <ul class="post-copyright">
+        <li>
+          <i class="ri-copyright-line"></i>
+          <strong>Copyright： </strong>
+          
+          Copyright is owned by the author. For commercial reprints, please contact the author for authorization. For non-commercial reprints, please indicate the source.
+          
+        </li>
+      </ul>
+    </div>
+    
+    <footer class="article-footer">
+       
+<div class="share-btn">
+      <span class="share-sns share-outer">
+        <i class="ri-share-forward-line"></i>
+        分享
+      </span>
+      <div class="share-wrap">
+        <i class="arrow"></i>
+        <div class="share-icons">
+          
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="ri-weibo-fill"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="ri-wechat-fill"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="ri-qq-fill"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="ri-douban-line"></i>
+          </a>
+          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a> -->
+          
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="ri-facebook-circle-fill"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="ri-twitter-fill"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="ri-google-fill"></i>
+          </a>
+        </div>
+      </div>
+</div>
+
+<div class="wx-share-modal">
+    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2024/03/21/%E5%BC%80%E5%8F%91-%E5%9F%BA%E4%BA%8Eruoyiui-%E7%AC%94%E8%AE%B0/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div id="share-mask"></div>  
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java%E5%92%8Cvue%E5%BC%80%E5%8F%91%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E9%94%99%E8%AF%AF%E4%BB%A5%E5%8F%8A%E5%A6%82%E4%BD%95%E6%94%B9%E6%AD%A3%E5%92%8C%E5%AF%B9%E4%BB%96%E4%BB%AC%E7%9A%84%E7%90%86%E8%A7%A3%E6%95%B4%E7%90%86-%E5%8F%82%E5%8A%A0%E7%9A%84%E9%A1%B9%E7%9B%AE/" rel="tag">java和vue开发中遇到的错误以及如何改正和对他们的理解整理(参加的项目)</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+  <nav class="article-nav">
+    
+      <a href="/2024/03/30/%E8%AE%B0%E5%BD%95Hadoop%E4%B8%ADHDFS%E5%91%BD%E4%BB%A4%E7%BB%9F%E8%AE%A1%E8%AF%8D%E9%A2%91%E9%94%99%E8%AF%AF/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            记录Hadoop中HDFS命令统计词频错误
+          
+        </div>
+      </a>
+    
+    
+      <a href="/2023/12/10/SpingCloud%E5%AD%A6%E4%B9%A0/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">SpingCloud学习</div>
+      </a>
+    
+  </nav>
+
+  
+   
+  
+   
+    <script src="https://cdn.staticfile.org/twikoo/1.4.18/twikoo.all.min.js"></script>
+    <div id="twikoo" class="twikoo"></div>
+    <script>
+        twikoo.init({
+            envId: ""
+        })
+    </script>
+ 
+</article>
+
+</section>
+      <footer class="footer">
+  <div class="outer">
+    <ul>
+      <li>
+        Copyrights &copy;
+        2015-2024
+        <i class="ri-heart-fill heart_icon"></i> John Doe
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+        
+        <span>
+  <span><i class="ri-user-3-fill"></i>Visitors:<span id="busuanzi_value_site_uv"></span></span>
+  <span class="division">|</span>
+  <span><i class="ri-eye-fill"></i>Views:<span id="busuanzi_value_page_pv"></span></span>
+</span>
+        
+      </li>
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      <li>
+        <!-- cnzz统计 -->
+        
+        <script type="text/javascript" src='https://s9.cnzz.com/z_stat.php?id=1278069914&amp;web_id=1278069914'></script>
+        
+      </li>
+    </ul>
+  </div>
+</footer>    
+    </main>
+    <div class="float_btns">
+      <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+    </div>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/ayer-side.svg" alt="Hexo"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">归档</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories">分类</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">标签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags/%E6%97%85%E8%A1%8C/">旅行</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" target="_blank" rel="noopener" href="http://shenyu-vip.lofter.com">摄影</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/friends">友链</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/2019/about">关于我</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="Search">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+        <i class="ri-rss-line"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/alipay.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/wechat.jpg">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-3.6.0.min.js"></script>
+ 
+<script src="/js/lazyload.min.js"></script>
+
+<!-- Tocbot -->
+ 
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  tocbot.init({
+    tocSelector: ".tocbot",
+    contentSelector: ".article-entry",
+    headingSelector: "h1, h2, h3, h4, h5, h6",
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: "main",
+    positionFixedSelector: ".tocbot",
+    positionFixedClass: "is-position-fixed",
+    fixedSidebarOffset: "auto",
+  });
+</script>
+
+<script src="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.css"
+/>
+<script src="https://cdn.staticfile.org/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
+
+<!-- ImageViewer -->
+ <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/default-skin/default-skin.min.css">
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.js"></script>
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script> 
+<!-- MathJax -->
+
+<!-- Katex -->
+
+<!-- busuanzi  -->
+ 
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+ 
+<!-- ClickLove -->
+
+<!-- ClickBoom1 -->
+
+<!-- ClickBoom2 -->
+
+<!-- CodeCopy -->
+ 
+<link rel="stylesheet" href="/css/clipboard.css">
+ <script src="https://cdn.staticfile.org/clipboard.js/2.0.10/clipboard.min.js"></script>
+<script>
+  function wait(callback, seconds) {
+    var timelag = null;
+    timelag = window.setTimeout(callback, seconds);
+  }
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="ri-file-copy-2-line"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      $(".article pre code").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copied');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-checkbox-circle-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPIED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-checkbox-circle-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-time-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-time-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+    }
+    initCopyCode();
+  }(window, document);
+</script>
+ 
+<!-- CanvasBackground -->
+
+<script>
+  if (window.mermaid) {
+    mermaid.initialize({ theme: "forest" });
+  }
+</script>
+
+
+    
+    
+
+  </div>
+</body>
+
+</html>
