@@ -217,7 +217,7 @@
 <p><img src="/./Springboot%E6%A8%A1%E5%9D%97%E5%AD%A6%E4%B9%A02/image-20231206213139508.png" alt="image-20231206213139508"></p>
 <p>成功访问到其他类的Bean！</p>
 <h3 id="4-Import注解"><a href="#4-Import注解" class="headerlink" title="4)@Import注解"></a>4)@Import注解</h3><p>Import注解有4种用法:</p>
-<figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">* <span class="number">1.</span>直接导入Bean:@<span class="keyword">Import</span>(<span class="keyword">User</span>.<span class="keyword">class</span>)Bean名字</span><br><span class="line">* <span class="number">2.</span>导入配置类:@<span class="keyword">Import</span>(UserConfig.<span class="keyword">class</span>)配置类名字</span><br><span class="line">* <span class="number">3.</span>导入ImportSelector的实现类</span><br><span class="line">* <span class="number">4.</span>导入ImportBeanDefinitionRegistrar实现类</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">* 1.直接导入Bean:@Import(User.class)Bean名字</span><br><span class="line">* 2.导入配置类:@Import(UserConfig.class)配置类名字</span><br><span class="line">* 3.导入ImportSelector的实现类</span><br><span class="line">* 4.导入ImportBeanDefinitionRegistrar实现类</span><br></pre></td></tr></table></figure>
 
 <h3 id="5-EnableAutoConfiguration注解"><a href="#5-EnableAutoConfiguration注解" class="headerlink" title="5)@EnableAutoConfiguration注解"></a>5)@EnableAutoConfiguration注解</h3><p><img src="/./Springboot%E6%A8%A1%E5%9D%97%E5%AD%A6%E4%B9%A02/image-20231209133911053.png" alt="image-20231209133911053"></p>
 <h3 id="6-自定义stater案例"><a href="#6-自定义stater案例" class="headerlink" title="6)自定义stater案例"></a>6)自定义stater案例</h3><p><img src="/./Springboot%E6%A8%A1%E5%9D%97%E5%AD%A6%E4%B9%A02/image-20231209163725826.png" alt="image-20231209163725826"></p>
@@ -236,7 +236,7 @@
 <p>关于health信息，初次访问只会显示一个内容</p>
 <p><img src="/./Springboot%E6%A8%A1%E5%9D%97%E5%AD%A6%E4%B9%A02/image-20231209183119864.png" alt="image-20231209183119864"></p>
 <p>如果你想开启有关健康方面的所有内容，需要在配置文件中配置上如下内容</p>
-<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">management.endpoint.health.show-details</span>=always</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">management.endpoint.health.show-details=always</span><br></pre></td></tr></table></figure>
 
 <p>即可！</p>
 <p><img src="/./Springboot%E6%A8%A1%E5%9D%97%E5%AD%A6%E4%B9%A02/image-20231209183221189.png" alt="image-20231209183221189"></p>
@@ -423,11 +423,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">java和vue开发中遇到的错误以及如何改正和对他们的理解整理</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Linux Error</a>
+                <a href="javascript:void(0)" class="js-tag color3">练习题，面试题</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -439,11 +435,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">学习路线</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">练习题，面试题</a>
+                <a href="javascript:void(0)" class="js-tag color2">Linux Error</a>
               </li>
             
             <div class="clearfix"></div>
