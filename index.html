@@ -342,7 +342,19 @@
 
 <h3 id="（6）HashSet"><a href="#（6）HashSet" class="headerlink" title="（6）HashSet"></a>（6）HashSet</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.itheima.List;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.HashSet;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">HashSetTest</span>  &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="comment">//HashSet:Hash + Set</span></span><br><span class="line">        <span class="comment">//Hash：哈希算法，散列(无序)</span></span><br><span class="line">        <span class="comment">//ArrayList：数组</span></span><br><span class="line">        <span class="comment">//LinkedList：</span></span><br><span class="line">        <span class="type">HashSet</span> <span class="variable">hashSet</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">HashSet</span>();</span><br><span class="line"></span><br><span class="line">        <span class="comment">//todo 增加数据</span></span><br><span class="line">        hashSet.add(<span class="string">&quot;lisi&quot;</span>);</span><br><span class="line">        hashSet.add(<span class="string">&quot;zhangsan&quot;</span>);</span><br><span class="line">        hashSet.add(<span class="string">&quot;wangwu&quot;</span>);</span><br><span class="line">        <span class="comment">// todo 修改数据(先删除，在增加)</span></span><br><span class="line">        hashSet.remove(<span class="string">&quot;zhangsan&quot;</span>);</span><br><span class="line">        hashSet.add(<span class="string">&quot;xiaoli&quot;</span>);</span><br><span class="line">        <span class="comment">//todo 遍历数据</span></span><br><span class="line">        <span class="keyword">for</span> (Object obj : hashSet)&#123;</span><br><span class="line">            System.out.println(obj);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// todo 转换成数组</span></span><br><span class="line">        Object[] objects = hashSet.toArray();</span><br><span class="line">        System.out.println(hashSet);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h1 id="第二章"><a href="#第二章" class="headerlink" title="第二章"></a>第二章</h1><h2 id="1、标识符的命名规则"><a href="#1、标识符的命名规则" class="headerlink" title="1、标识符的命名规则"></a>1、标识符的命名规则</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">/ /T0D0标识符得命名规则</span><br><span class="line"></span><br><span class="line"><span class="comment">//1．英文拉丁字母</span></span><br><span class="line"></span><br><span class="line">/ / wx , qq</span><br><span class="line"></span><br><span class="line"><span class="type">String</span> <span class="variable">username</span> <span class="operator">=</span> <span class="string">&quot;zhangsan&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">String</span> <span class="variable">xingming</span> <span class="operator">=</span> <span class="string">&quot;lisi&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 2．符号</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//@，#，%，$</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//3.标识符只能采用下划线和美元$符号，其他符号不能使用，称之为特殊符号</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//4.空格属于特殊符号，所以也不能作为标识符使用</span></span><br><span class="line"></span><br><span class="line"><span class="type">String</span> <span class="variable">_name</span> <span class="operator">=</span> <span class="string">&quot;wangwu&quot;</span>;</span><br><span class="line"><span class="type">String</span> <span class="variable">$name</span> <span class="operator">=</span> <span class="string">&quot;wangwu&quot;</span> ;</span><br><span class="line"><span class="type">String</span> <span class="variable">$na_me</span> <span class="operator">=</span> <span class="string">&quot;wangwu&quot;</span>;</span><br><span class="line">system.out.println(_name);</span><br><span class="line">system.out.println($name);</span><br><span class="line">system.out.println($na_me);</span><br><span class="line"><span class="comment">//5.阿拉伯数据0到9可以作为标识符使用，但是不能开头	</span></span><br><span class="line"><span class="comment">//数字如果在标识符得开头位置，那么会被识别为数字，而不是标识符，所以会发生错误</span></span><br><span class="line"><span class="comment">//String 1name = &quot;zhangsan&quot;;</span></span><br><span class="line"><span class="type">String</span> <span class="variable">name1</span> <span class="operator">=</span> <span class="string">&quot;zhangsan&quot;</span>;</span><br><span class="line"><span class="comment">//6.标识符区分大小写</span></span><br><span class="line"><span class="type">String</span> <span class="variable">Public</span> <span class="operator">=</span> <span class="string">&quot;zhaoliu&quot;</span>;</span><br><span class="line"><span class="comment">//7.驼峰命名法</span></span><br><span class="line"><span class="type">String</span> <span class="variable">userName</span> <span class="operator">=</span> <span class="string">&quot;小李&quot;</span>;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h4 id="HashSet处理重复数据"><a href="#HashSet处理重复数据" class="headerlink" title="HashSet处理重复数据"></a>HashSet处理重复数据</h4><p>重写equals和hashcode方法</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.itheima.List;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.HashSet;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">HashSetTestForNum</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="comment">//HashSet的底层是：数组 + 链表 结构</span></span><br><span class="line">        <span class="type">HashSet</span> <span class="variable">hashSet</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">HashSet</span>();</span><br><span class="line">        <span class="type">User1</span> <span class="variable">user1</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">User1</span>();</span><br><span class="line">        <span class="type">User1</span> <span class="variable">user2</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">User1</span>();</span><br><span class="line">        <span class="type">User1</span> <span class="variable">user3</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">User1</span>();</span><br><span class="line">        user1.id=<span class="number">1001</span>;</span><br><span class="line">        user1.name=<span class="string">&quot;zhangsan&quot;</span>;</span><br><span class="line">        user2.id=<span class="number">1001</span>;</span><br><span class="line">        user2.name=<span class="string">&quot;zhangsan&quot;</span>;</span><br><span class="line">        user3.id=<span class="number">1002</span>;</span><br><span class="line">        user3.name=<span class="string">&quot;lisi&quot;</span>;</span><br><span class="line"></span><br><span class="line">        hashSet.add(user1);</span><br><span class="line">        hashSet.add(user2);</span><br><span class="line">        hashSet.add(user3);</span><br><span class="line">        System.out.println(hashSet);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">User1</span>&#123;</span><br><span class="line">    <span class="keyword">public</span> String name;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> id;</span><br><span class="line">    <span class="comment">//重写hashcode方法和equals</span></span><br><span class="line">    <span class="comment">//类似于内存地址</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">hashCode</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> id;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">equals</span><span class="params">(Object obj)</span> &#123;</span><br><span class="line">        <span class="keyword">if</span>(obj <span class="keyword">instanceof</span> User1)&#123;</span><br><span class="line">            <span class="type">User1</span> <span class="variable">testObj</span> <span class="operator">=</span> (User1) obj;</span><br><span class="line">            <span class="keyword">if</span>(testObj.id == <span class="built_in">this</span>.id)&#123;</span><br><span class="line">                <span class="keyword">if</span>(testObj.name.equals(<span class="built_in">this</span>.name))&#123;</span><br><span class="line">                    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">toString</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;User&#123;&quot;</span> +</span><br><span class="line">                <span class="string">&quot;id=&#x27;&quot;</span> + id + <span class="string">&#x27;\&#x27;&#x27;</span> +</span><br><span class="line">                <span class="string">&quot;, name=&quot;</span> + name +</span><br><span class="line">                <span class="string">&#x27;&#125;&#x27;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="7-Queue接口"><a href="#7-Queue接口" class="headerlink" title="(7)Queue接口"></a>(7)Queue接口</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.itheima.Queue;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.concurrent.ArrayBlockingQueue;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">TestQueue</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> Exception&#123;</span><br><span class="line">        <span class="comment">//todo 了解我们的Queue</span></span><br><span class="line">        <span class="comment">//      ArrayBlockingQueue = Array(数组) + Blocking(阻塞，等待)</span></span><br><span class="line">        <span class="comment">//      所以queue底层还是数组</span></span><br><span class="line">        <span class="type">ArrayBlockingQueue</span> <span class="variable">queue</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ArrayBlockingQueue</span>(<span class="number">3</span>);</span><br><span class="line">        <span class="comment">//添加数据</span></span><br><span class="line">        queue.add(<span class="string">&quot;zhangsan&quot;</span>);</span><br><span class="line">        queue.add(<span class="string">&quot;lisi&quot;</span>);</span><br><span class="line">        queue.add(<span class="string">&quot;wangwu&quot;</span>);</span><br><span class="line">        <span class="comment">//由于我长度只给了3，所以只能存三个数据，下面这个数据无法存储,报错  Queue full，代表queue存满了</span></span><br><span class="line"><span class="comment">//        queue.add(&quot;xiaoli&quot;);</span></span><br><span class="line">        <span class="comment">//添加数据(put)方法，该方法能够体现出阻塞这一概念，当我添加的数据大于长度时，程序会继续运行，不会停止</span></span><br><span class="line"><span class="comment">//        queue.put(&quot;zhangsan&quot;);</span></span><br><span class="line"><span class="comment">//        queue.put(&quot;lisi&quot;);</span></span><br><span class="line"><span class="comment">//        queue.put(&quot;wangwu&quot;);</span></span><br><span class="line">        <span class="comment">//添加数据offer方法，该方法会返回一个布尔类型的值，添加成功返回true，添加失败(超出queue存储长度)返回false</span></span><br><span class="line"><span class="comment">//        boolean zhangsan = queue.offer(&quot;zhangsan&quot;);</span></span><br><span class="line"><span class="comment">//        boolean lisi = queue.offer(&quot;lisi&quot;);</span></span><br><span class="line"><span class="comment">//        boolean wangwu = queue.offer(&quot;wangwu&quot;);</span></span><br><span class="line"><span class="comment">//        System.out.println(zhangsan);</span></span><br><span class="line"><span class="comment">//        System.out.println(lisi);</span></span><br><span class="line"><span class="comment">//        System.out.println(wangwu);</span></span><br><span class="line">        <span class="comment">//拿取数据(poll方法)</span></span><br><span class="line"><span class="comment">//        System.out.println(queue.poll());</span></span><br><span class="line"><span class="comment">//        System.out.println(queue.poll());</span></span><br><span class="line"><span class="comment">//        System.out.println(queue.poll());</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">//拿取数据(take方法),当我去一个不存在的数据时，不会报错，程序不会结束，体现了一个等待，阻塞的过程</span></span><br><span class="line">        System.out.println(queue.take());</span><br><span class="line">        System.out.println(queue.take());</span><br><span class="line">        System.out.println(queue.take());</span><br><span class="line"></span><br><span class="line">        System.out.println(queue);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="8-HashMap-处理键值对数据-K-V"><a href="#8-HashMap-处理键值对数据-K-V" class="headerlink" title="(8)HashMap(处理键值对数据(K,V))"></a>(8)HashMap(处理键值对数据(K,V))</h3><p>数据存储无序</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.itheima.HashMap;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">TestHashMap</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="comment">//HashMap = Hash + Map</span></span><br><span class="line">        <span class="comment">//todo 处理键值对&#123;K=V&#125;</span></span><br><span class="line">        <span class="comment">//创建HashMap对象</span></span><br><span class="line">        HashMap&lt;String,String&gt; map = <span class="keyword">new</span> <span class="title class_">HashMap</span>();</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="comment">//添加数据put方法,当put传入的键相同时，相当于修改操作，返回被修改的值</span></span><br><span class="line">        map.put(<span class="string">&quot;zhangsan&quot;</span>,<span class="string">&quot;1&quot;</span>);</span><br><span class="line">        System.out.println(map.put(<span class="string">&quot;zhangsan&quot;</span>, <span class="string">&quot;2&quot;</span>));<span class="comment">//返回1，并且zhangsan键对应的value值被改为了2</span></span><br><span class="line">        map.put(<span class="string">&quot;lisi&quot;</span>,<span class="string">&quot;2&quot;</span>);</span><br><span class="line">        map.put(<span class="string">&quot;wangwu&quot;</span>,<span class="string">&quot;3&quot;</span>);</span><br><span class="line">        System.out.println(map);</span><br><span class="line">        <span class="comment">//todo 查询数据(返回被删除的键对应的value值)</span></span><br><span class="line">        System.out.println(map.get(<span class="string">&quot;zhangsan&quot;</span>));</span><br><span class="line">        <span class="comment">//todo 删除数据</span></span><br><span class="line">        map.remove(<span class="string">&quot;zhangsan&quot;</span>);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="comment">//todo 添加数据putIfAbsent方法，这个方法会检查该map里面有没有这个键值，如果有，则不做任何操作，如果没有则插入数据</span></span><br><span class="line">        map.putIfAbsent(<span class="string">&quot;Xiaoli&quot;</span>,<span class="string">&quot;4&quot;</span>);</span><br><span class="line">        map.putIfAbsent(<span class="string">&quot;lisi&quot;</span>,<span class="string">&quot;2&quot;</span>);</span><br><span class="line">        <span class="comment">//todo 修改数据replace方法</span></span><br><span class="line">        map.replace(<span class="string">&quot;Xiaoli&quot;</span>,<span class="string">&quot;8&quot;</span>);</span><br><span class="line">        <span class="comment">//todo 清空</span></span><br><span class="line"><span class="comment">//        map.clear();</span></span><br><span class="line">        <span class="comment">//todo 获取map集合中所有的key</span></span><br><span class="line">        <span class="type">Set</span> <span class="variable">setKey</span> <span class="operator">=</span> map.keySet();</span><br><span class="line"><span class="comment">//        for(Object i : setKey)&#123;</span></span><br><span class="line"><span class="comment">//            System.out.println(map.get(i));</span></span><br><span class="line"><span class="comment">//        &#125;</span></span><br><span class="line">        <span class="comment">//todo 获取所有的值</span></span><br><span class="line">        <span class="type">Collection</span> <span class="variable">value</span> <span class="operator">=</span> map.values();</span><br><span class="line">        System.out.println(value);</span><br><span class="line">        <span class="comment">//判断集合中包含某个指定的value值</span></span><br><span class="line">        System.out.println(map.containsValue(<span class="string">&quot;1&quot;</span>));</span><br><span class="line">        System.out.println(map);</span><br><span class="line">        <span class="comment">//todo 获取键值对对象</span></span><br><span class="line">        Set&lt;Map.Entry&lt;String, String&gt;&gt; entries = map.entrySet();</span><br><span class="line">        <span class="keyword">for</span> (Map.Entry&lt;String, String&gt; entry : entries) &#123;</span><br><span class="line">            System.out.println(entry.getKey()+<span class="string">&quot;=&quot;</span>+ entry.getValue());</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="9-HashTable"><a href="#9-HashTable" class="headerlink" title="(9)HashTable"></a>(9)HashTable</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.itheima.HashTable;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">TestHashTable</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="comment">//todo HashTable</span></span><br><span class="line">        <span class="comment">//  HashTable底层容量默认11</span></span><br><span class="line">        <span class="comment">//  HashTable的K,V不可以为null值</span></span><br><span class="line">        <span class="comment">//  HashTable使用的是HashCode</span></span><br><span class="line">        <span class="comment">//基本操作和HashMap一致(第(8)小节内容)</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="10-迭代器"><a href="#10-迭代器" class="headerlink" title="(10)迭代器"></a>(10)迭代器</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.itheima.HashTable;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.HashMap;</span><br><span class="line"><span class="keyword">import</span> java.util.HashSet;</span><br><span class="line"><span class="keyword">import</span> java.util.Iterator;</span><br><span class="line"><span class="keyword">import</span> java.util.Set;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">DieDaiQi</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        HashMap&lt;String, Integer&gt; map = <span class="keyword">new</span> <span class="title class_">HashMap</span>&lt;String,Integer&gt;();</span><br><span class="line">        map.put(<span class="string">&quot;a&quot;</span>,<span class="number">1</span>);</span><br><span class="line">        map.put(<span class="string">&quot;b&quot;</span>,<span class="number">2</span>);</span><br><span class="line">        map.put(<span class="string">&quot;c&quot;</span>,<span class="number">3</span>);</span><br><span class="line">        <span class="comment">//todo 获取map集合当中的key值，返回key值的集合</span></span><br><span class="line">        Set&lt;String&gt; setKeys = map.keySet();</span><br><span class="line"></span><br><span class="line">        <span class="comment">//TODO 使用迭代器对集合map进行处理</span></span><br><span class="line">        <span class="comment">//todo 创建迭代器对象(iterator)</span></span><br><span class="line">        Iterator&lt;String&gt; iterator = setKeys.iterator();</span><br><span class="line">        <span class="comment">//hasNext用于判断是否存在下一条数据</span></span><br><span class="line">        <span class="keyword">while</span> (iterator.hasNext())&#123;</span><br><span class="line">            <span class="comment">//获取下一条数据</span></span><br><span class="line">            <span class="type">String</span> <span class="variable">key</span> <span class="operator">=</span> iterator.next();</span><br><span class="line">            <span class="keyword">if</span>(<span class="string">&quot;b&quot;</span>.equals(key))&#123;</span><br><span class="line">                iterator.remove();</span><br><span class="line">            &#125;</span><br><span class="line">            System.out.println(map);</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(map);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="11-工具类"><a href="#11-工具类" class="headerlink" title="(11)工具类"></a>(11)工具类</h3><h1 id="第二章"><a href="#第二章" class="headerlink" title="第二章"></a>第二章</h1><h2 id="1、标识符的命名规则"><a href="#1、标识符的命名规则" class="headerlink" title="1、标识符的命名规则"></a>1、标识符的命名规则</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">/ /T0D0标识符得命名规则</span><br><span class="line"></span><br><span class="line"><span class="comment">//1．英文拉丁字母</span></span><br><span class="line"></span><br><span class="line">/ / wx , qq</span><br><span class="line"></span><br><span class="line"><span class="type">String</span> <span class="variable">username</span> <span class="operator">=</span> <span class="string">&quot;zhangsan&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">String</span> <span class="variable">xingming</span> <span class="operator">=</span> <span class="string">&quot;lisi&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 2．符号</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//@，#，%，$</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//3.标识符只能采用下划线和美元$符号，其他符号不能使用，称之为特殊符号</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//4.空格属于特殊符号，所以也不能作为标识符使用</span></span><br><span class="line"></span><br><span class="line"><span class="type">String</span> <span class="variable">_name</span> <span class="operator">=</span> <span class="string">&quot;wangwu&quot;</span>;</span><br><span class="line"><span class="type">String</span> <span class="variable">$name</span> <span class="operator">=</span> <span class="string">&quot;wangwu&quot;</span> ;</span><br><span class="line"><span class="type">String</span> <span class="variable">$na_me</span> <span class="operator">=</span> <span class="string">&quot;wangwu&quot;</span>;</span><br><span class="line">system.out.println(_name);</span><br><span class="line">system.out.println($name);</span><br><span class="line">system.out.println($na_me);</span><br><span class="line"><span class="comment">//5.阿拉伯数据0到9可以作为标识符使用，但是不能开头	</span></span><br><span class="line"><span class="comment">//数字如果在标识符得开头位置，那么会被识别为数字，而不是标识符，所以会发生错误</span></span><br><span class="line"><span class="comment">//String 1name = &quot;zhangsan&quot;;</span></span><br><span class="line"><span class="type">String</span> <span class="variable">name1</span> <span class="operator">=</span> <span class="string">&quot;zhangsan&quot;</span>;</span><br><span class="line"><span class="comment">//6.标识符区分大小写</span></span><br><span class="line"><span class="type">String</span> <span class="variable">Public</span> <span class="operator">=</span> <span class="string">&quot;zhaoliu&quot;</span>;</span><br><span class="line"><span class="comment">//7.驼峰命名法</span></span><br><span class="line"><span class="type">String</span> <span class="variable">userName</span> <span class="operator">=</span> <span class="string">&quot;小李&quot;</span>;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 <h2 id="2、数据存储单位"><a href="#2、数据存储单位" class="headerlink" title="2、数据存储单位"></a>2、数据存储单位</h2><p>1.比特(bit位)：数据运算的最小存储单位。</p>
 <p>2.字节(byte)：数据的最小存储单位。</p>
@@ -406,11 +418,11 @@
 <p>​			初始化表达式实际上是对条件表达式中用到的变量进行初始化，循环体内容执行完毕后，会重新进行条件判断，如果判断为ture则会继续执行循环体内容。</p>
 <p><code>小练习:九层妖塔</code></p>
 <p>请在控制台输出打印如下</p>
-<p><img src="/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%5Cimage-20240414160246249.png" alt="image-20240414160246249"></p>
+<p><img src="/2024/04/08/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%5Cimage-20240414160246249.png" alt="image-20240414160246249"></p>
 <p>代码如下:</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>;i&lt;<span class="number">9</span>;i++)&#123;</span><br><span class="line"><span class="comment">//完成打印但是打印出来的是全部对齐的，并未达到要求</span></span><br><span class="line">    <span class="comment">//下面打印空格因为最后一行不用输出空格所以我们只打印8层就可以，按照规律每层打印的空格数=8-层号</span></span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">0</span>;j&lt;<span class="number">8</span>-i;j++)&#123;</span><br><span class="line">System.out.print(<span class="string">&quot; &quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">0</span>;j&lt;i*<span class="number">2</span>+<span class="number">1</span>;j++)&#123;</span><br><span class="line">		System.out.print(<span class="string">&quot;*&quot;</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	System.out.println(<span class="string">&quot; &quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p><img src="/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%5Cimage-20240414161235302.png" alt="image-20240414161235302"></p>
+<p><img src="/2024/04/08/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%5Cimage-20240414161235302.png" alt="image-20240414161235302"></p>
 <h1 id="第三章-面向对象"><a href="#第三章-面向对象" class="headerlink" title="第三章 面向对象"></a>第三章 面向对象</h1><h2 id="1）什么是面向对象？"><a href="#1）什么是面向对象？" class="headerlink" title="1）什么是面向对象？"></a>1）什么是面向对象？</h2><p>所谓面向对象，其实就是分析问题时，以问题所涉及的是或者物为中心的分析方式</p>
 <h2 id="2）类和对象"><a href="#2）类和对象" class="headerlink" title="2）类和对象"></a>2）类和对象</h2><h3 id="1-类-and-对象-先有类，再有对象"><a href="#1-类-and-对象-先有类，再有对象" class="headerlink" title="1.类 and 对象(先有类，再有对象)"></a>1.类 and 对象(先有类，再有对象)</h3><p>类表示归纳和整理；对象表示具体的事务。</p>
 <p>在Java中我们用class表示类，<code>通常类名首写字母大写</code>。</p>
@@ -936,8 +948,8 @@
 
 <p>这是一段vue代码,我出现的问题是再前端页面查询的时候无法带入proTrack这个参数。</p>
 <p>解决方法:因为我们proTrackList中没有value这个字段，导致我再绑定的时候:value&#x3D;”item.value”绑定出错，将value更换为proTrack成功在查询时候带入了参数proTrack</p>
-<p><img src="/C:/Users\48531\OneDrive\桌面\hexo-blog\source_posts\开发-基于ruoyiui-笔记\image-20240321174607944.png" alt="image-20240321174607944"></p>
-<p><img src="/C:/Users\48531\OneDrive\桌面\hexo-blog\source_posts\开发-基于ruoyiui-笔记\image-20240321174646796.png" alt="image-20240321174646796"></p>
+<p><img src="/2024/03/21/%E5%BC%80%E5%8F%91-%E5%9F%BA%E4%BA%8Eruoyiui-%E7%AC%94%E8%AE%B0/Users/48531\OneDrive\桌面\hexo-blog\source_posts\开发-基于ruoyiui-笔记\image-20240321174607944.png" alt="image-20240321174607944"></p>
+<p><img src="/2024/03/21/%E5%BC%80%E5%8F%91-%E5%9F%BA%E4%BA%8Eruoyiui-%E7%AC%94%E8%AE%B0/Users/48531\OneDrive\桌面\hexo-blog\source_posts\开发-基于ruoyiui-笔记\image-20240321174646796.png" alt="image-20240321174646796"></p>
 <p><code>还有一种没有带入参数的情况就是，有些需要参数的函数，你可能没有传入函数或者定义接受函数的变量。</code>那这时候我们就需要去定义这个函数对于变量的传与接。下面来举一个我的错误例子</p>
 <p>先来看我原本的写法</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">  <span class="comment">//查询小组列表</span></span><br><span class="line"></span><br><span class="line">  <span class="title function_">selectGroup</span>(<span class="params"></span>)&#123;</span><br><span class="line"></span><br><span class="line">   <span class="variable language_">this</span>.<span class="property">loading</span>=<span class="literal">true</span>;</span><br><span class="line"></span><br><span class="line">   <span class="title function_">selectGroupList</span>(<span class="variable language_">this</span>.<span class="property">queryParams</span>).<span class="title function_">then</span>(<span class="function"><span class="params">response</span> =&gt;</span>&#123;</span><br><span class="line"></span><br><span class="line">​    <span class="variable language_">this</span>.<span class="property">tableList</span> = response.<span class="property">rows</span>;</span><br><span class="line"></span><br><span class="line">​    <span class="variable language_">this</span>.<span class="property">total</span> = response.<span class="property">total</span>;</span><br><span class="line"></span><br><span class="line">​    <span class="variable language_">this</span>.<span class="property">loading</span>=<span class="literal">false</span>;</span><br><span class="line"></span><br><span class="line">   &#125;)</span><br><span class="line"></span><br><span class="line">  &#125;,</span><br><span class="line"></span><br><span class="line">  <span class="comment">//赛道改变清空组列表</span></span><br><span class="line"></span><br><span class="line">  <span class="title function_">selectOnChangeTrack</span>(<span class="params"></span>)&#123;</span><br><span class="line"></span><br><span class="line">   <span class="variable language_">this</span>.<span class="property">tableList</span> = [];</span><br><span class="line"></span><br><span class="line">   <span class="variable language_">this</span>.<span class="title function_">selectGroup</span>(<span class="variable language_">this</span>.<span class="property">Track</span>);</span><br><span class="line"></span><br><span class="line">  &#125;,</span><br></pre></td></tr></table></figure>
@@ -977,7 +989,7 @@
 
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//@change的所绑定事件的功能</span></span><br><span class="line"> <span class="title function_">handleSelectionChange1</span>(<span class="params"></span>) &#123;</span><br><span class="line"></span><br><span class="line"> <span class="variable language_">this</span>.<span class="property">queryParams</span>.<span class="property">startTime</span> = <span class="variable language_">this</span>.<span class="property">queryParams</span>.<span class="property">time</span>; <span class="comment">// Update the query parameter</span></span><br><span class="line"></span><br><span class="line"> <span class="variable language_">this</span>.<span class="property">queryParams</span>.<span class="property">selectCompetition</span> = <span class="literal">null</span>; <span class="comment">// Clear the competition dropdown</span></span><br><span class="line"></span><br><span class="line"> <span class="variable language_">this</span>.<span class="property">competitionList</span> = []; <span class="comment">// Clear the competition list</span></span><br><span class="line"></span><br><span class="line"> <span class="variable language_">this</span>.<span class="title function_">getEventsList</span>(); <span class="comment">// Call the function to fetch the updated competition list</span></span><br><span class="line"></span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
 
-<h1 id="问题（五）-在今天编写代码时候遇到了这么一个问题，就是关于添加数据前端页面他不给我显示。"><a href="#问题（五）-在今天编写代码时候遇到了这么一个问题，就是关于添加数据前端页面他不给我显示。" class="headerlink" title="问题（五）:在今天编写代码时候遇到了这么一个问题，就是关于添加数据前端页面他不给我显示。"></a>问题（五）:在今天编写代码时候遇到了这么一个问题，就是关于添加数据前端页面他不给我显示。</h1><p><img src="/C:/Users\48531\OneDrive\桌面\hexo-blog\source_posts\开发-基于ruoyiui-笔记\image-20240327175415722.png" alt="image-20240327175415722"></p>
+<h1 id="问题（五）-在今天编写代码时候遇到了这么一个问题，就是关于添加数据前端页面他不给我显示。"><a href="#问题（五）-在今天编写代码时候遇到了这么一个问题，就是关于添加数据前端页面他不给我显示。" class="headerlink" title="问题（五）:在今天编写代码时候遇到了这么一个问题，就是关于添加数据前端页面他不给我显示。"></a>问题（五）:在今天编写代码时候遇到了这么一个问题，就是关于添加数据前端页面他不给我显示。</h1><p><img src="/2024/03/21/%E5%BC%80%E5%8F%91-%E5%9F%BA%E4%BA%8Eruoyiui-%E7%AC%94%E8%AE%B0/Users/48531\OneDrive\桌面\hexo-blog\source_posts\开发-基于ruoyiui-笔记\image-20240327175415722.png" alt="image-20240327175415722"></p>
 <p>查看发现是getfilename函数作怪，因为我的这个函数是要获取路径去分割，然而我并没有在数据库给出路径，所以这两个数据显示不出来，更改函数后成功显示，函数更改如下</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">  <span class="title function_">getfileName</span>(<span class="params">path</span>)&#123;</span><br><span class="line"></span><br><span class="line">   <span class="keyword">if</span>(path)&#123;</span><br><span class="line"></span><br><span class="line">​    <span class="keyword">return</span> path.<span class="title function_">split</span>(<span class="string">&#x27;/&#x27;</span>).<span class="title function_">pop</span>();</span><br><span class="line"></span><br><span class="line">   &#125;<span class="keyword">else</span>&#123;</span><br><span class="line"></span><br><span class="line">​    <span class="keyword">return</span> <span class="string">&quot;暂无资料&quot;</span>;</span><br><span class="line"></span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">  &#125;,</span><br></pre></td></tr></table></figure>
 
@@ -1067,7 +1079,7 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 通过赛道名称和小组获取参赛项目分配详细信息</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@PreAuthorize(&quot;@ss.hasPermi(&#x27;project:csxmfp:querybygroupId&#x27;)&quot;)</span></span><br><span class="line">    <span class="meta">@GetMapping(value = &quot;group/&#123;groupId&#125;/&#123;trackName&#125;&quot;)</span></span><br><span class="line">    <span class="keyword">public</span> AjaxResult <span class="title function_">getInfoByGroupId</span><span class="params">(<span class="meta">@PathVariable(&quot;groupId&quot;)</span> Long groupId,<span class="meta">@PathVariable(&quot;trackName&quot;)</span> String trackName)</span></span><br><span class="line">    &#123;</span><br><span class="line">        System.out.println(groupId);</span><br><span class="line">        System.out.println(<span class="string">&quot;aaaa&quot;</span>+trackName);</span><br><span class="line">        <span class="keyword">return</span> success(proAllocationService.selectGroupProjectByGroupId(groupId,trackName));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>控制台输出</p>
-<p><img src="/C:/Users\48531\OneDrive\桌面\hexo-blog\source_posts\开发-基于ruoyiui-笔记\image-20240403220611894.png" alt="image-20240403220611894"></p>
+<p><img src="/2024/03/21/%E5%BC%80%E5%8F%91-%E5%9F%BA%E4%BA%8Eruoyiui-%E7%AC%94%E8%AE%B0/Users/48531\OneDrive\桌面\hexo-blog\source_posts\开发-基于ruoyiui-笔记\image-20240403220611894.png" alt="image-20240403220611894"></p>
 <p>可以看到控制台是有<code>groupId</code>的输出<code>1</code>这就是说拿到了前端数据那为什么后端确说我没有定义呢？检查xml文件</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">&quot;selectGroupProjectByGroupId&quot;</span> <span class="attr">parameterType</span>=<span class="string">&quot;GroupProject&quot;</span> <span class="attr">resultMap</span>=<span class="string">&quot;GroupProjectresultMap&quot;</span>&gt;</span></span><br><span class="line">    SELECT</span><br><span class="line">        pro_details3.pro_id,</span><br><span class="line">        pro_details3.pro_name,</span><br><span class="line">        pro_details3.pro_logo,</span><br><span class="line">        pro_details3.pro_track,</span><br><span class="line">        pro_details3.pro_group_id</span><br><span class="line">    FROM</span><br><span class="line">        pro_details3</span><br><span class="line">            INNER JOIN</span><br><span class="line">        pro_mapping_group ON pro_details3.pro_id = pro_mapping_group.pro_id</span><br><span class="line">    <span class="tag">&lt;<span class="name">where</span>&gt;</span></span><br><span class="line">        pro_mapping_group.group_id = #&#123;group_id&#125;</span><br><span class="line"></span><br><span class="line">       <span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;proTrack != &#x27;null&#x27; and proTrack != &#x27;&#x27; and arg1!= null&quot;</span>&gt;</span> and pro_details3.pro_track = #&#123;proTrack&#125;<span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">where</span>&gt;</span></span><br><span class="line">    ORDER BY</span><br><span class="line">        pro_details3.pro_id;</span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
@@ -1252,7 +1264,7 @@
 <h2 id="9-Eureka注册中心说明"><a href="#9-Eureka注册中心说明" class="headerlink" title="9. Eureka注册中心说明"></a>9. Eureka注册中心说明</h2><p><strong>目标</strong>：说出Eureka的主要功能</p>
 <p><strong>小结</strong>：</p>
 <p>Eureka的主要功能是进行服务管理，定期检查服务状态，返回服务地址列表。</p>
-<p><img src="/C:/Users\48531\OneDrive\桌面\hexo-blog\source_posts\SpingCloud学习\1560439174201-1709728468837-5.png" alt="1560439174201"></p>
+<p><img src="/2023/12/10/SpingCloud%E5%AD%A6%E4%B9%A0/Users/48531\OneDrive\桌面\hexo-blog\source_posts\SpingCloud学习\1560439174201-1709728468837-5.png" alt="1560439174201"></p>
 <h2 id="10-搭建eureka-server工程"><a href="#10-搭建eureka-server工程" class="headerlink" title="10. 搭建eureka-server工程"></a>10. 搭建eureka-server工程</h2><p><strong>目标</strong>：添加eureka对应依赖和编写引导类搭建eureka服务并可访问eureka服务界面</p>
 <p><strong>分析</strong>：</p>
 <p>Eureka是服务注册中心，只做服务注册；自身并不提供服务也不消费服务。可以搭建web工程使用Eureka，可以使用Spring Boot方式搭建。</p>
@@ -1304,7 +1316,7 @@
 
 <ul>
 <li><p>添加启动引导类注解；</p>
-<p><img src="/C:/Users\48531\OneDrive\桌面\hexo-blog\source_posts\SpingCloud学习\1560519608668-1709728458655-3.png" alt="1560519608668"></p>
+<p><img src="/2023/12/10/SpingCloud%E5%AD%A6%E4%B9%A0/Users/48531\OneDrive\桌面\hexo-blog\source_posts\SpingCloud学习\1560519608668-1709728458655-3.png" alt="1560519608668"></p>
 </li>
 <li><p>修改配置</p>
 </li>
@@ -1398,7 +1410,7 @@
 
 <ul>
 <li><p>开启熔断</p>
-<p><img src="/C:/Users\48531\OneDrive\桌面\hexo-blog\source_posts\SpingCloud学习\1560662674993.png" alt="1560662674993"> </p>
+<p><img src="/2023/12/10/SpingCloud%E5%AD%A6%E4%B9%A0/Users/48531\OneDrive\桌面\hexo-blog\source_posts\SpingCloud学习\1560662674993.png" alt="1560662674993"> </p>
 </li>
 <li><p>降级逻辑</p>
 </li>
@@ -1416,7 +1428,7 @@
 
 <h2 id="18-服务熔断演示"><a href="#18-服务熔断演示" class="headerlink" title="18. 服务熔断演示"></a>18. 服务熔断演示</h2><p><strong>目标</strong>：了解熔断器工作原理</p>
 <p><strong>小结</strong>：</p>
-<p><img src="/C:/Users\48531\OneDrive\桌面\hexo-blog\source_posts\SpingCloud学习\1560682028169-1709728438301-1.png" alt="1560682028169"></p>
+<p><img src="/2023/12/10/SpingCloud%E5%AD%A6%E4%B9%A0/Users/48531\OneDrive\桌面\hexo-blog\source_posts\SpingCloud学习\1560682028169-1709728438301-1.png" alt="1560682028169"></p>
 <p>可以通过配置服务熔断参数修改默认：</p>
 <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">hystrix:</span></span><br><span class="line">  <span class="attr">command:</span></span><br><span class="line">    <span class="attr">default:</span></span><br><span class="line">      <span class="attr">execution:</span></span><br><span class="line">        <span class="attr">isolation:</span></span><br><span class="line">          <span class="attr">thread:</span></span><br><span class="line">            <span class="attr">timeoutInMilliseconds:</span> <span class="number">2000</span></span><br><span class="line">      <span class="attr">circuitBreaker:</span></span><br><span class="line">        <span class="attr">errorThresholdPercentage:</span> <span class="number">50</span> <span class="comment"># 触发熔断错误比例阈值，默认值50%</span></span><br><span class="line">        <span class="attr">sleepWindowInMilliseconds:</span> <span class="number">10000</span> <span class="comment"># 熔断后休眠时长，默认值5秒</span></span><br><span class="line">        <span class="attr">requestVolumeThreshold:</span> <span class="number">10</span> <span class="comment"># 熔断触发最小请求次数，默认值是20</span></span><br></pre></td></tr></table></figure>
 
@@ -1561,7 +1573,7 @@
 </blockquote>
 <h2 id="11-Spring-Cloud-Config分布式配置中心简介"><a href="#11-Spring-Cloud-Config分布式配置中心简介" class="headerlink" title="11. Spring Cloud Config分布式配置中心简介"></a>11. Spring Cloud Config分布式配置中心简介</h2><p><strong>目标</strong>：分布式配置中心的作用</p>
 <p><strong>小结</strong>：</p>
-<p><img src="/C:/Users\48531\OneDrive\桌面\hexo-blog\source_posts\SpingCloud学习\1560919656472.png" alt="1560919656472"></p>
+<p><img src="/2023/12/10/SpingCloud%E5%AD%A6%E4%B9%A0/Users/48531\OneDrive\桌面\hexo-blog\source_posts\SpingCloud学习\1560919656472.png" alt="1560919656472"></p>
 <p>spring cloud config作用：可以通过修改在git仓库中的配置文件实现其它所有微服务的配置文件的修改。</p>
 <h2 id="12-搭建配置中心微服务"><a href="#12-搭建配置中心微服务" class="headerlink" title="12. 搭建配置中心微服务"></a>12. 搭建配置中心微服务</h2><p><strong>目标</strong>：创建码云的远程公开git仓库，搭建配置中心微服务config-server</p>
 <p><strong>分析</strong>：</p>
@@ -1655,10 +1667,10 @@
 <ul>
 <li>UserController的修改</li>
 </ul>
-<p><img src="/C:/Users\48531\OneDrive\桌面\hexo-blog\source_posts\SpingCloud学习\1561003475491-1709728505732-7.png" alt="1561003475491"> </p>
+<p><img src="/2023/12/10/SpingCloud%E5%AD%A6%E4%B9%A0/Users/48531\OneDrive\桌面\hexo-blog\source_posts\SpingCloud学习\1561003475491-1709728505732-7.png" alt="1561003475491"> </p>
 <h2 id="16-Spring-Cloud-体系技术综合应用说明"><a href="#16-Spring-Cloud-体系技术综合应用说明" class="headerlink" title="16. Spring Cloud 体系技术综合应用说明"></a>16. Spring Cloud 体系技术综合应用说明</h2><p><strong>目标</strong>：了解Spring Cloud中的Eureka、GateWay、Config、Bus、Feign等技术的综合应用</p>
 <p><strong>小结</strong>：</p>
-<p><img src="/C:/Users\48531\OneDrive\桌面\hexo-blog\source_posts\SpingCloud学习\1561004983897.png" alt="1561004983897(1)"></p>
+<p><img src="/2023/12/10/SpingCloud%E5%AD%A6%E4%B9%A0/Users/48531\OneDrive\桌面\hexo-blog\source_posts\SpingCloud学习\1561004983897.png" alt="1561004983897(1)"></p>
 
       
 
@@ -1824,12 +1836,12 @@
 <p>2.依赖繁琐</p>
 <p>这样就引出了SpringBoot技术，下面介绍一下SpringBoot功能</p>
 <p>（1）自动配置</p>
-<p><img src="/./SpringBoot%E5%AD%A6%E4%B9%A0/image-20231127121051118.png" alt="image-20231127121051118"></p>
+<p><img src="/2023/12/04/SpringBoot%E5%AD%A6%E4%B9%A0/image-20231127121051118.png" alt="image-20231127121051118"></p>
 <p>（2）起步依赖</p>
-
+<img src="/2023/12/04/SpringBoot%E5%AD%A6%E4%B9%A0/12/04/SpringBoot%E5%AD%A6%E4%B9%A0/image-20231127121111083.png" class title="image-20231127121111083">
 
 <p>（3）辅助功能</p>
-
+<img src="/2023/12/04/SpringBoot%E5%AD%A6%E4%B9%A0/12/04/SpringBoot%E5%AD%A6%E4%B9%A0/image-20231127121129264.png" class title="image-20231127121129264">
 
 <p> <strong>SpringBoot并不是对Spring功能上的增强，而是提供了一种快速使用Spring的方式</strong></p>
 <h2 id="2-SpringBoot快速入门"><a href="#2-SpringBoot快速入门" class="headerlink" title="2.SpringBoot快速入门"></a>2.SpringBoot快速入门</h2><p>利用一个简单的小项目来入门一下</p>
@@ -1838,22 +1850,22 @@
 <li>SpringBoot的引导类，是项目入口，运行main方法就可以启动项目。</li>
 <li>使用SpringBoot和Spring构建的项目，业务代码编写方式完全一样。</li>
 </ul>
+<img src="/2023/12/04/SpringBoot%E5%AD%A6%E4%B9%A0/12/04/SpringBoot%E5%AD%A6%E4%B9%A0/image-20231127124611176.png" class title="image-20231127124611176">
 
+<img src="/2023/12/04/SpringBoot%E5%AD%A6%E4%B9%A0/12/04/SpringBoot%E5%AD%A6%E4%B9%A0/image-20231127124630645.png" class title="image-20231127124630645">
 
-
-
-
+<img src="/2023/12/04/SpringBoot%E5%AD%A6%E4%B9%A0/12/04/SpringBoot%E5%AD%A6%E4%B9%A0/image-20231127124650281.png" class title="image-20231127124650281">
 
 <p>同时利用idea工具可实现快速构建</p>
 <p>在new–&gt;Module下的Spring Initializr选项卡中实现快速构建项目</p>
-
+<img src="/2023/12/04/SpringBoot%E5%AD%A6%E4%B9%A0/12/04/SpringBoot%E5%AD%A6%E4%B9%A0/image-20231127165625244.png" class title="image-20231127165625244">
 
 <h2 id="3-Spring-Boot-起步依赖原理"><a href="#3-Spring-Boot-起步依赖原理" class="headerlink" title="3.Spring Boot 起步依赖原理"></a>3.Spring Boot 起步依赖原理</h2><p>（1）spring-boot-starter-parent</p>
 <p>（2）spring-boot-starter-web</p>
-
+<img src="/2023/12/04/SpringBoot%E5%AD%A6%E4%B9%A0/12/04/SpringBoot%E5%AD%A6%E4%B9%A0/image-20231127170537725.png" class title="image-20231127170537725">
 
 <h2 id="4-Spring-Boot配置原理"><a href="#4-Spring-Boot配置原理" class="headerlink" title="4.Spring Boot配置原理"></a>4.Spring Boot配置原理</h2><p><strong>配置文件分类:</strong></p>
-
+<img src="/2023/12/04/SpringBoot%E5%AD%A6%E4%B9%A0/12/04/SpringBoot%E5%AD%A6%E4%B9%A0/image-20231127170743378.png" class title="image-20231127170743378">
 
 <p>在<strong>application.properties</strong>下编写如下代码:</p>
 <p><strong>server.port &#x3D;8080</strong></p>
@@ -1864,35 +1876,35 @@
 <p><em><strong>.properties&gt;.yml&gt;.yaml</strong></em></p>
 <ul>
 <li><p>yaml</p>
-
+<img src="/2023/12/04/SpringBoot%E5%AD%A6%E4%B9%A0/12/04/SpringBoot%E5%AD%A6%E4%B9%A0/image-20231127171638640.png" class title="image-20231127171638640">
 
 <p><strong>yaml:基本语法</strong>:joy:</p>
-<p><strong></strong></p>
+<p><strong><img src="/2023/12/04/SpringBoot%E5%AD%A6%E4%B9%A0/12/04/SpringBoot%E5%AD%A6%E4%B9%A0/image-20231127171856985.png" class title="image-20231127171856985"></strong></p>
 <p><strong>yaml:数据格式</strong>:</p>
 <ul>
 <li>对象(map):键值对的集合。</li>
 </ul>
-
+<img src="/2023/12/04/SpringBoot%E5%AD%A6%E4%B9%A0/12/04/SpringBoot%E5%AD%A6%E4%B9%A0/image-20231127172159576.png" class title="image-20231127172159576">
 
 <ul>
 <li>数组:一组按次序排列的值。</li>
 </ul>
-
+<img src="/2023/12/04/SpringBoot%E5%AD%A6%E4%B9%A0/12/04/SpringBoot%E5%AD%A6%E4%B9%A0/image-20231127172231099.png" class title="image-20231127172231099">
 
 <ul>
 <li><p>纯量:单个的、不可再分的值。</p>
-</li>
+<img src="/2023/12/04/SpringBoot%E5%AD%A6%E4%B9%A0/12/04/SpringBoot%E5%AD%A6%E4%B9%A0/image-20231127172305038.png" class title="image-20231127172305038"></li>
 </ul>
 <p>以上注意 <strong>属性名称:(空格)+属性值</strong></p>
 <p><strong>yaml:参数引用</strong></p>
-
+<img src="/2023/12/04/SpringBoot%E5%AD%A6%E4%B9%A0/12/04/SpringBoot%E5%AD%A6%E4%B9%A0/image-20231127172922753.png" class title="image-20231127172922753">
 
 <p><strong>YAML:小结</strong></p>
-
+<img src="/2023/12/04/SpringBoot%E5%AD%A6%E4%B9%A0/12/04/SpringBoot%E5%AD%A6%E4%B9%A0/image-20231127173040450.png" class title="image-20231127173040450">
 </li>
 <li><p>读取配置文件内容</p>
 <p>(1)@Value</p>
-
+<img src="/2023/12/04/SpringBoot%E5%AD%A6%E4%B9%A0/12/04/SpringBoot%E5%AD%A6%E4%B9%A0/image-20231130144357066.png" class title="image-20231130144357066">
 
 <p><strong>@Value(“${name}”)</strong></p>
 <p>​	<strong>private String name</strong></p>
@@ -1901,10 +1913,10 @@
 <p>(2)Environment</p>
 <p>使用Environment获取值时的步骤如下:</p>
 <p>1)使用**@Autowired<strong>注解让Springboot启动时注入一个对象</strong>env**</p>
-
+<img src="/2023/12/04/SpringBoot%E5%AD%A6%E4%B9%A0/12/04/SpringBoot%E5%AD%A6%E4%B9%A0/image-20231130150414772.png" class title="image-20231130150414772">
 
 <p>2)直接在输出这一行利用env.getProperty(“”)输入你要获取的值的属性名字即可</p>
-
+<img src="/2023/12/04/SpringBoot%E5%AD%A6%E4%B9%A0/12/04/SpringBoot%E5%AD%A6%E4%B9%A0/image-20231130150424354.png" class title="image-20231130150424354">
 
 <p>(3)@ConfigurationProperties</p>
 <p>创建一个你需要用到的对象类(如我图中的person类):</p>
@@ -1913,13 +1925,13 @@
 <p>​	@ConfigurationProperties</p>
 <p>注意了!!!!</p>
 <p>如果此时你的@ConfigurationProperties并没有写前缀，那么它会读取配置文件中你所配置的属性名的属性值</p>
+<img src="/2023/12/04/SpringBoot%E5%AD%A6%E4%B9%A0/12/04/SpringBoot%E5%AD%A6%E4%B9%A0/image-20231130151741953.png" class title="image-20231130151741953">
 
-
-<p>如下</p>
+<p>如下<img src="/2023/12/04/SpringBoot%E5%AD%A6%E4%B9%A0/12/04/SpringBoot%E5%AD%A6%E4%B9%A0/image-20231130151702681.png" class title="image-20231130151702681"><img src="/2023/12/04/SpringBoot%E5%AD%A6%E4%B9%A0/12/04/SpringBoot%E5%AD%A6%E4%B9%A0/image-20231130151723394.png" class title="image-20231130151723394"></p>
 <p>但是如果你加了前缀@ConfigurationProperties(<strong>prefix &#x3D; “person”</strong>)那么它读取的是你在.yaml文件里前缀为person：下的属性名的属性值</p>
+<img src="/2023/12/04/SpringBoot%E5%AD%A6%E4%B9%A0/12/04/SpringBoot%E5%AD%A6%E4%B9%A0/image-20231130151805714.png" class title="image-20231130151805714">
 
-
-
+<img src="/2023/12/04/SpringBoot%E5%AD%A6%E4%B9%A0/12/04/SpringBoot%E5%AD%A6%E4%B9%A0/image-20231130151825782.png" class title="image-20231130151825782">
 
 
 </li>
@@ -1928,7 +1940,7 @@
 <ul>
 <li><p>多profile文件方式</p>
 <p>一般来讲结构是这样的</p>
-
+<img src="/2023/12/04/SpringBoot%E5%AD%A6%E4%B9%A0/12/04/SpringBoot%E5%AD%A6%E4%B9%A0/image-20231130154714615.png" class title="image-20231130154714615">
 
 <p>我们分别在dev、pro、test里面配置需要的属性</p>
 <p>然后再主要文件<strong>application.properties</strong>里面加上</p>
@@ -1937,81 +1949,81 @@
 <li><p>yml多文档方式</p>
 <p>在yml中用—分割即可</p>
 <p>2)profile激活方式</p>
-
+<img src="/2023/12/04/SpringBoot%E5%AD%A6%E4%B9%A0/12/04/SpringBoot%E5%AD%A6%E4%B9%A0/image-20231130155050196.png" class title="image-20231130155050196">
 
 <p>在运行位置编辑运行设置找到这两个;</p>
 <p>虚拟机参数:-Dspring.profiles.active&#x3D;pro</p>
 <p>命令行参数:–spring.profiles.active&#x3D;pro</p>
-<p><strong></strong></p>
+<p><strong><img src="/2023/12/04/SpringBoot%E5%AD%A6%E4%B9%A0/12/04/SpringBoot%E5%AD%A6%E4%B9%A0/image-20231130155606679.png" class title="image-20231130155606679"></strong></p>
 </li>
 </ul>
 </li>
 <li><p>内部配置加载顺序</p>
-
+<img src="/2023/12/04/SpringBoot%E5%AD%A6%E4%B9%A0/12/04/SpringBoot%E5%AD%A6%E4%B9%A0/image-20231202194402571.png" class title="image-20231202194402571">
 </li>
 <li><p>外部配置加载顺序</p>
 </li>
 </ul>
+<img src="/2023/12/04/SpringBoot%E5%AD%A6%E4%B9%A0/12/04/SpringBoot%E5%AD%A6%E4%B9%A0/image-20231202195819000.png" class title="image-20231202195819000">
 
-
-<h2 id="3-SpringBoot整合其他框架"><a href="#3-SpringBoot整合其他框架" class="headerlink" title="3.SpringBoot整合其他框架"></a>3.SpringBoot整合其他框架</h2><h3 id="1-SpringBoot整合Junit。"><a href="#1-SpringBoot整合Junit。" class="headerlink" title="(1)SpringBoot整合Junit。"></a>(1)SpringBoot整合Junit。</h3>
+<h2 id="3-SpringBoot整合其他框架"><a href="#3-SpringBoot整合其他框架" class="headerlink" title="3.SpringBoot整合其他框架"></a>3.SpringBoot整合其他框架</h2><h3 id="1-SpringBoot整合Junit。"><a href="#1-SpringBoot整合Junit。" class="headerlink" title="(1)SpringBoot整合Junit。"></a>(1)SpringBoot整合Junit。</h3><img src="/2023/12/04/SpringBoot%E5%AD%A6%E4%B9%A0/12/04/SpringBoot%E5%AD%A6%E4%B9%A0/image-20231202200030447.png" class title="image-20231202200030447">
 
 <p>1.在搭建的com&#x2F;itheima&#x2F;Springboottest&#x2F;下创建类UserService</p>
 <p>并编写以下内容</p>
-
+<img src="/2023/12/04/SpringBoot%E5%AD%A6%E4%B9%A0/12/04/SpringBoot%E5%AD%A6%E4%B9%A0/image-20231202201519254.png" class title="image-20231202201519254">
 
 <p>这里我们编写了一个名为add()的方法，作用是打印add……</p>
 <p>在test包下的com&#x2F;itheima&#x2F;目录下创建test目录，在test下创建UserServiceTest类作为测试类</p>
+<img src="/2023/12/04/SpringBoot%E5%AD%A6%E4%B9%A0/12/04/SpringBoot%E5%AD%A6%E4%B9%A0/image-20231202201650084.png" class title="image-20231202201650084">
 
-
-
+<img src="/2023/12/04/SpringBoot%E5%AD%A6%E4%B9%A0/12/04/SpringBoot%E5%AD%A6%E4%B9%A0/image-20231202201659097.png" class title="image-20231202201659097">
 
 <p>利用@Autowired注入一个类的对象userService</p>
 <p>@Test下创建一个test()函数，通过对象去访问UserService下的add方法即</p>
 <p><strong>userService.add()</strong></p>
 <p>以上注意点有:</p>
 <p>当你的测试路径和的包名和上面主目录的包名一致时,@SpringBootTest(classes &#x3D; SpringbootTestApplication.class)中的classes &#x3D; SpringbootTestApplication.class可以省略不写</p>
+<img src="/2023/12/04/SpringBoot%E5%AD%A6%E4%B9%A0/12/04/SpringBoot%E5%AD%A6%E4%B9%A0/1.png" class width="1">
 
+<h3 id="2-SpringBoot整合Redis"><a href="#2-SpringBoot整合Redis" class="headerlink" title="(2)SpringBoot整合Redis"></a>(2)SpringBoot整合Redis</h3><img src="/2023/12/04/SpringBoot%E5%AD%A6%E4%B9%A0/12/04/SpringBoot%E5%AD%A6%E4%B9%A0/image-20231202202259105.png" class title="image-20231202202259105">
 
-<h3 id="2-SpringBoot整合Redis"><a href="#2-SpringBoot整合Redis" class="headerlink" title="(2)SpringBoot整合Redis"></a>(2)SpringBoot整合Redis</h3>
-
-<h3 id="3-SpringBoot整合mybaits"><a href="#3-SpringBoot整合mybaits" class="headerlink" title="(3)SpringBoot整合mybaits"></a>(3)SpringBoot整合mybaits</h3>
+<h3 id="3-SpringBoot整合mybaits"><a href="#3-SpringBoot整合mybaits" class="headerlink" title="(3)SpringBoot整合mybaits"></a>(3)SpringBoot整合mybaits</h3><img src="/2023/12/04/SpringBoot%E5%AD%A6%E4%B9%A0/12/04/SpringBoot%E5%AD%A6%E4%B9%A0/image-20231202204301365.png" class title="image-20231202204301365">
 
 <p>按步骤如下排列:</p>
 <p>在主目录domain下创建类User</p>
-
+<img src="/2023/12/04/SpringBoot%E5%AD%A6%E4%B9%A0/12/04/SpringBoot%E5%AD%A6%E4%B9%A0/image-20231202214054020.png" class title="image-20231202214054020">
 
 <p>并且写好get，set方法最后写上toString()</p>
 <p>在com&#x2F;itheima&#x2F;springbiittestmybaits&#x2F;下创建UserMapper文件</p>
 <p>内容如下</p>
-
+<img src="/2023/12/04/SpringBoot%E5%AD%A6%E4%B9%A0/12/04/SpringBoot%E5%AD%A6%E4%B9%A0/image-20231202214211600.png" class title="image-20231202214211600">
 
 <p><strong>注意写好@Mpper注解,@Repository注解，@Select(“”)里面写好查询语句(select * from t_user)</strong></p>
 <p>来到test目录下操作</p>
-
+<img src="/2023/12/04/SpringBoot%E5%AD%A6%E4%B9%A0/12/04/SpringBoot%E5%AD%A6%E4%B9%A0/image-20231202214343730.png" class title="image-20231202214343730">
 
 <p><strong>在测试类中编写如下代码，其中@Autowired注解注入了UserMapper的对象userMapper</strong></p>
 <p><strong>@Test注解中编写了testFindAll()方法来调用对象userMapper中的findAll()方法并打印输出列表list</strong></p>
-
+<img src="/2023/12/04/SpringBoot%E5%AD%A6%E4%B9%A0/12/04/SpringBoot%E5%AD%A6%E4%B9%A0/image-20231202223054341.png" class title="image-20231202223054341">
 
 <p>我们的<strong>application.yaml</strong>文件的内容如下</p>
-
+<img src="/2023/12/04/SpringBoot%E5%AD%A6%E4%B9%A0/12/04/SpringBoot%E5%AD%A6%E4%B9%A0/image-20231202214536961.png" class title="image-20231202214536961">
 
 <h3 id="下面来看第二种方法"><a href="#下面来看第二种方法" class="headerlink" title="下面来看第二种方法"></a>下面来看第二种方法</h3><p>在主目录下创建mapper目录，目录下创建UserXmlMapper接口并编写里面的内容</p>
-
+<img src="/2023/12/04/SpringBoot%E5%AD%A6%E4%B9%A0/12/04/SpringBoot%E5%AD%A6%E4%B9%A0/image-20231202215945150.png" class title="image-20231202215945150">
 
 <p>在resources目录下创建mapper文件，在里面创建UserMapper.xml文件并且编写如下</p>
-
+<img src="/2023/12/04/SpringBoot%E5%AD%A6%E4%B9%A0/12/04/SpringBoot%E5%AD%A6%E4%B9%A0/image-20231202220056745.png" class title="image-20231202220056745">
 
 <p><strong>这一步注意:一定要指定namespace的路径(其实是UserMapper的路径)</strong></p>
 <p>在applications.yaml里面编写</p>
-
+<img src="/2023/12/04/SpringBoot%E5%AD%A6%E4%B9%A0/12/04/SpringBoot%E5%AD%A6%E4%B9%A0/image-20231202220208781.png" class title="image-20231202220208781">
 
 <p>在主要测试类中添加@Autowired注解注入UserXmlMapper的对象userXmlMapper，并且添加对象对应的findAll()方法</p>
-
+<img src="/2023/12/04/SpringBoot%E5%AD%A6%E4%B9%A0/12/04/SpringBoot%E5%AD%A6%E4%B9%A0/image-20231202220322506.png" class title="image-20231202220322506">
 
 <p>运行测试的结果</p>
-
+<img src="/2023/12/04/SpringBoot%E5%AD%A6%E4%B9%A0/12/04/SpringBoot%E5%AD%A6%E4%B9%A0/image-20231202223058753.png" class title="image-20231202223058753">
 
 
 
@@ -11546,10 +11558,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="SpringBoot模块学习-二-—-SpringBoot高级"><a href="#SpringBoot模块学习-二-—-SpringBoot高级" class="headerlink" title="SpringBoot模块学习(二)—-SpringBoot高级"></a>SpringBoot模块学习(二)—-SpringBoot高级</h1><h2 id="1-SpringBoot自动配置"><a href="#1-SpringBoot自动配置" class="headerlink" title="1.SpringBoot自动配置"></a>1.SpringBoot自动配置</h2><h3 id="1-Condition"><a href="#1-Condition" class="headerlink" title="1)Condition"></a>1)Condition</h3><p><img src="/./Springboot%E6%A8%A1%E5%9D%97%E5%AD%A6%E4%B9%A02/image-20231206145641002.png" alt="image-20231206145641002"></p>
+        <h1 id="SpringBoot模块学习-二-—-SpringBoot高级"><a href="#SpringBoot模块学习-二-—-SpringBoot高级" class="headerlink" title="SpringBoot模块学习(二)—-SpringBoot高级"></a>SpringBoot模块学习(二)—-SpringBoot高级</h1><h2 id="1-SpringBoot自动配置"><a href="#1-SpringBoot自动配置" class="headerlink" title="1.SpringBoot自动配置"></a>1.SpringBoot自动配置</h2><h3 id="1-Condition"><a href="#1-Condition" class="headerlink" title="1)Condition"></a>1)Condition</h3><p><img src="/2023/12/04/Springboot%E6%A8%A1%E5%9D%97%E5%AD%A6%E4%B9%A02/image-20231206145641002.png" alt="image-20231206145641002"></p>
 <p>以上是Condition的作用</p>
 <h3 id="2-切换内置web服务器"><a href="#2-切换内置web服务器" class="headerlink" title="2)切换内置web服务器"></a>2)切换内置web服务器</h3><p>SpringBoot的web环境中默认使用tomcat作为内置服务器，其实SpringBoot提供了4种内置服务器供我们选择，我们可以很方便进行切换</p>
-<p><img src="/./Springboot%E6%A8%A1%E5%9D%97%E5%AD%A6%E4%B9%A02/image-20231206205702290.png" alt="image-20231206205702290"></p>
+<p><img src="/2023/12/04/Springboot%E6%A8%A1%E5%9D%97%E5%AD%A6%E4%B9%A02/image-20231206205702290.png" alt="image-20231206205702290"></p>
 <p>那么我们如何在这四种服务器之间切换呢？</p>
 <p><strong>只需要在pom.xml文件中引入对应的服务器坐标就可以了</strong></p>
 <p><strong><code>&lt;dependency&gt;</code></strong></p>
@@ -11558,62 +11570,62 @@
 <p><strong><code>&lt;/dependency&gt;</code></strong></p>
 <p><strong>以上是我们的tomcat的坐标</strong></p>
 <p><strong>只需要将tomcat位置替换成jetty就可以了</strong></p>
-<h3 id="3-Enable注解"><a href="#3-Enable注解" class="headerlink" title="3)@Enable注解"></a>3)@Enable注解</h3><p><img src="/./Springboot%E6%A8%A1%E5%9D%97%E5%AD%A6%E4%B9%A02/image-20231206210416016.png" alt="image-20231206210416016"></p>
+<h3 id="3-Enable注解"><a href="#3-Enable注解" class="headerlink" title="3)@Enable注解"></a>3)@Enable注解</h3><p><img src="/2023/12/04/Springboot%E6%A8%A1%E5%9D%97%E5%AD%A6%E4%B9%A02/image-20231206210416016.png" alt="image-20231206210416016"></p>
 <p>下面我们利用项目来加深一下理解</p>
 <p>创建一个叫springboot-enable的模块和为名springboot-enable-other的模块，第二个模块的作用是提供一些Bean来查询。</p>
-<p><img src="/./Springboot%E6%A8%A1%E5%9D%97%E5%AD%A6%E4%B9%A02/image-20231206211815199.png" alt="image-20231206211815199"></p>
+<p><img src="/2023/12/04/Springboot%E6%A8%A1%E5%9D%97%E5%AD%A6%E4%B9%A02/image-20231206211815199.png" alt="image-20231206211815199"></p>
 <p><strong>以上是第一个项目需要的代码</strong></p>
 <p>第二个项目我们在包下创建</p>
-<p><img src="/./Springboot%E6%A8%A1%E5%9D%97%E5%AD%A6%E4%B9%A02/image-20231206212626748.png" alt="image-20231206212626748"></p>
+<p><img src="/2023/12/04/Springboot%E6%A8%A1%E5%9D%97%E5%AD%A6%E4%B9%A02/image-20231206212626748.png" alt="image-20231206212626748"></p>
 <p>在UserConfig下编写如下代码即可</p>
-<p><img src="/./Springboot%E6%A8%A1%E5%9D%97%E5%AD%A6%E4%B9%A02/image-20231206212647527.png" alt="image-20231206212647527"></p>
+<p><img src="/2023/12/04/Springboot%E6%A8%A1%E5%9D%97%E5%AD%A6%E4%B9%A02/image-20231206212647527.png" alt="image-20231206212647527"></p>
 <p>随后我们在springbootenable模块的pom文件中引入springbootenableother的依赖即可</p>
-<p><img src="/./Springboot%E6%A8%A1%E5%9D%97%E5%AD%A6%E4%B9%A02/image-20231206212737274.png" alt="image-20231206212737274"></p>
+<p><img src="/2023/12/04/Springboot%E6%A8%A1%E5%9D%97%E5%AD%A6%E4%B9%A02/image-20231206212737274.png" alt="image-20231206212737274"></p>
 <p>运行第一个项目报错为正常情况，然后我们来说@Enable注解的作用。</p>
 <p>我们自己写一个EnableUser注解</p>
-<p><img src="/./Springboot%E6%A8%A1%E5%9D%97%E5%AD%A6%E4%B9%A02/image-20231206212930295.png" alt="image-20231206212930295"></p>
+<p><img src="/2023/12/04/Springboot%E6%A8%A1%E5%9D%97%E5%AD%A6%E4%B9%A02/image-20231206212930295.png" alt="image-20231206212930295"></p>
 <p>接下来我们在启动类里面运用上自己写的@EnableUser注解启动</p>
-<p><img src="/./Springboot%E6%A8%A1%E5%9D%97%E5%AD%A6%E4%B9%A02/image-20231209131920545.png" alt="image-20231209131920545"></p>
-<p><img src="/./Springboot%E6%A8%A1%E5%9D%97%E5%AD%A6%E4%B9%A02/image-20231206213139508.png" alt="image-20231206213139508"></p>
+<p><img src="/2023/12/04/Springboot%E6%A8%A1%E5%9D%97%E5%AD%A6%E4%B9%A02/image-20231209131920545.png" alt="image-20231209131920545"></p>
+<p><img src="/2023/12/04/Springboot%E6%A8%A1%E5%9D%97%E5%AD%A6%E4%B9%A02/image-20231206213139508.png" alt="image-20231206213139508"></p>
 <p>成功访问到其他类的Bean！</p>
 <h3 id="4-Import注解"><a href="#4-Import注解" class="headerlink" title="4)@Import注解"></a>4)@Import注解</h3><p>Import注解有4种用法:</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">* 1.直接导入Bean:@Import(User.class)Bean名字</span><br><span class="line">* 2.导入配置类:@Import(UserConfig.class)配置类名字</span><br><span class="line">* 3.导入ImportSelector的实现类</span><br><span class="line">* 4.导入ImportBeanDefinitionRegistrar实现类</span><br></pre></td></tr></table></figure>
 
-<h3 id="5-EnableAutoConfiguration注解"><a href="#5-EnableAutoConfiguration注解" class="headerlink" title="5)@EnableAutoConfiguration注解"></a>5)@EnableAutoConfiguration注解</h3><p><img src="/./Springboot%E6%A8%A1%E5%9D%97%E5%AD%A6%E4%B9%A02/image-20231209133911053.png" alt="image-20231209133911053"></p>
-<h3 id="6-自定义stater案例"><a href="#6-自定义stater案例" class="headerlink" title="6)自定义stater案例"></a>6)自定义stater案例</h3><p><img src="/./Springboot%E6%A8%A1%E5%9D%97%E5%AD%A6%E4%B9%A02/image-20231209163725826.png" alt="image-20231209163725826"></p>
-<h3 id="7-SpringBoot监听器"><a href="#7-SpringBoot监听器" class="headerlink" title="7)SpringBoot监听器"></a>7)SpringBoot监听器</h3><p><img src="/./Springboot%E6%A8%A1%E5%9D%97%E5%AD%A6%E4%B9%A02/image-20231209165608666.png" alt="image-20231209165608666"></p>
+<h3 id="5-EnableAutoConfiguration注解"><a href="#5-EnableAutoConfiguration注解" class="headerlink" title="5)@EnableAutoConfiguration注解"></a>5)@EnableAutoConfiguration注解</h3><p><img src="/2023/12/04/Springboot%E6%A8%A1%E5%9D%97%E5%AD%A6%E4%B9%A02/image-20231209133911053.png" alt="image-20231209133911053"></p>
+<h3 id="6-自定义stater案例"><a href="#6-自定义stater案例" class="headerlink" title="6)自定义stater案例"></a>6)自定义stater案例</h3><p><img src="/2023/12/04/Springboot%E6%A8%A1%E5%9D%97%E5%AD%A6%E4%B9%A02/image-20231209163725826.png" alt="image-20231209163725826"></p>
+<h3 id="7-SpringBoot监听器"><a href="#7-SpringBoot监听器" class="headerlink" title="7)SpringBoot监听器"></a>7)SpringBoot监听器</h3><p><img src="/2023/12/04/Springboot%E6%A8%A1%E5%9D%97%E5%AD%A6%E4%B9%A02/image-20231209165608666.png" alt="image-20231209165608666"></p>
 <p><strong>这些监听器，是一些列的接口，我们要使用就要创建实现这些接口的类并实现里面的方法。</strong></p>
-<h2 id="2-SpringBoot监控"><a href="#2-SpringBoot监控" class="headerlink" title="2.SpringBoot监控"></a>2.SpringBoot监控</h2><p><img src="/./Springboot%E6%A8%A1%E5%9D%97%E5%AD%A6%E4%B9%A02/image-20231209180436343.png" alt="image-20231209180436343"></p>
-<p><img src="/./Springboot%E6%A8%A1%E5%9D%97%E5%AD%A6%E4%B9%A02/image-20231209182525637.png" alt="image-20231209182525637"></p>
+<h2 id="2-SpringBoot监控"><a href="#2-SpringBoot监控" class="headerlink" title="2.SpringBoot监控"></a>2.SpringBoot监控</h2><p><img src="/2023/12/04/Springboot%E6%A8%A1%E5%9D%97%E5%AD%A6%E4%B9%A02/image-20231209180436343.png" alt="image-20231209180436343"></p>
+<p><img src="/2023/12/04/Springboot%E6%A8%A1%E5%9D%97%E5%AD%A6%E4%B9%A02/image-20231209182525637.png" alt="image-20231209182525637"></p>
 <p>上面的信息当中三个是health信息,一个是info</p>
 <p>这里推荐使用json,cn网站来进行解析:</p>
 <p>得到如下结果</p>
-<p><img src="/./Springboot%E6%A8%A1%E5%9D%97%E5%AD%A6%E4%B9%A02/image-20231209182726341.png" alt="image-20231209182726341"></p>
+<p><img src="/2023/12/04/Springboot%E6%A8%A1%E5%9D%97%E5%AD%A6%E4%B9%A02/image-20231209182726341.png" alt="image-20231209182726341"></p>
 <p>我们访问info信息发现是空的，如果想要在info里面添加内容，需要在配置文件中写上以info.开头的属性名称和其对应的属性值,我下面只举一个例子:</p>
-<p><img src="/./Springboot%E6%A8%A1%E5%9D%97%E5%AD%A6%E4%B9%A02/image-20231209182911535.png" alt="image-20231209182911535"></p>
+<p><img src="/2023/12/04/Springboot%E6%A8%A1%E5%9D%97%E5%AD%A6%E4%B9%A02/image-20231209182911535.png" alt="image-20231209182911535"></p>
 <p>在配置文件中添加如下内容后重新启动再次进入</p>
-<p><img src="/./Springboot%E6%A8%A1%E5%9D%97%E5%AD%A6%E4%B9%A02/image-20231209183000907.png" alt="image-20231209183000907"></p>
+<p><img src="/2023/12/04/Springboot%E6%A8%A1%E5%9D%97%E5%AD%A6%E4%B9%A02/image-20231209183000907.png" alt="image-20231209183000907"></p>
 <p>关于health信息，初次访问只会显示一个内容</p>
-<p><img src="/./Springboot%E6%A8%A1%E5%9D%97%E5%AD%A6%E4%B9%A02/image-20231209183119864.png" alt="image-20231209183119864"></p>
+<p><img src="/2023/12/04/Springboot%E6%A8%A1%E5%9D%97%E5%AD%A6%E4%B9%A02/image-20231209183119864.png" alt="image-20231209183119864"></p>
 <p>如果你想开启有关健康方面的所有内容，需要在配置文件中配置上如下内容</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">management.endpoint.health.show-details=always</span><br></pre></td></tr></table></figure>
 
 <p>即可！</p>
-<p><img src="/./Springboot%E6%A8%A1%E5%9D%97%E5%AD%A6%E4%B9%A02/image-20231209183221189.png" alt="image-20231209183221189"></p>
+<p><img src="/2023/12/04/Springboot%E6%A8%A1%E5%9D%97%E5%AD%A6%E4%B9%A02/image-20231209183221189.png" alt="image-20231209183221189"></p>
 <p>如果你想开启所有监控信息全部暴露出来你需要在配置文件中添加:</p>
-<p><img src="/./Springboot%E6%A8%A1%E5%9D%97%E5%AD%A6%E4%B9%A02/image-20231209183332240.png" alt="image-20231209183332240"></p>
-<h3 id="2-SpringBoot-监控-Spring-Boot-Admin"><a href="#2-SpringBoot-监控-Spring-Boot-Admin" class="headerlink" title="2)SpringBoot 监控 Spring Boot Admin"></a>2)SpringBoot 监控 Spring Boot Admin</h3><p><img src="/./Springboot%E6%A8%A1%E5%9D%97%E5%AD%A6%E4%B9%A02/image-20231209184045796.png" alt="image-20231209184045796"></p>
+<p><img src="/2023/12/04/Springboot%E6%A8%A1%E5%9D%97%E5%AD%A6%E4%B9%A02/image-20231209183332240.png" alt="image-20231209183332240"></p>
+<h3 id="2-SpringBoot-监控-Spring-Boot-Admin"><a href="#2-SpringBoot-监控-Spring-Boot-Admin" class="headerlink" title="2)SpringBoot 监控 Spring Boot Admin"></a>2)SpringBoot 监控 Spring Boot Admin</h3><p><img src="/2023/12/04/Springboot%E6%A8%A1%E5%9D%97%E5%AD%A6%E4%B9%A02/image-20231209184045796.png" alt="image-20231209184045796"></p>
 <p>使用步骤:</p>
-<p><img src="/./Springboot%E6%A8%A1%E5%9D%97%E5%AD%A6%E4%B9%A02/image-20231209184206537.png" alt="image-20231209184206537"></p>
-<h2 id="3-SpringBoot项目部署"><a href="#3-SpringBoot项目部署" class="headerlink" title="3.SpringBoot项目部署"></a>3.SpringBoot项目部署</h2><p><img src="/./Springboot%E6%A8%A1%E5%9D%97%E5%AD%A6%E4%B9%A02/image-20231209185754370.png" alt="image-20231209185754370">利用idea中的maven打包默认打jar包</p>
+<p><img src="/2023/12/04/Springboot%E6%A8%A1%E5%9D%97%E5%AD%A6%E4%B9%A02/image-20231209184206537.png" alt="image-20231209184206537"></p>
+<h2 id="3-SpringBoot项目部署"><a href="#3-SpringBoot项目部署" class="headerlink" title="3.SpringBoot项目部署"></a>3.SpringBoot项目部署</h2><p><img src="/2023/12/04/Springboot%E6%A8%A1%E5%9D%97%E5%AD%A6%E4%B9%A02/image-20231209185754370.png" alt="image-20231209185754370">利用idea中的maven打包默认打jar包</p>
 <p>可以在目录下用Powershell终端 </p>
 <p>java -jar+ jar包名</p>
-<p><img src="/./Springboot%E6%A8%A1%E5%9D%97%E5%AD%A6%E4%B9%A02/image-20231209190150879.png" alt="image-20231209190150879"></p>
+<p><img src="/2023/12/04/Springboot%E6%A8%A1%E5%9D%97%E5%AD%A6%E4%B9%A02/image-20231209190150879.png" alt="image-20231209190150879"></p>
 <p>也可以打war包</p>
 <p>在pom中将打包方式改为war</p>
 <p>然后再启动类中继承一个名为SoringBootServletInitializer的类</p>
 <p>随后在加一个@Override注解</p>
-<p><img src="/./Springboot%E6%A8%A1%E5%9D%97%E5%AD%A6%E4%B9%A02/image-20231209190325853.png" alt="image-20231209190325853"></p>
+<p><img src="/2023/12/04/Springboot%E6%A8%A1%E5%9D%97%E5%AD%A6%E4%B9%A02/image-20231209190325853.png" alt="image-20231209190325853"></p>
 <p>将war包放在Tomcat的wabapp下启动Tomcat访问但注意:</p>
 <p>1.目录发生了变化</p>
 <p>2.端口号内置的不在起作用，需要从外置tomcat配置文件中更改</p>
@@ -11760,11 +11772,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">java和vue开发中遇到的错误以及如何改正和对他们的理解整理(参加的项目)</a>
+                <a href="javascript:void(0)" class="js-tag color2">Linux Error</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Linux Error</a>
+                <a href="javascript:void(0)" class="js-tag color4">java和vue开发中遇到的错误以及如何改正和对他们的理解整理(参加的项目)</a>
               </li>
             
             <div class="clearfix"></div>
