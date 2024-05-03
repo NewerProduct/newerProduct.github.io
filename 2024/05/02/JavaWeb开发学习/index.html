@@ -17,8 +17,14 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://example.com/2024/05/02/JavaWeb%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/image-20240503143408361-1714718055325-1-1714718064241-3.png">
 <meta property="og:image" content="http://example.com/JavaWeb%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/image-20240503145115827.png">
+<meta property="og:image" content="http://example.com/JavaWeb%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/image-20240503151224544.png">
+<meta property="og:image" content="http://example.com/JavaWeb%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/image-20240503153618200.png">
+<meta property="og:image" content="http://example.com/JavaWeb%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/image-20240503165308862.png">
+<meta property="og:image" content="http://example.com/JavaWeb%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/image-20240503172509557.png">
+<meta property="og:image" content="http://example.com/JavaWeb%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/image-20240503180943024.png">
+<meta property="og:image" content="http://example.com/JavaWeb%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/image-20240503184235985.png">
 <meta property="article:published_time" content="2024-05-02T09:41:21.000Z">
-<meta property="article:modified_time" content="2024-05-03T06:56:01.029Z">
+<meta property="article:modified_time" content="2024-05-03T10:44:58.378Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="JavaWeb">
 <meta name="twitter:card" content="summary">
@@ -263,7 +269,212 @@
 </li>
 </ul>
 <p><img src="/./JavaWeb%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/image-20240503145115827.png" alt="image-20240503145115827"></p>
-<h3 id="2）JS基础语法"><a href="#2）JS基础语法" class="headerlink" title="2）JS基础语法"></a>2）JS基础语法</h3><h3 id="3）JS函数"><a href="#3）JS函数" class="headerlink" title="3）JS函数"></a>3）JS函数</h3><h3 id="4）JS对象"><a href="#4）JS对象" class="headerlink" title="4）JS对象"></a>4）JS对象</h3><h3 id="5）JS事件监听"><a href="#5）JS事件监听" class="headerlink" title="5）JS事件监听"></a>5）JS事件监听</h3></script></li></ul></li></ul>
+<h3 id="2）JS基础语法"><a href="#2）JS基础语法" class="headerlink" title="2）JS基础语法"></a>2）JS基础语法</h3><h4 id="1、书写语法"><a href="#1、书写语法" class="headerlink" title="1、书写语法"></a>1、书写语法</h4><ul>
+<li><p>区分大小写：与java一样，变量名、函数名以及其他一切东西都是区分大小写的</p>
+</li>
+<li><p>每行结尾的分号可有可无</p>
+</li>
+<li><p>注释：</p>
+<ul>
+<li>单行注释：//注释内容</li>
+<li>多行注释：/<em>注释内容</em> */</li>
+</ul>
+</li>
+<li><p>大括号代表代码块：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//判断</span></span><br><span class="line"><span class="keyword">if</span>(count == <span class="number">3</span>)&#123;</span><br><span class="line"><span class="title function_">alert</span>(count);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h5 id="输出语句"><a href="#输出语句" class="headerlink" title="输出语句"></a>输出语句</h5><pre><code>* 使用**window.alert()**写入警告框
+* 使用**document.write()**写入HTML输出
+* 使用**console.log()**写入浏览器控制台
+</code></pre>
+<p><img src="/./JavaWeb%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/image-20240503151224544.png" alt="image-20240503151224544"></p>
+<h4 id="2、变量"><a href="#2、变量" class="headerlink" title="2、变量"></a>2、变量</h4><ul>
+<li><p><strong>JavaScript</strong> 中用 <strong>var</strong>关键字(<strong>variable</strong> 的缩写)来声明变量。</p>
+<p><strong>var</strong>的特点：</p>
+<ul>
+<li>作用域比较大，全局变量。</li>
+<li>可以重复定义同一个变量。相当于一个覆盖</li>
+</ul>
+</li>
+<li><p><strong>JavaScript</strong> 是一门弱类型语言，变量<strong>可以存放不同类型的值</strong>。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="string">&quot;张三&quot;</span>;<span class="comment">//定义a的值是字符串张三</span></span><br><span class="line">a = <span class="number">20</span><span class="comment">//把值20赋值给a</span></span><br><span class="line"><span class="title function_">alert</span>(a)<span class="comment">//输出20</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>变量名需要遵循如下规则:</p>
+<ul>
+<li>组成字符可以是任何字母、数字、下划线(_)或美元符号($)</li>
+<li>数字不能开头</li>
+<li>建议使用驼峰命名(如<strong>userName</strong>)</li>
+</ul>
+</li>
+<li><p><strong>let</strong> 关键字来定义变量。它的用法类似于 var，但是所声明的变量，只在let 关键字所在的代码块内有效，且不允许重复声明。</p>
+</li>
+<li><p><strong>const</strong> 关键字，用来声明一个只读的常量。一旦声明，常量的值就不能改变。</p>
+</li>
+</ul>
+<h4 id="3、数据类型"><a href="#3、数据类型" class="headerlink" title="3、数据类型"></a>3、数据类型</h4><ul>
+<li>JS中分为：<strong>原始类型</strong>和<strong>引用类型</strong>。</li>
+</ul>
+<h5 id="原始类型"><a href="#原始类型" class="headerlink" title="原始类型"></a>原始类型</h5><p><img src="/./JavaWeb%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/image-20240503153618200.png" alt="image-20240503153618200"></p>
+<h5 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h5><ul>
+<li><p>算术运算符:+，-，*，/，%，++，--</p>
+</li>
+<li><p>赋值运算符:=，+=，-=，，/=,%=</p>
+</li>
+<li><p>比较运算符:>，<，>=，<=，!=，==，**===**</p>
+<p>==与===</p>
+<ul>
+<li>==会进行类型转换，===不会进行类型转换。</li>
+</ul>
+</li>
+<li><p>逻辑运算符:&&，||，!</p>
+</li>
+<li><p>三元运算符:条件表达式?true_value:false value</p>
+</li>
+</ul>
+<p>类型转换：</p>
+<ul>
+<li><p>字符串类型转为数字：</p>
+<ul>
+<li><p>paseInt方法：<strong>这个方法能够将字符串转为数字，原理是从字符串左边开始读取，读取到不是数字的地方(如12A45他会读取到A这个为止而停下来)停下来，取该位置前面的输出。</strong></p>
+<pre><code>alert(parseInt(&quot;12&quot;));//转为12
+alert(parseInt(&quot;12A45&quot;));//转为12
+alert(parseInt(&quot;A45&quot;));//转为NaN(not a number)
+</code></pre>
+</li>
+</ul>
+</li>
+<li><p>其他类型转为boolean：</p>
+<ul>
+<li>Number类型：0和NaN转为false，其他均转为true。</li>
+<li>String类型：空字符串转为false，其他 均转为true。</li>
+<li>Null类型和undefined类型：均转为false。</li>
+</ul>
+</li>
+</ul>
+<h4 id="4、流程控制"><a href="#4、流程控制" class="headerlink" title="4、流程控制"></a>4、流程控制</h4><ul>
+<li><p>if...else if ....else....</p>
+</li>
+<li><p>switch</p>
+</li>
+<li><p>for</p>
+</li>
+<li><p>while</p>
+</li>
+<li><p>do...while</p>
+<p>值得注意的是，<strong>在JS中这些流程控制语句和我们的java是完全一致的。</strong></p>
+</li>
+</ul>
+<h3 id="3）JS函数"><a href="#3）JS函数" class="headerlink" title="3）JS函数"></a>3）JS函数</h3><h4 id="1、函数的定义"><a href="#1、函数的定义" class="headerlink" title="1、函数的定义"></a>1、函数的定义</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">functionName</span>(<span class="params">参数<span class="number">1</span>，参数<span class="number">2.</span>..</span>)&#123;</span><br><span class="line"><span class="comment">//要执行的代码</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//另一种方式调用</span></span><br><span class="line"><span class="keyword">var</span> functionName = <span class="keyword">function</span>(<span class="params">参数<span class="number">1</span>，参数<span class="number">2.</span>..</span>)&#123;</span><br><span class="line">    <span class="comment">//要执行的代码</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>注意<ul>
+<li>形式参数不需要类型。因为JS是弱类型语言。</li>
+<li>返回值类型也不需要定义，可以再函数内部直接使用return返回即可。</li>
+</ul>
+</li>
+<li>调用：函数名称(实际参数列表)</li>
+</ul>
+<h3 id="4）JS对象"><a href="#4）JS对象" class="headerlink" title="4）JS对象"></a>4）JS对象</h3><h5 id="Array-数组对象"><a href="#Array-数组对象" class="headerlink" title="Array(数组对象)"></a>Array(数组对象)</h5><ul>
+<li><p>定义：var 变量名 = new Array(元素列表)；或者var 变量名= [元素列表];</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">    <span class="comment">//定义数组</span></span></span><br><span class="line"><span class="language-javascript">    <span class="keyword">var</span> arr1 = <span class="keyword">new</span> <span class="title class_">Array</span>(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>);</span></span><br><span class="line"><span class="language-javascript">    <span class="comment">//或者var arr1 = [1,2,3,4,5]</span></span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">    <span class="comment">//访问元素</span></span></span><br><span class="line"><span class="language-javascript">    <span class="variable language_">console</span>.<span class="title function_">log</span>(arr1[<span class="number">0</span>]);</span></span><br><span class="line"><span class="language-javascript">    <span class="variable language_">console</span>.<span class="title function_">log</span>(arr1[<span class="number">1</span>]);</span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">   <span class="comment">//特点：长度可变，类型可变</span></span></span><br><span class="line"><span class="language-javascript">   <span class="keyword">var</span> arr = <span class="keyword">new</span> <span class="title class_">Array</span>(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>);</span></span><br><span class="line"><span class="language-javascript">   arr[<span class="number">10</span>] = <span class="number">50</span>; </span></span><br><span class="line"><span class="language-javascript">   <span class="variable language_">console</span>.<span class="title function_">log</span>(arr[<span class="number">10</span>]);</span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">   arr[<span class="number">9</span>] = <span class="string">&quot;zhangsan&quot;</span>;</span></span><br><span class="line"><span class="language-javascript">   arr[<span class="number">8</span>] = <span class="literal">true</span>;</span></span><br><span class="line"><span class="language-javascript">    <span class="variable language_">console</span>.<span class="title function_">log</span>(arr);</span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">    <span class="comment">//数组的遍历,遍历所有的元素</span></span></span><br><span class="line"><span class="language-javascript">    <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; arr.<span class="property">length</span>; i++) &#123;</span></span><br><span class="line"><span class="language-javascript">        <span class="keyword">const</span> element = arr[i];</span></span><br><span class="line"><span class="language-javascript">        <span class="variable language_">console</span>.<span class="title function_">log</span>(element);</span></span><br><span class="line"><span class="language-javascript">    &#125;</span></span><br><span class="line"><span class="language-javascript">        <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;=========================&quot;</span>);</span></span><br><span class="line"><span class="language-javascript">    <span class="comment">//数组的遍历(foreach):遍历数组中有值的元素</span></span></span><br><span class="line"><span class="language-javascript">    arr.<span class="title function_">forEach</span>(<span class="function"><span class="params">element</span> =&gt;</span> &#123;</span></span><br><span class="line"><span class="language-javascript">        <span class="variable language_">console</span>.<span class="title function_">log</span>(element);</span></span><br><span class="line"><span class="language-javascript">        <span class="comment">//ES6 箭头函数：(形参列表...) =&gt;&#123;函数体的内容&#125;</span></span></span><br><span class="line"><span class="language-javascript">    &#125;);</span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">    <span class="comment">//push方法：添加元素到数组末尾</span></span></span><br><span class="line"><span class="language-javascript">    arr.<span class="title function_">push</span>(<span class="string">&quot;添加测试1&quot;</span>,<span class="string">&quot;添加测试2&quot;</span>)</span></span><br><span class="line"><span class="language-javascript">    <span class="variable language_">console</span>.<span class="title function_">log</span>(arr);</span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">    <span class="comment">//删除元素splice方法:(从某个索引位置开始删除,删除元素的个数)</span></span></span><br><span class="line"><span class="language-javascript">    arr.<span class="title function_">splice</span>(<span class="number">11</span>,<span class="number">2</span>)</span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h5 id="String对象"><a href="#String对象" class="headerlink" title="String对象"></a>String对象</h5><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">    <span class="comment">//String对象</span></span></span><br><span class="line"><span class="language-javascript">    <span class="comment">//方式一：</span></span></span><br><span class="line"><span class="language-javascript">    <span class="keyword">var</span> stringTest = <span class="keyword">new</span> <span class="title class_">String</span>(<span class="string">&quot;zhangsan&quot;</span>);</span></span><br><span class="line"><span class="language-javascript">    <span class="comment">//方式二：</span></span></span><br><span class="line"><span class="language-javascript">    <span class="keyword">var</span> stringTest1 =<span class="string">&quot;lisi&quot;</span>;</span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>String对象的<strong>属性</strong>和<strong>方法</strong></p>
+<p><img src="/./JavaWeb%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/image-20240503165308862.png" alt="image-20240503165308862"></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">    <span class="comment">//String对象</span></span></span><br><span class="line"><span class="language-javascript">    <span class="comment">//方式一：</span></span></span><br><span class="line"><span class="language-javascript">    <span class="comment">// var stringTest = new String(&quot;zhangsan&quot;);</span></span></span><br><span class="line"><span class="language-javascript">    <span class="comment">//方式二：</span></span></span><br><span class="line"><span class="language-javascript">    <span class="keyword">var</span> stringTest1 =<span class="string">&quot;  Hello World  &quot;</span>;</span></span><br><span class="line"><span class="language-javascript">    <span class="comment">//获取字符串长度</span></span></span><br><span class="line"><span class="language-javascript">    <span class="variable language_">console</span>.<span class="title function_">log</span>(stringTest1.<span class="property">length</span>);</span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">    <span class="comment">//chAt方法,返回指定位置的字符</span></span></span><br><span class="line"><span class="language-javascript">    <span class="variable language_">console</span>.<span class="title function_">log</span>(stringTest1.<span class="title function_">charAt</span>(<span class="number">2</span>));<span class="comment">//H</span></span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">    <span class="comment">//indexOf方法，查询对应字符的索引</span></span></span><br><span class="line"><span class="language-javascript">    <span class="variable language_">console</span>.<span class="title function_">log</span>(stringTest1.<span class="title function_">indexOf</span>(<span class="string">&quot;H&quot;</span>)); <span class="comment">//2</span></span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">    <span class="comment">//trim方法(去除空格)</span></span></span><br><span class="line"><span class="language-javascript">    <span class="keyword">var</span> newString = stringTest1.<span class="title function_">trim</span>();</span></span><br><span class="line"><span class="language-javascript">    <span class="variable language_">console</span>.<span class="title function_">log</span>(newString);</span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">    <span class="comment">//substring方法，截取字符串，(前闭后开)输入两个值，开始索引和结束索引</span></span></span><br><span class="line"><span class="language-javascript">    <span class="comment">//这里演示截取去除空格后的字符串，将Hello截取出来</span></span></span><br><span class="line"><span class="language-javascript">   <span class="variable language_">console</span>.<span class="title function_">log</span>(newString.<span class="title function_">substring</span>(<span class="number">0</span>,<span class="number">5</span>));<span class="comment">//Hello</span></span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="json对象"><a href="#json对象" class="headerlink" title="json对象"></a>json对象</h5><ul>
+<li><p>概念: <strong>JavaScript Object Notation，JavaScript</strong>，对象标记法</p>
+</li>
+<li><p>JSON 是通过JavaScript 对象标记法书写的文本。</p>
+</li>
+<li><p>由于其语法简单，层次结构鲜明，现多用于作为<strong>数据载体</strong>，在网络中进行数据传输。</p>
+</li>
+</ul>
+<p>数据格式：</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line"><span class="attr">&quot;name&quot;</span> <span class="punctuation">:</span> <span class="string">&quot;xiaoli&quot;</span><span class="punctuation">,</span></span><br><span class="line"><span class="attr">&quot;age&quot;</span><span class="punctuation">:</span><span class="number">25</span><span class="punctuation">,</span></span><br><span class="line"><span class="attr">&quot;sex&quot;</span><span class="punctuation">:</span><span class="string">&quot;男性&quot;</span><span class="punctuation">,</span></span><br><span class="line"> <span class="attr">&quot;key1&quot;</span><span class="punctuation">:</span><span class="string">&quot;value1&quot;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="/./JavaWeb%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/image-20240503172509557.png" alt="image-20240503172509557"></p>
+<p>定义json案例</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">	<span class="comment">//定义json</span></span></span><br><span class="line"><span class="language-javascript">    <span class="keyword">var</span> jsonStr = <span class="string">&#x27;&#123;&quot;name&quot; = &quot;小李&quot;,&quot;age&quot; = 25, &quot;address&quot; = &quot;北京&quot; &#125;&#x27;</span>;</span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">    <span class="comment">//JSON字符串转为JS对象——JSON.parse()方法</span></span></span><br><span class="line"><span class="language-javascript">    <span class="keyword">var</span> jsonStrObject = <span class="title class_">JSON</span>.<span class="title function_">parse</span>(jsonStr);</span></span><br><span class="line"><span class="language-javascript">    <span class="variable language_">console</span>.<span class="title function_">log</span>(jsonStrObject);</span></span><br><span class="line"><span class="language-javascript">    <span class="comment">//JS对象转为JS字符串——JSON.stringify()方法</span></span></span><br><span class="line"><span class="language-javascript">    <span class="keyword">var</span>  jsObject = <span class="title class_">JSON</span>.<span class="title function_">stringify</span>(jsonStrObject);</span></span><br><span class="line"><span class="language-javascript">    <span class="variable language_">console</span>.<span class="title function_">log</span>(jsObject);</span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="BOM对象"><a href="#BOM对象" class="headerlink" title="BOM对象"></a>BOM对象</h5><ul>
+<li>概念:<strong>Browser Object Model</strong> 浏览器对象模型，允许lavaScript与浏览器对话，lavaScript 将浏览器的各个组成部分封装为<strong>对象</strong>。</li>
+</ul>
+<h6 id="Window对象"><a href="#Window对象" class="headerlink" title="Window对象"></a>Window对象</h6><ul>
+<li>介绍:浏览器窗口对象。</li>
+<li>获取:直接使用window，其中 window.可以省略<strong>window.alert()和alert()效果一样</strong></li>
+<li>属性<ul>
+<li>history:对 History 对象的只读引用。请参阅 History 对象</li>
+<li>location:用于窗口或框架的 Location 对象。请参阅Location 对象。</li>
+<li>navigator:对 Navigator 对象的只读引用。请参阅Navigator 对象</li>
+</ul>
+</li>
+<li>方法<ul>
+<li><strong>alert()</strong>:显示带有一段消息和一个确认按钮的警告框。</li>
+<li><strong>confirm()</strong>:显示带有一段消息以及确认按钮和取消按钮的对话。</li>
+<li>**setlnterval():**按照指定的周期(以毫秒计)来调用函数或计算表达式。</li>
+<li><strong>setTimeout()</strong>:在指定的毫秒数后调用函数或计算表达式。</li>
+</ul>
+</li>
+</ul>
+<p>示例代码：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">    <span class="comment">//获取</span></span></span><br><span class="line"><span class="language-javascript">    <span class="variable language_">window</span>.<span class="title function_">alert</span>(<span class="string">&quot;Hello BOM&quot;</span>);</span></span><br><span class="line"><span class="language-javascript">    <span class="title function_">alert</span>(<span class="string">&quot;Hello BoM window&quot;</span>);</span></span><br><span class="line"><span class="language-javascript">    <span class="comment">// 方法</span></span></span><br><span class="line"><span class="language-javascript">    <span class="comment">// confirm-对话框--确认:true ，取消:false</span></span></span><br><span class="line"><span class="language-javascript">    <span class="keyword">var</span> flag = <span class="title function_">confirm</span>(<span class="string">&quot;您确认删除该记录吗?&quot;</span>);</span></span><br><span class="line"><span class="language-javascript">    <span class="title function_">alert</span>(flag);</span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">    <span class="comment">// 定时器-setInterval -- 周期性的执行某一个函数</span></span></span><br><span class="line"><span class="language-javascript">    <span class="keyword">var</span> i=<span class="number">0</span>;</span></span><br><span class="line"><span class="language-javascript">    <span class="built_in">setInterval</span>(<span class="keyword">function</span>(<span class="params"></span>)&#123;</span></span><br><span class="line"><span class="language-javascript">        i++;</span></span><br><span class="line"><span class="language-javascript">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;定时器执行了&quot;</span>+i+<span class="string">&quot;次&quot;</span>);</span></span><br><span class="line"><span class="language-javascript">    &#125;,<span class="number">2000</span>);</span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">    <span class="comment">//定时器延迟指定时间执行一次:-setTimeout </span></span></span><br><span class="line"><span class="language-javascript">    <span class="built_in">setTimeout</span>(<span class="keyword">function</span>(<span class="params"></span>)&#123;</span></span><br><span class="line"><span class="language-javascript">    <span class="title function_">alert</span>(<span class="string">&quot;Js&quot;</span>);</span></span><br><span class="line"><span class="language-javascript">    &#125;,<span class="number">3000</span>);</span></span><br><span class="line"><span class="language-javascript">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h6 id="Location对象"><a href="#Location对象" class="headerlink" title="Location对象"></a>Location对象</h6><ul>
+<li><p>介绍：地址栏对象。</p>
+</li>
+<li><p>获取：使用window.location获取，其中window.可以省略不写</p>
+</li>
+<li><p>属性：</p>
+<ul>
+<li><p>href：设置或返回完整的URL，如果设置URL那么他会自动跳转所设置的URL。</p>
+<p>代码示例：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">    <span class="comment">//获取当前完整的URL</span></span></span><br><span class="line"><span class="language-javascript">    <span class="variable language_">console</span>.<span class="title function_">log</span>(location.<span class="property">href</span>);</span></span><br><span class="line"><span class="language-javascript">    <span class="comment">//设置URL自动跳转</span></span></span><br><span class="line"><span class="language-javascript">    location.<span class="property">href</span>=<span class="string">&quot;http://www.itcast.cn&quot;</span></span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+<h5 id="DOM对象"><a href="#DOM对象" class="headerlink" title="DOM对象"></a>DOM对象</h5><ul>
+<li><p>概念:<strong>Document Object Model</strong>，文档对象模型。</p>
+</li>
+<li><p>将标记语言的各个组成部分封装为对应的对象：</p>
+<ul>
+<li>Document：整个文档对象</li>
+<li>Element：元素对象</li>
+<li>Attribute：属性对象</li>
+<li>Text：文本对象</li>
+<li>Comment：注释对象</li>
+</ul>
+</li>
+<li><p>JavaScript 通过DOM，就能够对HTML进行如下操作：</p>
+<ul>
+<li>改变 HTML元素的内容</li>
+<li>改变 HTML元素的样式(CSS)</li>
+<li>对 HTML DOM 事件作出反应</li>
+<li>添加和删除 HTML元素</li>
+</ul>
+</li>
+</ul>
+<p><img src="/./JavaWeb%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/image-20240503180943024.png" alt="image-20240503180943024"></p>
+<h3 id="5）JS事件监听"><a href="#5）JS事件监听" class="headerlink" title="5）JS事件监听"></a>5）JS事件监听</h3><ul>
+<li>事件:HTML事件是发生在HTML元素上的“事情”。比如:<ul>
+<li>按钮被点击</li>
+<li>鼠标移动到元素上</li>
+<li>按下键盘按键</li>
+</ul>
+</li>
+<li>事件监听:JavaScript可以在事件被侦测到时 执行代码。</li>
+</ul>
+<h4 id="事件绑定"><a href="#事件绑定" class="headerlink" title="事件绑定"></a>事件绑定</h4><ul>
+<li><p>方式一：通过HTML标签中的时间属性进行绑定</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;button&quot;</span> <span class="attr">onclick</span>=<span class="string">&quot;on()&quot;</span> <span class="attr">value</span>=<span class="string">&quot;按钮1&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line">	function on()</span><br><span class="line">    &#123;</span><br><span class="line">		alert(&#x27;我被点击了!);</span><br><span class="line">	&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>方式二：通过DOM元素属性绑定</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span> = <span class="string">&quot;button&quot;</span> <span class="attr">id</span> =<span class="string">&quot;btn1&quot;</span> <span class="attr">value</span> = <span class="string">&quot;按钮2&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript"><span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&quot;btn1&quot;</span>).<span class="property">onclick</span> = 			<span class="keyword">function</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="language-javascript">	&#123;</span></span><br><span class="line"><span class="language-javascript">    	<span class="title function_">alert</span>(<span class="string">&quot;我被点击了！&quot;</span>);</span></span><br><span class="line"><span class="language-javascript">	&#125;</span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="常见事件"><a href="#常见事件" class="headerlink" title="常见事件"></a>常见事件</h4><p><img src="/./JavaWeb%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/image-20240503184235985.png" alt="image-20240503184235985"></p>
+</script></li></ul></li></ul>
       
 
       
@@ -436,11 +647,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">JavaWeb</a>
+                <a href="javascript:void(0)" class="js-tag color3">练习题，面试题</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">练习题，面试题</a>
+                <a href="javascript:void(0)" class="js-tag color3">JavaWeb</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -448,11 +659,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">java和vue开发中遇到的错误以及如何改正和对他们的理解整理(参加的项目)</a>
+                <a href="javascript:void(0)" class="js-tag color2">Linux Error</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Linux Error</a>
+                <a href="javascript:void(0)" class="js-tag color4">java和vue开发中遇到的错误以及如何改正和对他们的理解整理(参加的项目)</a>
               </li>
             
             <div class="clearfix"></div>
