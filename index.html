@@ -172,10 +172,92 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="Chapter-一"><a href="#Chapter-一" class="headerlink" title="Chapter(一)"></a>Chapter(一)</h1><h2 id="1-HTML、CSS"><a href="#1-HTML、CSS" class="headerlink" title="(1)HTML、CSS"></a>(1)HTML、CSS</h2><p>HTML大致格式：</p>
+        <h1 id="Chapter-一"><a href="#Chapter-一" class="headerlink" title="Chapter(一)"></a>Chapter(一)</h1><h2 id="1-HTML笔记"><a href="#1-HTML笔记" class="headerlink" title="(1)HTML笔记"></a>(1)HTML笔记</h2><ul>
+<li>HTML大致格式：</li>
+</ul>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">HTML</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">title</span>&gt;</span>标题<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">        内容</span><br><span class="line">    <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">HTML</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-
+<ul>
+<li><p>1.超链接<br>标签:<a><br>属性:<br>    <strong>href</strong>:指定资源访问的url**<br>    <strong>target:指定在何处打开资源链接</strong><br>    <strong>self:默认值，在当前页面打开</strong><br>    <strong>blank:在空白页面打开</strong></a></p>
+</li>
+<li><p>视频标签:<video></video></p>
+<ul>
+<li><strong>src:规定视频的ur1</strong></li>
+<li><strong>controls:显示播放控件</strong></li>
+<li><strong>width:播放器的宽度</strong></li>
+<li><strong>height:播放器的高度</strong></li>
+<li><strong>音频标签:<audio></audio></strong></li>
+<li><strong>src:规定音频的url</strong></li>
+<li><strong>controls:显示播放控件</strong></li>
+</ul>
+</li>
+<li><p>段落标签:</p><p></p>
+</li>
+<li><p>文本加粗标签：<b> &#x2F; <strong></strong></b></p>
+</li>
+<li><p>盒子(div)</p>
+<ul>
+<li>盒子:页面中所有的元素(标签)，<br>都可以看做是一个 盒子，由盒子将页面中的元素包含在一个矩形区域内，通过盒子的视角更方便的进行页面布局</li>
+<li>盒子模型组成:<strong>内容区域(content)</strong><br><strong>边框区域(border)、外边距区域(margin)</strong><br><strong>、内边距区域(padding)</strong></li>
+</ul>
+</li>
+<li><p>span标签:<strong>一行可以显示多个，宽度和高度默认由内容撑开，不可以设置宽高(width、height)。</strong></p>
+</li>
+<li><p>表格：</p>
+<ul>
+<li>标签：<table>，属性border：规定表格边框的宽度，width：规定表格的宽度，cellspacing：规定单元之间的空间</table></li>
+<li><tr>：表格的行，可以包裹多个<td></td></tr></li>
+<li><td>：表格的单元格(普通)，可以包裹内容，如果是表头单元格可以用标签<th></th></td></li>
+</ul>
+</li>
+<li><p>表单标签：<form></form></p>
+<ul>
+<li><p>应用场景：数据的采集功能，如注册、登录等数据采集</p>
+</li>
+<li><p>表单项：</p>
+<ul>
+<li><p><input>：定义表单项，通过type属性控制输入的形式</p>
+</li>
+<li><p><select>：定义下拉列表，<option>定义列表选项</option></select></p>
+</li>
+<li><textarea>：定义文本区域
+</textarea></li>
+</ul>
+</li>
+<li><p>表单属性</p>
+<ul>
+<li>action：规定当提交表单时向何处发送表单数据，URL</li>
+<li>method：规定用于发送表单数据的方式。GET、POST</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>​		</p>
+<p><strong>form表单属性:</strong></p>
+<p><strong><label>标签有聚焦的作用</label></strong></p>
+<p><strong>action：表单提交的ur1，往何处提交数据，如果不指定，默认提交到当前页面</strong><br><strong>method：表单的提交方式</strong><br><strong>get：在ur1后面拼接表单数据，比如:?username&#x3D;Tom&amp;age&#x3D;12，url长度有限制 。默认值</strong><br><strong>post：在消息体(请求体)中传递的，参数大小无限制的</strong></p>
+<p>表单标签——表单项</p>
+<p><img src="/2024/05/02/JavaWeb%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/image-20240503143408361-1714718055325-1-1714718064241-3.png" alt="image-20240503143408361"></p>
+<h2 id="2-JavaScript笔记"><a href="#2-JavaScript笔记" class="headerlink" title="(2)JavaScript笔记"></a>(2)JavaScript笔记</h2><h3 id="1）JS引入方式"><a href="#1）JS引入方式" class="headerlink" title="1）JS引入方式"></a>1）JS引入方式</h3><p><strong>JS的引入方式有两种：</strong></p>
+<ul>
+<li><p>内部脚本：将JS代码定义在HTML页面中</p>
+<ul>
+<li>JavaScript代码必须位于<script>标签内</li>
+<li>在HTML文档中，可以再任意地方 ，放置任意数量的<script></li>
+<li>一般会把脚本置于<body>元素的底部，可以改善显示速度</li>
+</ul>
+</li>
+<li><p>外部脚本：将JS代码定义在外部JS文件中，然后引入到HTML页面中</p>
+<ul>
+<li><p>外部JS文件中，只包含JS代码，不包含<script>标签</p>
+</li>
+<li><script>标签不能自闭合，也就是不能写成这样：<script/></li>
+</ul>
+</li>
+</ul>
+<p><img src="/./JavaWeb%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/image-20240503145115827.png" alt="image-20240503145115827"></p>
+<h3 id="2）JS基础语法"><a href="#2）JS基础语法" class="headerlink" title="2）JS基础语法"></a>2）JS基础语法</h3><h3 id="3）JS函数"><a href="#3）JS函数" class="headerlink" title="3）JS函数"></a>3）JS函数</h3><h3 id="4）JS对象"><a href="#4）JS对象" class="headerlink" title="4）JS对象"></a>4）JS对象</h3><h3 id="5）JS事件监听"><a href="#5）JS事件监听" class="headerlink" title="5）JS事件监听"></a>5）JS事件监听</h3></script></li></ul></li></ul>
       
 
       
