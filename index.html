@@ -178,22 +178,42 @@
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">HTML</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">title</span>&gt;</span>标题<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">        内容</span><br><span class="line">    <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">HTML</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <ul>
-<li><p>1.超链接<br>标签:<a><br>属性:<br>    <strong>href</strong>:指定资源访问的url**<br>    <strong>target:指定在何处打开资源链接</strong><br>    <strong>self:默认值，在当前页面打开</strong><br>    <strong>blank:在空白页面打开</strong></a></p>
+<li><p>1.超链接<br>标签:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span>&gt;</span>这是a标签<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>属性:<br>    <strong>href</strong>:指定资源访问的url<br>    <strong>target:指定在何处打开资源链接</strong><br>    <strong>self:默认值，在当前页面打开</strong><br>    <strong>blank:在空白页面打开</strong></p>
 </li>
-<li><p>视频标签:<video></video></p>
+<li><p>视频标签:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">audio</span>&gt;</span><span class="tag">&lt;/<span class="name">audio</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
 <ul>
 <li><strong>src:规定视频的ur1</strong></li>
 <li><strong>controls:显示播放控件</strong></li>
 <li><strong>width:播放器的宽度</strong></li>
 <li><strong>height:播放器的高度</strong></li>
-<li><strong>音频标签:<audio></audio></strong></li>
+</ul>
+</li>
+<li><p>音频标签:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">audio</span> <span class="attr">src</span>&quot;<span class="attr">xxxxx</span>&quot; <span class="attr">controls</span> = <span class="string">&quot;controls&quot;</span>&gt;</span> <span class="tag">&lt;/<span class="name">audio</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
 <li><strong>src:规定音频的url</strong></li>
 <li><strong>controls:显示播放控件</strong></li>
 </ul>
 </li>
-<li><p>段落标签:</p><p></p>
+<li><p>段落标签:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>这是段落标签<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
 </li>
-<li><p>文本加粗标签：<b> &#x2F; <strong></strong></b></p>
+<li><p>文本加粗标签：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">b</span>&gt;</span> / <span class="tag">&lt;<span class="name">strong</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
 </li>
 <li><p>盒子(div)</p>
 <ul>
@@ -205,72 +225,35 @@
 </li>
 <li><p>表格：</p>
 <ul>
-<li>标签：<table>，属性border：规定表格边框的宽度，width：规定表格的宽度，cellspacing：规定单元之间的空间</table></li>
-<li><tr>：表格的行，可以包裹多个<td></td></tr></li>
-<li><td>：表格的单元格(普通)，可以包裹内容，如果是表头单元格可以用标签<th></th></td></li>
+<li><p>标签：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">table</span>&gt;</span><span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>，属性border：规定表格边框的宽度，width：规定表格的宽度，cellspacing：规定单元之间的空间</p>
+</li>
+<li><pre><code class="html">&lt;tr&gt;：表格的行，可以包裹多个&lt;td&gt;
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">* ```html</span><br><span class="line">  &lt;td&gt;：表格的单元格(普通)，可以包裹内容，如果是表头单元格可以用标签&lt;th&gt;</span><br></pre></td></tr></table></figure>
+</code></pre>
+</li>
 </ul>
 </li>
-<li><p>表单标签：<form></form></p>
+<li><p>表单标签：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
 <ul>
 <li><p>应用场景：数据的采集功能，如注册、登录等数据采集</p>
 </li>
 <li><p>表单项：</p>
 <ul>
-<li><p><input>：定义表单项，通过type属性控制输入的形式</p>
-</li>
-<li><p><select>：定义下拉列表，<option>定义列表选项</option></select></p>
-</li>
-<li><textarea>：定义文本区域
-</textarea></li>
-</ul>
-</li>
-<li><p>表单属性</p>
-<ul>
-<li>action：规定当提交表单时向何处发送表单数据，URL</li>
-<li>method：规定用于发送表单数据的方式。GET、POST</li>
-</ul>
+<li><pre><code>&lt;input&gt;标签，定义表单项，通过type属性控制输入的形式
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">    * &lt;select&gt;：定义下拉列表， &lt;option&gt;定义列表选项&lt;/option&gt;</span><br><span class="line"></span><br><span class="line">    * &lt;textarea&gt;：定义文本区域</span><br><span class="line">      </span><br><span class="line">      </span><br><span class="line"></span><br><span class="line">  * 表单属性</span><br><span class="line">    * action：规定当提交表单时向何处发送表单数据，URL</span><br><span class="line">    * method：规定用于发送表单数据的方式。GET、POST</span><br><span class="line"></span><br><span class="line">​		</span><br><span class="line"></span><br><span class="line">**form表单属性:**</span><br><span class="line"></span><br><span class="line">**label标签有聚焦的作用**</span><br><span class="line"></span><br><span class="line">**action：表单提交的ur1，往何处提交数据，如果不指定，默认提交到当前页面**</span><br><span class="line">**method：表单的提交方式**</span><br><span class="line">**get：在ur1后面拼接表单数据，比如:?username=Tom&amp;age=12，url长度有限制 。默认值**</span><br><span class="line">**post：在消息体(请求体)中传递的，参数大小无限制的**</span><br><span class="line"></span><br><span class="line">表单标签——表单项</span><br><span class="line"></span><br><span class="line">![image-20240503143408361](./JavaWeb%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/image-20240503143408361-1714718055325-1-1714718064241-3.png)</span><br><span class="line"></span><br><span class="line">## (2)JavaScript笔记</span><br><span class="line"></span><br><span class="line">### 1）JS引入方式</span><br><span class="line"></span><br><span class="line">**JS的引入方式有两种：**</span><br><span class="line"></span><br><span class="line">* 内部脚本：将JS代码定义在HTML页面中</span><br><span class="line"></span><br><span class="line">  * JavaScript代码必须位于script标签内</span><br><span class="line">  * 在HTML文档中，可以再任意地方 ，放置任意数量的script</span><br><span class="line">  * 一般会把脚本置于body元素的底部，可以改善显示速度</span><br><span class="line"></span><br><span class="line">* 外部脚本：将JS代码定义在外部JS文件中，然后引入到HTML页面中</span><br><span class="line"></span><br><span class="line">  * 外部JS文件中，只包含JS代码，不包含script标签</span><br><span class="line"></span><br><span class="line">  * script标签不能够自闭合，也就是不可以写成</span><br><span class="line"></span><br><span class="line">![image-20240503145115827](./JavaWeb%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/image-20240503145115827.png)</span><br><span class="line"></span><br><span class="line">### 2）JS基础语法</span><br><span class="line"></span><br><span class="line">#### 1、书写语法</span><br><span class="line"></span><br><span class="line">* 区分大小写：与java一样，变量名、函数名以及其他一切东西都是区分大小写的</span><br><span class="line"></span><br><span class="line">* 每行结尾的分号可有可无</span><br><span class="line"></span><br><span class="line">* 注释：</span><br><span class="line"></span><br><span class="line">  * 单行注释：//注释内容</span><br><span class="line">  * 多行注释：/*注释内容* */</span><br><span class="line"></span><br><span class="line">* 大括号代表代码块：</span><br><span class="line"></span><br><span class="line">  ```js</span><br><span class="line">  //判断</span><br><span class="line">  if(count == 3)&#123;</span><br><span class="line">  alert(count);</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+</code></pre>
 </li>
 </ul>
 </li>
 </ul>
-<p>​		</p>
-<p><strong>form表单属性:</strong></p>
-<p><strong><label>标签有聚焦的作用</label></strong></p>
-<p><strong>action：表单提交的ur1，往何处提交数据，如果不指定，默认提交到当前页面</strong><br><strong>method：表单的提交方式</strong><br><strong>get：在ur1后面拼接表单数据，比如:?username&#x3D;Tom&amp;age&#x3D;12，url长度有限制 。默认值</strong><br><strong>post：在消息体(请求体)中传递的，参数大小无限制的</strong></p>
-<p>表单标签——表单项</p>
-<p><img src="/2024/05/02/JavaWeb%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/image-20240503143408361-1714718055325-1-1714718064241-3.png" alt="image-20240503143408361"></p>
-<h2 id="2-JavaScript笔记"><a href="#2-JavaScript笔记" class="headerlink" title="(2)JavaScript笔记"></a>(2)JavaScript笔记</h2><h3 id="1）JS引入方式"><a href="#1）JS引入方式" class="headerlink" title="1）JS引入方式"></a>1）JS引入方式</h3><p><strong>JS的引入方式有两种：</strong></p>
-<ul>
-<li><p>内部脚本：将JS代码定义在HTML页面中</p>
-<ul>
-<li>JavaScript代码必须位于script标签内</li>
-<li>在HTML文档中，可以再任意地方 ，放置任意数量的script</li>
-<li>一般会把脚本置于body元素的底部，可以改善显示速度</li>
-</ul>
 </li>
-<li><p>外部脚本：将JS代码定义在外部JS文件中，然后引入到HTML页面中</p>
-<ul>
-<li><p>外部JS文件中，只包含JS代码，不包含script标签</p>
-</li>
-<li><p>script标签不能够自闭合，也就是不可以写成</p>
-</li>
-</ul>
-</li>
-</ul>
-<p><img src="/2024/05/02/JavaWeb%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/image-20240503145115827.png" alt="image-20240503145115827"></p>
-<h3 id="2）JS基础语法"><a href="#2）JS基础语法" class="headerlink" title="2）JS基础语法"></a>2）JS基础语法</h3><h4 id="1、书写语法"><a href="#1、书写语法" class="headerlink" title="1、书写语法"></a>1、书写语法</h4><ul>
-<li><p>区分大小写：与java一样，变量名、函数名以及其他一切东西都是区分大小写的</p>
-</li>
-<li><p>每行结尾的分号可有可无</p>
-</li>
-<li><p>注释：</p>
-<ul>
-<li>单行注释：&#x2F;&#x2F;注释内容</li>
-<li>多行注释：&#x2F;<em>注释内容</em> *&#x2F;</li>
-</ul>
-</li>
-<li><p>大括号代表代码块：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//判断</span></span><br><span class="line"><span class="keyword">if</span>(count == <span class="number">3</span>)&#123;</span><br><span class="line"><span class="title function_">alert</span>(count);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
 </ul>
 <h5 id="输出语句"><a href="#输出语句" class="headerlink" title="输出语句"></a>输出语句</h5><pre><code>* 使用**window.alert()**写入警告框
 * 使用**document.write()**写入HTML输出
@@ -504,7 +487,7 @@ alert(parseInt(&quot;A45&quot;));//转为NaN(not a number)
 </li>
 <li><ol start="3">
 <li>HTTP协议是无状态的协议:对于事务处理没有记忆能力。每次请求-响应都是独立的。<ul>
-<li>缺点:多次请求间不能共享数据，</li>
+<li>缺点:多次请求间不能共享数据。</li>
 <li>优点:速度快</li>
 </ul>
 </li>
@@ -513,7 +496,49 @@ alert(parseInt(&quot;A45&quot;));//转为NaN(not a number)
 </ul>
 </li>
 </ul>
-<h2 id="3-Web服务器——Tomcat"><a href="#3-Web服务器——Tomcat" class="headerlink" title="(3)Web服务器——Tomcat"></a>(3)Web服务器——Tomcat</h2>
+<h3 id="HTTP——请求数据格式"><a href="#HTTP——请求数据格式" class="headerlink" title="HTTP——请求数据格式"></a>HTTP——请求数据格式</h3><ul>
+<li>请求行：请求数据的第一行(请求方式、资源路径、协议)</li>
+<li>请求头：第二行开始，key：value格式</li>
+<li>请求体：(post请求独有)，存放请求的参数<ul>
+<li><img src="/2024/05/02/JavaWeb%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/image-20240511145939993.png" alt="image-20240511145939993"></li>
+</ul>
+</li>
+</ul>
+<p>拿下面这一段代码举例：</p>
+<p><img src="/2024/05/02/JavaWeb%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/image-20240512130440784.png" alt="image-20240512130440784"></p>
+<p>我们来看下，他的各个部分代表着什么含义：</p>
+<img src="/2024/05/02/JavaWeb%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/image-20240512130505773.png" alt="image-20240512130505773" style="zoom:33%;">
+
+<h3 id="HTTP——响应格式"><a href="#HTTP——响应格式" class="headerlink" title="HTTP——响应格式"></a>HTTP——响应格式</h3><ul>
+<li><p>响应行：响应数据的第一行(协议、状态码、描述)</p>
+<ul>
+<li><p>状态码 ：<img src="/2024/05/02/JavaWeb%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/image-20240512175202186.png" alt="image-20240512175202186"></p>
+</li>
+<li><p>常见的响应状态码：<img src="/2024/05/02/JavaWeb%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/image-20240512175514372.png" alt="image-20240512175514372"></p>
+</li>
+</ul>
+</li>
+<li><p>响应头：第二行开始，格式key：value</p>
+<ul>
+<li>常见的响应头：<img src="/2024/05/02/JavaWeb%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/image-20240512194826494.png" alt="image-20240512194826494"></li>
+</ul>
+</li>
+<li><p>响应体：最后一部分，存放响应数据。</p>
+</li>
+</ul>
+<h2 id="3-Web服务器——Tomcat"><a href="#3-Web服务器——Tomcat" class="headerlink" title="(3)Web服务器——Tomcat"></a>(3)Web服务器——Tomcat</h2><ul>
+<li>是一个开源免费的轻量级Web服务器，智齿Servle&#x2F;JSP少量JavaEE规范。</li>
+<li>Tomcat也称为Web容器、Servlet容器。Servlet程序需要依赖于Tomcat才能运行。</li>
+<li>Tomcat官网：<a target="_blank" rel="noopener" href="https://tomcat.apache.org/">https://tomcat.apache.org/</a></li>
+</ul>
+<h4 id="Tomcat目录说明"><a href="#Tomcat目录说明" class="headerlink" title="Tomcat目录说明"></a>Tomcat目录说明</h4><ul>
+<li><img src="/2024/05/02/JavaWeb%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/image-20240512200708260.png" alt="image-20240512200708260"></li>
+</ul>
+<h2 id="4-请求和响应概述"><a href="#4-请求和响应概述" class="headerlink" title="(4)请求和响应概述"></a>(4)请求和响应概述</h2><p>BS架构和CS架构：</p>
+<ul>
+<li><img src="/2024/05/02/JavaWeb%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/image-20240512204745235.png" alt="image-20240512204745235"></li>
+</ul>
+
       
 
       
@@ -1480,7 +1505,7 @@ alert(parseInt(&quot;A45&quot;));//转为NaN(not a number)
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">getAllocationList</span>(<span class="params">groupId</span>)&#123;</span><br><span class="line">	<span class="comment">// 输出传入的 groupId</span></span><br><span class="line">   <span class="variable language_">console</span>.<span class="title function_">log</span>(groupId)</span><br><span class="line">    <span class="comment">// 创建一个新对象，包含 groupId</span></span><br><span class="line">	<span class="keyword">const</span> params = &#123;groupId&#125;</span><br><span class="line">   <span class="variable language_">this</span>.<span class="property">loading</span> = <span class="literal">true</span>;</span><br><span class="line">	<span class="comment">//传递参数</span></span><br><span class="line">   <span class="title function_">alreadyAllocation</span>(params).<span class="title function_">then</span>(<span class="function"><span class="params">response</span> =&gt;</span>&#123;</span><br><span class="line"></span><br><span class="line">   <span class="variable language_">this</span>.<span class="property">alAllocationList</span> = response.<span class="property">rows</span>;</span><br><span class="line"></span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">total</span> = response.<span class="property">total</span>;</span><br><span class="line">   <span class="variable language_">this</span>.<span class="property">loading</span>=<span class="literal">false</span>;</span><br><span class="line"></span><br><span class="line">   &#125;)</span><br><span class="line"></span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
 
 <p>也是可以的，ok今天就写这么多0.0</p>
-<h1 id="问题6-在传入参数时的错误"><a href="#问题6-在传入参数时的错误" class="headerlink" title="问题6:在传入参数时的错误"></a>问题6:在传入参数时的错误</h1><p>报错是这样对的</p>
+<h1 id="问题7-在传入参数时的错误"><a href="#问题7-在传入参数时的错误" class="headerlink" title="问题7:在传入参数时的错误"></a>问题7:在传入参数时的错误</h1><p>报错是这样对的</p>
 <p> <code>Error: nested exception is org.apache.ibatis.binding.BindingException: Parameter &#39;groupId&#39; not found. Available parameters are [arg1, arg0, param1, param2]</code> 翻译一下就是</p>
 <p><code>错误：嵌套异常是 org.apache.ibatis.binding.BindingException：找不到参数“groupId”。可用参数为 [arg1， arg0， param1， param2]</code></p>
 <p>这是我传入参数的函数</p>
@@ -1501,6 +1526,37 @@ alert(parseInt(&quot;A45&quot;));//转为NaN(not a number)
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">&quot;selectGroupProjectByGroupId&quot;</span> <span class="attr">parameterType</span>=<span class="string">&quot;GroupProject&quot;</span> <span class="attr">resultMap</span>=<span class="string">&quot;GroupProjectresultMap&quot;</span>&gt;</span></span><br><span class="line">    SELECT</span><br><span class="line">        pro_details3.pro_id,</span><br><span class="line">        pro_details3.pro_name,</span><br><span class="line">        pro_details3.pro_logo,</span><br><span class="line">        pro_details3.pro_track,</span><br><span class="line">        pro_details3.pro_group_id</span><br><span class="line">    FROM</span><br><span class="line">        pro_details3</span><br><span class="line">            INNER JOIN</span><br><span class="line">        pro_mapping_group ON pro_details3.pro_id = pro_mapping_group.pro_id</span><br><span class="line">    <span class="tag">&lt;<span class="name">where</span>&gt;</span></span><br><span class="line">        pro_mapping_group.group_id = #&#123;arg0&#125;</span><br><span class="line"></span><br><span class="line">       <span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;arg1 != &#x27;null&#x27; and arg1 != &#x27;&#x27; and arg1!= null&quot;</span>&gt;</span> and pro_details3.pro_track = #&#123;arg1&#125;<span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">where</span>&gt;</span></span><br><span class="line">    ORDER BY</span><br><span class="line">        pro_details3.pro_id;</span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <p>运行代码，成功传递了数据，问题解决了。你要是问我为什么这样做，其实我也不清楚，但是通过报错信息给出了<code>可用的</code>四个参数，所以说有错误还是要从报错信息入手啊 </p>
+<h1 id="问题8：vue-ruoyi前端内网在线预览ppt"><a href="#问题8：vue-ruoyi前端内网在线预览ppt" class="headerlink" title="问题8：vue+ruoyi前端内网在线预览ppt"></a>问题8：vue+ruoyi前端内网在线预览ppt</h1><p>在内网在线预览ppt时，我踩了很多坑，这里记录一下我都翻过什么错误。</p>
+<ul>
+<li><p>错误一：在给数据模型里面的数据赋值时，没有搞清楚层级，来看代码<img src="/2024/03/21/%E5%BC%80%E5%8F%91-%E5%9F%BA%E4%BA%8Eruoyiui-%E7%AC%94%E8%AE%B0/image-20240506225835352.png" alt="image-20240506225835352">这里，我定义了一个<code>prevForm</code>对象，里面有<code>prev</code>和<code>url</code>两个数据。然而在我进行赋值操作时错写成了this.prev &#x3D; xxxx，this.url&#x3D;xxxx，看似没错，但是实际上已经少写了一层了那就是丢了一个最大的对象<code>prevForm</code>正确写法是这样的<img src="/2024/03/21/%E5%BC%80%E5%8F%91-%E5%9F%BA%E4%BA%8Eruoyiui-%E7%AC%94%E8%AE%B0/image-20240506230117170.png" alt="image-20240506230117170"></p>
+</li>
+<li><p>错误二：<img src="/2024/03/21/%E5%BC%80%E5%8F%91-%E5%9F%BA%E4%BA%8Eruoyiui-%E7%AC%94%E8%AE%B0/image-20240506230225944.png" alt="image-20240506230225944">没有搞清楚&#x3D;，&#x3D;&#x3D;，&#x3D;&#x3D;&#x3D;这三个符号的意思，&#x3D;：意味着赋值操作，左边的值赋值给右边的，&#x3D;&#x3D;是比较运算符，当左右两边相等时返回true，不相等时返回false，而&#x3D;&#x3D;&#x3D;在前端中表示全等，意味着完全相等，意思就是在做运算判断时，等式两边的数值以及数据类型都必须相同。</p>
+</li>
+<li><p>在线预览ppt：</p>
+<ul>
+<li>我完成这次任务主要使用了vue-office，官网：<a target="_blank" rel="noopener" href="https://gitee.com/ye-jizeng/vue-office">vue-office: 支持word(.docx)、excel(.xlsx)、pdf等各类型office文件预览的vue组件集合，提供一站式office文件预览方案，支持vue2和3 (gitee.com)</a></li>
+</ul>
+</li>
+<li><p>思路是，我在a标签中写了一个函数whatType用来判断这是一个以什么结尾的文件，这里用到了方法pop()取最后一个元素</p>
+<ul>
+<li><img src="/2024/03/21/%E5%BC%80%E5%8F%91-%E5%9F%BA%E4%BA%8Eruoyiui-%E7%AC%94%E8%AE%B0/image-20240506230845450.png" alt="image-20240506230845450"></li>
+</ul>
+</li>
+<li><p>来说一下在线预览ppt的模板：</p>
+<ul>
+<li><p>第一步，确定你要在线预览文件的类型：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">//docx文档预览组件</span><br><span class="line">npm install @vue-office/docx vue-demi</span><br><span class="line"></span><br><span class="line">//excel文档预览组件</span><br><span class="line">npm install @vue-office/excel vue-demi</span><br><span class="line"></span><br><span class="line">//pdf文档预览组件</span><br><span class="line">npm install @vue-office/pdf vue-demi</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>vue模板</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">    &lt;vue-office-docx :src=&quot;docx&quot; @rendered=&quot;rendered&quot;/&gt;</span><br><span class="line">    &lt;vue-office-excel :src=&quot;excel&quot; @rendered=&quot;rendered&quot;/&gt;</span><br><span class="line">    &lt;vue-office-pdf :src=&quot;pdf&quot; @rendered=&quot;rendered&quot;/&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">//引入VueOfficeDocx组件</span><br><span class="line">import VueOfficeDocx from &#x27;@vue-office/docx&#x27;</span><br><span class="line">//引入VueOfficeExcel组件</span><br><span class="line">import VueOfficeExcel from &#x27;@vue-office/excel&#x27;</span><br><span class="line">//引入VueOfficePdf组件</span><br><span class="line">import VueOfficePdf from &#x27;@vue-office/pdf&#x27;</span><br><span class="line">//引入相关样式</span><br><span class="line">import &#x27;@vue-office/docx/lib/index.css&#x27;</span><br><span class="line"></span><br><span class="line">export default &#123;</span><br><span class="line">  components:&#123;</span><br><span class="line">    VueOfficeDocx</span><br><span class="line">  &#125;,</span><br><span class="line">  data()&#123;</span><br><span class="line">    return &#123;</span><br><span class="line">      docx: &#x27;http://static.shanhuxueyuan.com/test6.docx&#x27; //设置文档网络地址，可以是相对地址</span><br><span class="line">      excel：</span><br><span class="line">      pdf:</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  methods:&#123;</span><br><span class="line">    rendered()&#123;</span><br><span class="line">      console.log(&quot;渲染完成&quot;)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+<p>一次性引入了三个，这样会渲染三个</p>
+<ul>
+<li><p>最后，展示一下我写的点击弹出弹窗，来展示对应的内容，代码如下(只展示核心部分，多余代码省略)：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">.........</span><br><span class="line">  &lt;el-table-column label=&quot;项目计划书&quot; align=&quot;center&quot; prop=&quot;proPlan&quot; &gt;</span><br><span class="line">  &lt;template slot-scope=&quot;scope&quot;&gt;</span><br><span class="line">    &lt;a @click=&quot;whatType(scope.row.proPlan)&quot; v-if=&quot;getfileName(scope.row.proPt) !== &#x27;暂无资料&#x27;&quot;&gt;  </span><br><span class="line">      &#123;&#123; getfileName(scope.row.proPlan) &#125;&#125;</span><br><span class="line">      &lt;/a&gt;</span><br><span class="line">      &lt;a v-else&gt;</span><br><span class="line">        &#123;&#123; getfileName(scope.row.proPlan) &#125;&#125;</span><br><span class="line">      &lt;/a&gt;</span><br><span class="line">  &lt;/template&gt;</span><br><span class="line">.......</span><br><span class="line">&lt;!--弹出各种文件预览弹窗--&gt;</span><br><span class="line">&lt;el-dialog :visible.sync=&quot;dialogPrevVisible&quot; title=&quot;文件预览&quot; width=&quot;90%&quot; &gt;</span><br><span class="line">    &lt;el-form style=&quot;margin-top: 10px;&quot; :model=&quot;prevForm&quot;&gt;</span><br><span class="line">      &lt;template v-if=&quot;prevForm.prev == &#x27;docx&#x27;&quot;&gt;</span><br><span class="line">          &lt;vue-office-docx style=&quot;height: 90%&quot; :src=&quot;prevForm.url&quot; @rendered=&quot;rendered&quot;/&gt;</span><br><span class="line">      &lt;/template&gt;</span><br><span class="line">      &lt;template v-if=&quot;prevForm.prev == &#x27;xlsx&#x27;&quot;&gt;</span><br><span class="line">          &lt;vue-office-excel style=&quot;height: 90%&quot; :src=&quot;prevForm.url&quot; @rendered=&quot;rendered&quot; /&gt;</span><br><span class="line">      &lt;/template&gt;</span><br><span class="line">      &lt;template v-if=&quot;prevForm.prev == &#x27;pdf&#x27;&quot;&gt;</span><br><span class="line">          &lt;vue-office-pdf style=&quot;height: 90%&quot; :src=&quot;prevForm.url&quot; @rendered=&quot;rendered&quot;/&gt;</span><br><span class="line">      &lt;/template&gt;</span><br><span class="line">    &lt;/el-form&gt;</span><br><span class="line">  &lt;/el-dialog&gt;</span><br><span class="line">......</span><br><span class="line">&lt;/template&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">//引入VueOfficeDocx组件</span><br><span class="line">import VueOfficeDocx from &#x27;@vue-office/docx&#x27;;</span><br><span class="line">import VueOfficeExcel from &#x27;@vue-office/excel&#x27;;</span><br><span class="line">import VueOfficePdf from &#x27;@vue-office/pdf&#x27;;</span><br><span class="line">//引入相关样式</span><br><span class="line">import &#x27;@vue-office/docx/lib/index.css&#x27;;</span><br><span class="line">data() &#123;</span><br><span class="line">  return &#123;</span><br><span class="line">   //设置弹窗初始状态</span><br><span class="line">   dialogPrevVisible:false,</span><br><span class="line">   prevForm:&#123;</span><br><span class="line">    prev:&#x27;&#x27;,</span><br><span class="line">    url:&#x27;&#x27;</span><br><span class="line">   &#125;,</span><br><span class="line">.....</span><br><span class="line">&#125;</span><br><span class="line">methods: &#123;</span><br><span class="line">  //判断路径的类型</span><br><span class="line">  whatType(path)&#123;</span><br><span class="line">    //获取文件拓展名并改为小写</span><br><span class="line">    var tempPath = path;</span><br><span class="line">    console.log(tempPath);</span><br><span class="line">    //pop函数取最后一个元素，然后在转成小写。</span><br><span class="line">    var fileType = path.split(&#x27;.&#x27;).pop().toLowerCase(); </span><br><span class="line">    console.log(fileType);</span><br><span class="line">    </span><br><span class="line">   if(fileType == &#x27;docx&#x27;)&#123;</span><br><span class="line">    this.prevForm.prev = &#x27;docx&#x27;,</span><br><span class="line">    this.prevForm.url=&#x27;http://192.168.1.104/dev-api&#x27;+ tempPath</span><br><span class="line">    this.dialogPrevVisible = true;</span><br><span class="line">   </span><br><span class="line">   &#125;else if(fileType == &#x27;excel&#x27;)&#123;</span><br><span class="line">    this.prevForm.prev = &#x27;excel&#x27;,</span><br><span class="line">    this.prevForm.url=&#x27;http://192.168.1.104/dev-api&#x27;+ tempPath</span><br><span class="line">    this.dialogPrevVisible = true;</span><br><span class="line">    </span><br><span class="line">   &#125;else if(fileType ==&#x27;pdf&#x27;)&#123;</span><br><span class="line">    this.prevForm.prev = &#x27;pdf&#x27;,</span><br><span class="line">    this.prevForm.url=&#x27;http://192.168.1.104/dev-api&#x27;+ tempPath</span><br><span class="line">    this.dialogPrevVisible = true;</span><br><span class="line">   &#125;else&#123;</span><br><span class="line">    window.alert(&quot;不支持查看该文件格式&quot;)</span><br><span class="line">   &#125;</span><br><span class="line">   &#125;,</span><br><span class="line">  rendered()&#123;</span><br><span class="line">      console.log(&quot;渲染完成&quot;)</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure></li>
+</ul>
 
       
 
@@ -12190,11 +12246,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">java和vue开发中遇到的错误以及如何改正和对他们的理解整理(参加的项目)</a>
+                <a href="javascript:void(0)" class="js-tag color2">Linux Error</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Linux Error</a>
+                <a href="javascript:void(0)" class="js-tag color4">java和vue开发中遇到的错误以及如何改正和对他们的理解整理(参加的项目)</a>
               </li>
             
             <div class="clearfix"></div>
