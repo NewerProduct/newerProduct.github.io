@@ -542,14 +542,61 @@
 </li>
 <li><p>表单项：</p>
 <ul>
-<li><pre><code>&lt;input&gt;标签，定义表单项，通过type属性控制输入的形式
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">    * &lt;select&gt;：定义下拉列表， &lt;option&gt;定义列表选项&lt;/option&gt;</span><br><span class="line"></span><br><span class="line">    * &lt;textarea&gt;：定义文本区域</span><br><span class="line">      </span><br><span class="line">      </span><br><span class="line"></span><br><span class="line">  * 表单属性</span><br><span class="line">    * action：规定当提交表单时向何处发送表单数据，URL</span><br><span class="line">    * method：规定用于发送表单数据的方式。GET、POST</span><br><span class="line"></span><br><span class="line">​		</span><br><span class="line"></span><br><span class="line">**form表单属性:**</span><br><span class="line"></span><br><span class="line">**label标签有聚焦的作用**</span><br><span class="line"></span><br><span class="line">**action：表单提交的ur1，往何处提交数据，如果不指定，默认提交到当前页面**</span><br><span class="line">**method：表单的提交方式**</span><br><span class="line">**get：在ur1后面拼接表单数据，比如:?username=Tom&amp;age=12，url长度有限制 。默认值**</span><br><span class="line">**post：在消息体(请求体)中传递的，参数大小无限制的**</span><br><span class="line"></span><br><span class="line">表单标签——表单项</span><br><span class="line"></span><br><span class="line">![image-20240503143408361](./JavaWeb%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/image-20240503143408361-1714718055325-1-1714718064241-3.png)</span><br><span class="line"></span><br><span class="line">## (2)JavaScript笔记</span><br><span class="line"></span><br><span class="line">### 1）JS引入方式</span><br><span class="line"></span><br><span class="line">**JS的引入方式有两种：**</span><br><span class="line"></span><br><span class="line">* 内部脚本：将JS代码定义在HTML页面中</span><br><span class="line"></span><br><span class="line">  * JavaScript代码必须位于script标签内</span><br><span class="line">  * 在HTML文档中，可以再任意地方 ，放置任意数量的script</span><br><span class="line">  * 一般会把脚本置于body元素的底部，可以改善显示速度</span><br><span class="line"></span><br><span class="line">* 外部脚本：将JS代码定义在外部JS文件中，然后引入到HTML页面中</span><br><span class="line"></span><br><span class="line">  * 外部JS文件中，只包含JS代码，不包含script标签</span><br><span class="line"></span><br><span class="line">  * script标签不能够自闭合，也就是不可以写成</span><br><span class="line"></span><br><span class="line">![image-20240503145115827](./JavaWeb%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/image-20240503145115827.png)</span><br><span class="line"></span><br><span class="line">### 2）JS基础语法</span><br><span class="line"></span><br><span class="line">#### 1、书写语法</span><br><span class="line"></span><br><span class="line">* 区分大小写：与java一样，变量名、函数名以及其他一切东西都是区分大小写的</span><br><span class="line"></span><br><span class="line">* 每行结尾的分号可有可无</span><br><span class="line"></span><br><span class="line">* 注释：</span><br><span class="line"></span><br><span class="line">  * 单行注释：//注释内容</span><br><span class="line">  * 多行注释：/*注释内容* */</span><br><span class="line"></span><br><span class="line">* 大括号代表代码块：</span><br><span class="line"></span><br><span class="line">  ```js</span><br><span class="line">  //判断</span><br><span class="line">  if(count == 3)&#123;</span><br><span class="line">  alert(count);</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
-</code></pre>
+<li><p>input标签，定义表单项，通过type属性控制输入的形式</p>
 </li>
+<li><p>select：定义下拉列表， option定义列表选项</p>
+</li>
+<li><p>textarea：定义文本区域</p>
+</li>
+</ul>
+</li>
+<li><p>表单属性</p>
+<ul>
+<li>action：规定当提交表单时向何处发送表单数据，URL</li>
+<li>method：规定用于发送表单数据的方式。GET、POST</li>
 </ul>
 </li>
 </ul>
 </li>
+</ul>
+<p>​		</p>
+<p><strong>form表单属性:</strong></p>
+<p><strong>label标签有聚焦的作用</strong></p>
+<p><strong>action：表单提交的ur1，往何处提交数据，如果不指定，默认提交到当前页面</strong><br><strong>method：表单的提交方式</strong><br><strong>get：在ur1后面拼接表单数据，比如:?username&#x3D;Tom&amp;age&#x3D;12，url长度有限制 。默认值</strong><br><strong>post：在消息体(请求体)中传递的，参数大小无限制的</strong></p>
+<p>表单标签——表单项</p>
+<p><img src="/2024/05/02/JavaWeb%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/image-20240503143408361-1714718055325-1-1714718064241-3.png" alt="image-20240503143408361"></p>
+<h2 id="2-JavaScript笔记"><a href="#2-JavaScript笔记" class="headerlink" title="(2)JavaScript笔记"></a>(2)JavaScript笔记</h2><h3 id="1）JS引入方式"><a href="#1）JS引入方式" class="headerlink" title="1）JS引入方式"></a>1）JS引入方式</h3><p><strong>JS的引入方式有两种：</strong></p>
+<ul>
+<li><p>内部脚本：将JS代码定义在HTML页面中</p>
+<ul>
+<li>JavaScript代码必须位于script标签内</li>
+<li>在HTML文档中，可以再任意地方 ，放置任意数量的script</li>
+<li>一般会把脚本置于body元素的底部，可以改善显示速度</li>
+</ul>
+</li>
+<li><p>外部脚本：将JS代码定义在外部JS文件中，然后引入到HTML页面中</p>
+<ul>
+<li><p>外部JS文件中，只包含JS代码，不包含script标签</p>
+</li>
+<li><p>script标签不能够自闭合，也就是不可以写成</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><img src="/2024/05/02/JavaWeb%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/image-20240503145115827.png" alt="image-20240503145115827"></p>
+<h3 id="2）JS基础语法"><a href="#2）JS基础语法" class="headerlink" title="2）JS基础语法"></a>2）JS基础语法</h3><h4 id="1、书写语法"><a href="#1、书写语法" class="headerlink" title="1、书写语法"></a>1、书写语法</h4><ul>
+<li><p>区分大小写：与java一样，变量名、函数名以及其他一切东西都是区分大小写的</p>
+</li>
+<li><p>每行结尾的分号可有可无</p>
+</li>
+<li><p>注释：</p>
+<ul>
+<li>单行注释：&#x2F;&#x2F;注释内容</li>
+<li>多行注释：&#x2F;<em>注释内容</em> *&#x2F;</li>
+</ul>
+</li>
+<li><p>大括号代表代码块：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//判断</span></span><br><span class="line"><span class="keyword">if</span>(count == <span class="number">3</span>)&#123;</span><br><span class="line"><span class="title function_">alert</span>(count);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
 </ul>
 <h5 id="输出语句"><a href="#输出语句" class="headerlink" title="输出语句"></a>输出语句</h5><pre><code>* 使用**window.alert()**写入警告框
 * 使用**document.write()**写入HTML输出
@@ -1083,132 +1130,6 @@ return &quot;ok;&quot;
                 </div>
             </div>
             
-                <style>
-    #reward {
-        margin: 40px 0;
-        text-align: center;
-    }
-
-    #reward .reward-link {
-        font-size: 1.4rem;
-        line-height: 38px;
-    }
-
-    #reward .btn-floating:hover {
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
-    }
-
-    #rewardModal {
-        width: 320px;
-        height: 350px;
-    }
-
-    #rewardModal .reward-title {
-        margin: 15px auto;
-        padding-bottom: 5px;
-    }
-
-    #rewardModal .modal-content {
-        padding: 10px;
-    }
-
-    #rewardModal .close {
-        position: absolute;
-        right: 15px;
-        top: 15px;
-        color: rgba(0, 0, 0, 0.5);
-        font-size: 1.3rem;
-        line-height: 20px;
-        cursor: pointer;
-    }
-
-    #rewardModal .close:hover {
-        color: #ef5350;
-        transform: scale(1.3);
-        -moz-transform:scale(1.3);
-        -webkit-transform:scale(1.3);
-        -o-transform:scale(1.3);
-    }
-
-    #rewardModal .reward-tabs {
-        margin: 0 auto;
-        width: 210px;
-    }
-
-    .reward-tabs .tabs {
-        height: 38px;
-        margin: 10px auto;
-        padding-left: 0;
-    }
-
-    .reward-content ul {
-        padding-left: 0 !important;
-    }
-
-    .reward-tabs .tabs .tab {
-        height: 38px;
-        line-height: 38px;
-    }
-
-    .reward-tabs .tab a {
-        color: #fff;
-        background-color: #ccc;
-    }
-
-    .reward-tabs .tab a:hover {
-        background-color: #ccc;
-        color: #fff;
-    }
-
-    .reward-tabs .wechat-tab .active {
-        color: #fff !important;
-        background-color: #22AB38 !important;
-    }
-
-    .reward-tabs .alipay-tab .active {
-        color: #fff !important;
-        background-color: #019FE8 !important;
-    }
-
-    .reward-tabs .reward-img {
-        width: 210px;
-        height: 210px;
-    }
-</style>
-
-<div id="reward">
-    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
-
-    <!-- Modal Structure -->
-    <div id="rewardModal" class="modal">
-        <div class="modal-content">
-            <a class="close modal-close"><i class="fas fa-times"></i></a>
-            <h4 class="reward-title">你的赏识是我前进的动力</h4>
-            <div class="reward-content">
-                <div class="reward-tabs">
-                    <ul class="tabs row">
-                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
-                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
-                    </ul>
-                    <div id="alipay">
-                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
-                    </div>
-                    <div id="wechat">
-                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<script>
-    $(function () {
-        $('.tabs').tabs();
-    });
-</script>
-
-            
         </div>
     </div>
 
@@ -1507,9 +1428,9 @@ return &quot;ok;&quot;
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             
-                <span id="year">2019-2024</span>
+                <span id="year">2024</span>
             
-            <span id="year">2019</span>
+            <span id="year">2024</span>
             <a href="/about" target="_blank">John Doe</a>
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
@@ -1537,13 +1458,13 @@ return &quot;ok;&quot;
             
         </div>
         <div class="col s12 m4 l4 social-link social-statis">
-    <a href="https://github.com/blinkfox" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+    <a href="https://github.com/NewerProduct/newerProduct.github.io" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
         <i class="fab fa-github"></i>
     </a>
 
 
 
-    <a href="mailto:1181062873@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+    <a href="mailto:485312009@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
         <i class="fas fa-envelope-open"></i>
     </a>
 
@@ -1553,7 +1474,7 @@ return &quot;ok;&quot;
 
 
 
-    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1181062873" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1181062873" data-position="top" data-delay="50">
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=485312009" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 485312009" data-position="top" data-delay="50">
         <i class="fab fa-qq"></i>
     </a>
 
