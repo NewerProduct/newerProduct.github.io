@@ -807,7 +807,7 @@ alert(parseInt(&quot;A45&quot;));//转为NaN(not a number)
 <li><p>引入Axios的js文件：</p>
 <ul>
 <li><pre><code class="html">&lt;script src = &quot;js/axios-0.18.0.js&quot;&gt;&lt;/script&gt;
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">* 使用Axios发送请求并获取响应结果。</span><br><span class="line">  * ![image-20240504155841437](./JavaWeb%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/image-20240504155841437.png)</span><br><span class="line"></span><br><span class="line">​	</span><br><span class="line"></span><br><span class="line">Axios请求方式别名：</span><br><span class="line"></span><br><span class="line">![image-20240504160329139](./JavaWeb%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/image-20240504160329139.png)</span><br><span class="line"></span><br><span class="line">举个例子：</span><br><span class="line"></span><br><span class="line">![image-20240504160406515](./JavaWeb%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/image-20240504160406515.png)</span><br><span class="line"></span><br><span class="line">## (5)Vue路由</span><br><span class="line"></span><br><span class="line">* 介绍: Vue Router 是 Vue 的官方路由。</span><br><span class="line"></span><br><span class="line">* 组成:</span><br><span class="line"></span><br><span class="line">  * VueRouter:路由器类，根据路由请求在路由视图中动态渲染选中的组件。</span><br><span class="line">  * &lt;router-link&gt;：请求链接组件，浏览器会解析成&lt;a&gt;。</span><br><span class="line">  * &lt;router-view&gt;：动态视图组件，用来渲染展示与路由路径对应的组件。</span><br><span class="line"></span><br><span class="line">* 图示：</span><br><span class="line"></span><br><span class="line">  ![image-20240505153439121](./JavaWeb%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/image-20240505153439121.png)</span><br><span class="line"></span><br><span class="line">## (6)部署——nginx服务器</span><br><span class="line"></span><br><span class="line">* 部署：</span><br><span class="line">  * 将打包好的dist文件里面的内容放在nginx目录下的html文件夹下。</span><br><span class="line">  * 启动nginx即可</span><br><span class="line">* ![image-20240505154702311](./JavaWeb%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/image-20240505154702311.png)</span><br><span class="line"></span><br><span class="line"># Chapter(二)——JavaWeb开发</span><br><span class="line"></span><br><span class="line">## (1)maven</span><br><span class="line"></span><br><span class="line">* Maven是apache旗下的一个开源项目，是一款用于管理和构建java项目的工具。</span><br><span class="line">* maven的作用：</span><br><span class="line">  * ![image-20240505155028692](./JavaWeb%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/image-20240505155028692.png)</span><br><span class="line"></span><br><span class="line">* 仓库:用于存储资源，管理各种jar包。</span><br><span class="line">  * 本地仓库:自己计算机上的一个目录。</span><br><span class="line">  * 中央仓库:由Maven团队维护的全球唯一的。仓库地址:https://repo1.maven.qrg/maven2/</span><br><span class="line">  * 远程仓库(私服):一般由公司团队搭建的私有仓库。</span><br><span class="line"></span><br><span class="line">* maven中的坐标：</span><br><span class="line">  * maven中的坐标是资源的唯一标识，**通过该坐标可以唯一定位资源位置。**</span><br><span class="line">  * 使用坐标来定义项目或引入项目中需要的依赖。</span><br><span class="line"></span><br><span class="line">* Maven 坐标主要组成：</span><br><span class="line">  * groupld:定义当前Maven项目隶属组织名称(通常是域名反写，例如:com.itheima)。</span><br><span class="line">  * artifactld:定义当前Maven项目名称(通常是模块名称，例如 order-service、goods-service)。</span><br><span class="line">  * version:定义当前项目版本号</span><br><span class="line"></span><br><span class="line">![image-20240505164733500](./JavaWeb%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/image-20240505164733500.png)</span><br><span class="line"></span><br><span class="line">* 依赖传递</span><br><span class="line">  * 依赖具有传递性</span><br><span class="line">  * 直接依赖:在当前项目中通过依赖配置建立的依赖关系。</span><br><span class="line">  * 间接依赖:被依赖的资源如果依赖其他资源，当前项目间接依赖其他资源</span><br><span class="line"></span><br><span class="line">* 排除依赖：</span><br><span class="line">  * 排除依赖指主动断开依赖的资源，被排除的资源无需指定版本。</span><br><span class="line">  * ![image-20240505165557223](./JavaWeb%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/image-20240505165557223.png)</span><br><span class="line"></span><br><span class="line">上面通过标签&lt;exclusions&gt;来排除。</span><br><span class="line"></span><br><span class="line">* 依赖范围：依赖的jar包在默认情况下可以再任何地方使用。但是我们通过&lt;scope&gt;标签可以指定它的作用范围。</span><br><span class="line"></span><br><span class="line">  * 主程序范围有效。(main文件夹范围内)</span><br><span class="line">  * 测试程序范围有效。(test文件夹范围内)</span><br><span class="line">  * 是否参与打包运行。(package指令范围内)</span><br><span class="line">  * ![image-20240505170021537](./JavaWeb%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/image-20240505170021537.png)</span><br><span class="line"></span><br><span class="line">  </span><br><span class="line"></span><br><span class="line">* maven的生命周期：</span><br><span class="line">  * clean：清理。</span><br><span class="line">  * compile：编译</span><br><span class="line">  * test：测试</span><br><span class="line">  * package：打包</span><br><span class="line">  * install：安装(将打好的jar包安装到本地仓库)</span><br><span class="line"></span><br><span class="line"># Chapter(三)——Spring</span><br><span class="line"></span><br><span class="line">* 官网：https://spring.io</span><br><span class="line"></span><br><span class="line">* Spring形成一种开发生态圈，Spring提供了若干个子项目，每个项目用于完成特定功能。</span><br><span class="line">  * ![image-20240505172103140](./JavaWeb%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/image-20240505172103140.png)</span><br><span class="line"></span><br><span class="line">## (1)SpringBoot入门</span><br><span class="line"></span><br><span class="line">* **编写一个入门程序，浏览器访问url输出Hello，Spring！字样**</span><br><span class="line">  * 项目结构：</span><br><span class="line">  * ![image-20240505172659110](./JavaWeb%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/image-20240505172659110.png)</span><br><span class="line"></span><br><span class="line">第一步，在java包下的com下新建controller包下创建HelloTestController类中添加如下内容：</span><br><span class="line"></span><br><span class="line">```java</span><br><span class="line">package com.xiaoli.controller;</span><br><span class="line"></span><br><span class="line">import org.springframework.web.bind.annotation.GetMapping;</span><br><span class="line">import org.springframework.web.bind.annotation.RequestMapping;</span><br><span class="line">import org.springframework.web.bind.annotation.RestController;</span><br><span class="line"></span><br><span class="line">@RestController</span><br><span class="line">@RequestMapping(&quot;/hello&quot;)</span><br><span class="line">public class HelloSpringController &#123;</span><br><span class="line">    @GetMapping(&quot;/test&quot;)</span><br><span class="line">    public void testSpring()&#123;</span><br><span class="line">        System.out.println(&quot;Hello,Spring,你好，Spring&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">* 使用Axios发送请求并获取响应结果。</span><br><span class="line">  * ![image-20240504155841437](./JavaWeb%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/image-20240504155841437.png)</span><br><span class="line"></span><br><span class="line">​	</span><br><span class="line"></span><br><span class="line">Axios请求方式别名：</span><br><span class="line"></span><br><span class="line">![image-20240504160329139](./JavaWeb%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/image-20240504160329139.png)</span><br><span class="line"></span><br><span class="line">举个例子：</span><br><span class="line"></span><br><span class="line">![image-20240504160406515](./JavaWeb%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/image-20240504160406515.png)</span><br><span class="line"></span><br><span class="line">## (5)Vue路由</span><br><span class="line"></span><br><span class="line">* 介绍: Vue Router 是 Vue 的官方路由。</span><br><span class="line"></span><br><span class="line">* 组成:</span><br><span class="line"></span><br><span class="line">  * VueRouter:路由器类，根据路由请求在路由视图中动态渲染选中的组件。</span><br><span class="line">  * &lt;router-link&gt;：请求链接组件，浏览器会解析成&lt;a&gt;。</span><br><span class="line">  * &lt;router-view&gt;：动态视图组件，用来渲染展示与路由路径对应的组件。</span><br><span class="line"></span><br><span class="line">* 图示：</span><br><span class="line"></span><br><span class="line">  ![image-20240505153439121](./JavaWeb%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/image-20240505153439121.png)</span><br><span class="line"></span><br><span class="line">## (6)部署——nginx服务器</span><br><span class="line"></span><br><span class="line">* 部署：</span><br><span class="line">  * 将打包好的dist文件里面的内容放在nginx目录下的html文件夹下。</span><br><span class="line">  * 启动nginx即可</span><br><span class="line">* ![image-20240505154702311](./JavaWeb%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/image-20240505154702311.png)</span><br><span class="line"></span><br><span class="line"># Chapter(二)——JavaWeb开发</span><br><span class="line"></span><br><span class="line">## (1)maven</span><br><span class="line"></span><br><span class="line">* Maven是apache旗下的一个开源项目，是一款用于管理和构建java项目的工具。</span><br><span class="line">* maven的作用：</span><br><span class="line">  * ![image-20240505155028692](./JavaWeb%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/image-20240505155028692.png)</span><br><span class="line"></span><br><span class="line">* 仓库:用于存储资源，管理各种jar包。</span><br><span class="line">  * 本地仓库:自己计算机上的一个目录。</span><br><span class="line">  * 中央仓库:由Maven团队维护的全球唯一的。仓库地址:https://repo1.maven.qrg/maven2/</span><br><span class="line">  * 远程仓库(私服):一般由公司团队搭建的私有仓库。</span><br><span class="line"></span><br><span class="line">* maven中的坐标：</span><br><span class="line">  * maven中的坐标是资源的唯一标识，**通过该坐标可以唯一定位资源位置。**</span><br><span class="line">  * 使用坐标来定义项目或引入项目中需要的依赖。</span><br><span class="line"></span><br><span class="line">* Maven 坐标主要组成：</span><br><span class="line">  * groupld:定义当前Maven项目隶属组织名称(通常是域名反写，例如:com.itheima)。</span><br><span class="line">  * artifactld:定义当前Maven项目名称(通常是模块名称，例如 order-service、goods-service)。</span><br><span class="line">  * version:定义当前项目版本号</span><br><span class="line"></span><br><span class="line">![image-20240505164733500](./JavaWeb%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/image-20240505164733500.png)</span><br><span class="line"></span><br><span class="line">* 依赖传递</span><br><span class="line">  * 依赖具有传递性</span><br><span class="line">  * 直接依赖:在当前项目中通过依赖配置建立的依赖关系。</span><br><span class="line">  * 间接依赖:被依赖的资源如果依赖其他资源，当前项目间接依赖其他资源</span><br><span class="line"></span><br><span class="line">* 排除依赖：</span><br><span class="line">  * 排除依赖指主动断开依赖的资源，被排除的资源无需指定版本。</span><br><span class="line">  * ![image-20240505165557223](./JavaWeb%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/image-20240505165557223.png)</span><br><span class="line"></span><br><span class="line">上面通过标签&lt;exclusions&gt;来排除。</span><br><span class="line"></span><br><span class="line">* 依赖范围：依赖的jar包在默认情况下可以再任何地方使用。但是我们通过&lt;scope&gt;标签可以指定它的作用范围。</span><br><span class="line"></span><br><span class="line">  * 主程序范围有效。(main文件夹范围内)</span><br><span class="line">  * 测试程序范围有效。(test文件夹范围内)</span><br><span class="line">  * 是否参与打包运行。(package指令范围内)</span><br><span class="line">  * ![image-20240505170021537](./JavaWeb%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/image-20240505170021537.png)</span><br><span class="line"></span><br><span class="line">  </span><br><span class="line"></span><br><span class="line">* maven的生命周期：</span><br><span class="line">  * clean：清理。</span><br><span class="line">  * compile：编译</span><br><span class="line">  * test：测试</span><br><span class="line">  * package：打包</span><br><span class="line">  * install：安装(将打好的jar包安装到本地仓库)</span><br><span class="line"></span><br><span class="line"># Chapter(三)——Spring</span><br><span class="line"></span><br><span class="line">* 官网：https://spring.io</span><br><span class="line"></span><br><span class="line">* Spring形成一种开发生态圈，Spring提供了若干个子项目，每个项目用于完成特定功能。</span><br><span class="line">  * ![image-20240505172103140](./JavaWeb%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/image-20240505172103140.png)</span><br><span class="line"></span><br><span class="line">## (1)SpringBoot入门</span><br><span class="line"></span><br><span class="line">* **编写一个入门程序，浏览器访问url输出Hello，Spring！字样**</span><br><span class="line">  * 项目结构：</span><br><span class="line">  * ![image-20240505172659110](./JavaWeb%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/image-20240505172659110.png)</span><br><span class="line"></span><br><span class="line">第一步，在java包下的com下新建controller包下创建HelloTestController类中添加如下内容：</span><br><span class="line"></span><br><span class="line">```java</span><br><span class="line">package com.xiaoli.controller;</span><br><span class="line"></span><br><span class="line">import org.springframework.web.bind.annotation.GetMapping;</span><br><span class="line">import org.springframework.web.bind.annotation.RequestMapping;</span><br><span class="line">import org.springframework.web.bind.annotation.RestController;</span><br><span class="line"></span><br><span class="line">@RestController//该注解相当于@Controller + @ResponseBody</span><br><span class="line">@RequestMapping(&quot;/hello&quot;)</span><br><span class="line">public class HelloSpringController &#123;</span><br><span class="line">    @GetMapping(&quot;/test&quot;)</span><br><span class="line">    public void testSpring()&#123;</span><br><span class="line">        System.out.println(&quot;Hello,Spring,你好，Spring&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 </code></pre>
 </li>
 </ul>
@@ -850,7 +850,7 @@ alert(parseInt(&quot;A45&quot;));//转为NaN(not a number)
 <p>拿下面这一段代码举例：</p>
 <p><img src="/2024/05/02/JavaWeb%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/image-20240512130440784.png" alt="image-20240512130440784"></p>
 <p>我们来看下，他的各个部分代表着什么含义：</p>
-<img src="/2024/05/02/JavaWeb%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/image-20240512130505773.png" alt="image-20240512130505773" style="zoom:33%;">
+<img src="/2024/05/02/JavaWeb%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/image-20240512130505773.png" alt="image-20240512130505773" style="zoom:93%;">
 
 <h3 id="HTTP——响应格式"><a href="#HTTP——响应格式" class="headerlink" title="HTTP——响应格式"></a>HTTP——响应格式</h3><ul>
 <li><p>响应行：响应数据的第一行(协议、状态码、描述)</p>
@@ -962,7 +962,7 @@ return &quot;ok;&quot;
 </li>
 </ul>
 <h3 id="（8）路径参数"><a href="#（8）路径参数" class="headerlink" title="（8）路径参数"></a>（8）路径参数</h3><ul>
-<li><p>通过URL直接传递参数，使用{….}来标识该路径参数，需要使用@PathVariable获取路径参数。</p>
+<li><p>通过URL直接传递参数，使用{….}来标识该路径参数，需要使用**@PathVariable**获取路径参数。</p>
 <ul>
 <li><p>说明：</p>
 <ul>
@@ -973,7 +973,7 @@ return &quot;ok;&quot;
 </ul>
 </li>
 </ul>
-<h2 id="5-响应数据"><a href="#5-响应数据" class="headerlink" title="(5)响应数据"></a>(5)响应数据</h2><p>来看一图：</p>
+<h3 id="（9）响应数据-介绍注解-ResponseBody"><a href="#（9）响应数据-介绍注解-ResponseBody" class="headerlink" title="（9）响应数据(介绍注解**@ResponseBody**)"></a>（9）响应数据(介绍注解**@ResponseBody**)</h3><p>来看一图：</p>
 <p><img src="/2024/05/02/JavaWeb%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/image-20240518205828162.png" alt="image-20240518205828162"></p>
 <p>这里介绍注解**@ResponseBody**</p>
 <ul>
@@ -1030,7 +1030,7 @@ return &quot;ok;&quot;
 </ul>
 </li>
 </ul>
-<h3 id="（4）IOC详解"><a href="#（4）IOC详解" class="headerlink" title="（4）IOC详解"></a>（4）IOC详解</h3><ul>
+<h3 id="（4）IOC详解-控制反转"><a href="#（4）IOC详解-控制反转" class="headerlink" title="（4）IOC详解(控制反转)"></a>（4）IOC详解(控制反转)</h3><ul>
 <li><p>对于Bean对象**(IOC容器中创建、管理的对象，称之为bean**)，如若要把某个对象交给IOC容器管理，需要在对应类上加上如下注解：</p>
 <ul>
 <li><img src="/2024/05/02/JavaWeb%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/image-20240520164610396.png" alt="image-20240520164610396"></li>
@@ -1040,6 +1040,112 @@ return &quot;ok;&quot;
 <ul>
 <li>前面声明Bean的四大注解，想要生效，还需要被组件扫描注解**@ComponetScan**扫描。</li>
 <li>@ComponetScan注解虽然没有显示配置，但是实际上已经包含在了启动类注解**@SpringBootApplication<strong>中，</strong>默认扫描范围是启动类所在的包及其子包。**</li>
+</ul>
+</li>
+</ul>
+<h3 id="（5）DI详解-依赖注入"><a href="#（5）DI详解-依赖注入" class="headerlink" title="（5）DI详解(依赖注入)"></a>（5）DI详解(依赖注入)</h3><ul>
+<li><p>Bean注入：</p>
+<ul>
+<li><p><img src="/2024/05/02/JavaWeb%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/image-20240520173859033.png" alt="image-20240520173859033"></p>
+</li>
+<li><p>解决方法：</p>
+<ul>
+<li><p>使用@Primary注解，想使用谁就在谁上添加该注解，在进行程序运行时就会使用带有@Primary注解的Bean对象</p>
+</li>
+<li><p><strong>@AutoWried注解搭配@Qualifier</strong>注解：</p>
+<p><img src="/2024/05/02/JavaWeb%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/image-20240520174057576.png" alt="image-20240520174057576"></p>
+</li>
+<li><p>@Resource注解(由JDK提供)：注入哪一个Bean就使用@Resource(name &#x3D; “要注入Bean对象的名字”)</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>穿插一道面试题：</p>
+<ul>
+<li>@AutoWried与@Resource注解的区别 ：<ul>
+<li>@Autowired 是spring框架提供的注解。而@Resource是JDK提供的注解。</li>
+<li>@Autowired 默认是按照类型注入，而@Resource默认是按照名称注入。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="Chapter-五-——Mysql"><a href="#Chapter-五-——Mysql" class="headerlink" title="Chapter(五)——Mysql"></a>Chapter(五)——Mysql</h1><h3 id="（1）Mysql——查询"><a href="#（1）Mysql——查询" class="headerlink" title="（1）Mysql——查询"></a>（1）Mysql——查询</h3><h4 id="（1）Mysql——基本查询"><a href="#（1）Mysql——基本查询" class="headerlink" title="（1）Mysql——基本查询"></a>（1）Mysql——基本查询</h4><p>语法：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"># 查询多个字段</span><br><span class="line"><span class="keyword">Select</span> 字段<span class="number">1</span>,字段<span class="number">2</span>,字段<span class="number">3</span> <span class="keyword">from</span> 表名；</span><br><span class="line"># 查询所有字段(通配符)</span><br><span class="line">Selcet <span class="operator">*</span> <span class="keyword">from</span> 表名;</span><br><span class="line"># 设置别名(<span class="keyword">as</span>关键字可以省略)</span><br><span class="line"><span class="keyword">select</span> 字段<span class="number">1</span> [<span class="keyword">as</span> <span class="string">&#x27;别名1&#x27;</span>],字段<span class="number">2</span> [<span class="keyword">as</span> <span class="string">&#x27;别名2&#x27;</span> ] <span class="keyword">from</span> 表名;</span><br><span class="line"># 去除重复记录</span><br><span class="line"><span class="keyword">select</span> <span class="keyword">DISTINCT</span> 字段<span class="number">1</span>,字段<span class="number">2</span> <span class="keyword">from</span> 表名;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h4 id="（2）Mysql——条件查询"><a href="#（2）Mysql——条件查询" class="headerlink" title="（2）Mysql——条件查询"></a>（2）Mysql——条件查询</h4><ul>
+<li><p>语法：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> 要查询的字段 <span class="keyword">from</span> 表名 <span class="keyword">where</span> 条件</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><img src="/2024/05/02/JavaWeb%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/image-20240521200136313.png" alt="image-20240521200136313"></li>
+<li><img src="/2024/05/02/JavaWeb%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/image-20240521200147742.png" alt="image-20240521200147742"></li>
+</ul>
+</li>
+</ul>
+<h4 id="（3）Mysql——聚合函数"><a href="#（3）Mysql——聚合函数" class="headerlink" title="（3）Mysql——聚合函数"></a>（3）Mysql——聚合函数</h4><ul>
+<li><p>语法：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span></span><br><span class="line">	字段列表</span><br><span class="line"><span class="keyword">from</span></span><br><span class="line">	表名列表</span><br><span class="line"><span class="keyword">where</span></span><br><span class="line">	条件列表</span><br><span class="line"><span class="keyword">group</span> <span class="keyword">by</span></span><br><span class="line">	分组字段列表</span><br><span class="line"><span class="keyword">having</span></span><br><span class="line">	分组后条件列表</span><br><span class="line"><span class="keyword">order</span> <span class="keyword">by</span></span><br><span class="line">	排序字段列表</span><br><span class="line">limit</span><br><span class="line">	分页参数</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>聚合函数：</p>
+<ul>
+<li><p>count：统计数量(*是通配符)</p>
+</li>
+<li><p>max：取最大值</p>
+</li>
+<li><p>min：取最小值</p>
+</li>
+<li><p>avg：取平均值</p>
+</li>
+<li><p>sum：求和</p>
+</li>
+<li><p>语法：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> 聚合函数(字段名) <span class="keyword">from</span> 表名</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+<h4 id="（4）Mysql——分组查询"><a href="#（4）Mysql——分组查询" class="headerlink" title="（4）Mysql——分组查询"></a>（4）Mysql——分组查询</h4><ul>
+<li><p>语法：group by 关键字</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> 字段列表 <span class="keyword">from</span> 表名 [<span class="keyword">where</span> 条件] <span class="keyword">group</span> <span class="keyword">by</span> 分组字段名 [<span class="keyword">having</span> 分组后的过滤条件]</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="（5）Mysql——排序查询"><a href="#（5）Mysql——排序查询" class="headerlink" title="（5）Mysql——排序查询"></a>（5）Mysql——排序查询</h4><ul>
+<li><p>关键字：order by</p>
+<ul>
+<li><p>语法：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> 字段列表 <span class="keyword">from</span> 表名 [<span class="keyword">where</span> 条件] <span class="keyword">group</span> <span class="keyword">by</span> 分组字段名  <span class="keyword">order</span> <span class="keyword">by</span> 字段<span class="number">1</span> 排序方式<span class="number">1</span>,字段<span class="number">2</span>,排序方式<span class="number">2</span>,....;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>排序方式：</p>
+<ul>
+<li>ASC：升序(默认值)</li>
+<li>DESC：降序</li>
+</ul>
+</li>
+</ul>
+<h4 id="（6）Mysql——分页查询"><a href="#（6）Mysql——分页查询" class="headerlink" title="（6）Mysql——分页查询"></a>（6）Mysql——分页查询</h4><ul>
+<li><p>关键字：limit</p>
+</li>
+<li><p>语法：</p>
+<ul>
+<li><pre><code class="sql">select 字段列表 from 表名 limit 起始索引,查询记录数;
+</code></pre>
+</li>
+</ul>
+</li>
+<li><p>起始索引从0开始。起始索引 &#x3D; (页码－1) * 5</p>
+</li>
+<li><p>注意事项：</p>
+<p><img src="/2024/05/02/JavaWeb%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/image-20240521202744500.png" alt="image-20240521202744500"></p>
+</li>
+</ul>
+<h3 id="（2）Mysql——多表设计"><a href="#（2）Mysql——多表设计" class="headerlink" title="（2）Mysql——多表设计"></a>（2）Mysql——多表设计</h3><h4 id="（1）一对多"><a href="#（1）一对多" class="headerlink" title="（1）一对多"></a>（1）一对多</h4><ul>
+<li>实现：在数据库表中多的一方，添加字段，来关联一的一方的主键</li>
+<li>实现关联可以通过添加外键约束：<ul>
+<li>外键语法：<ul>
+<li><img src="/2024/05/02/JavaWeb%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/image-20240521204007417.png" alt="image-20240521204007417"></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
