@@ -1,474 +1,510 @@
-<!DOCTYPE HTML>
-<html lang="en">
-
-
+<!DOCTYPE html>
+<html>
 <head>
-    <meta charset="utf-8">
-    <meta name="keywords" content="JavaWeb开发学习, Hexo">
-    <meta name="description" content="">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <meta name="renderer" content="webkit|ie-stand|ie-comp">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="format-detection" content="telephone=no">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <!-- Global site tag (gtag.js) - Google Analytics -->
+  <meta charset="utf-8">
+  <title>JavaWeb开发学习 | Hexo</title>
+  <meta name="keywords" content=" JavaWeb ">
+  <meta name="description" content="JavaWeb开发学习 | Hexo">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta property="og:type" content="website">
+<meta property="og:title" content="tags">
+<meta property="og:url" content="http://example.com/tags/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2024-05-20T09:20:46.000Z">
+<meta property="article:modified_time" content="2024-05-20T09:21:28.598Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
 
 
-    <title>JavaWeb开发学习 | Hexo</title>
-    <link rel="icon" type="image/png" href="/favicon.png">
+<link rel="icon" href="/img/avatar.jpg">
 
-    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
-    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
-    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
-    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
-    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
-    <link rel="stylesheet" type="text/css" href="/css/matery.css">
-    <link rel="stylesheet" type="text/css" href="/css/my.css">
+<link href="/css/style.css?v=1.1.0" rel="stylesheet">
 
-    <script src="/libs/jquery/jquery.min.js"></script>
+<link href="/css/hl_theme/atom-light.css?v=1.1.0" rel="stylesheet">
+
+<link href="//cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" rel="stylesheet">
+
+<script src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="/js/titleTip.js?v=1.1.0" ></script>
+
+<script src="//cdn.jsdelivr.net/npm/highlightjs@9.16.2/highlight.pack.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/jquery.cookie@1.4.1/jquery.cookie.min.js" ></script>
+
+<script src="/js/iconfont.js?v=1.1.0" ></script>
 
 <meta name="generator" content="Hexo 7.0.0"></head>
-
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="">
+  <input class="theme_blog_path" value="">
+  <input id="theme_shortcut" value="true" />
+  <input id="theme_highlight_on" value="true" />
+  <input id="theme_code_copy" value="true" />
+</div>
 
 
 
 <body>
-    <header class="navbar-fixed">
-    <nav id="headNav" class="bg-color nav-transparent">
-        <div id="navContainer" class="nav-wrapper container">
-            <div class="brand-logo">
-                <a href="/" class="waves-effect waves-light">
-                    
-                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
-                    
-                    <span class="logo-span">Hexo</span>
-                </a>
-            </div>
-            
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/"
+   class="avatar_target">
+    <img class="avatar"
+         src="/img/avatar.jpg"/>
+</a>
+<div class="author">
+    <span>John Doe</span>
+</div>
 
-<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
-<ul class="right nav-menu">
-  
-  <li class="hide-on-med-and-down nav-item">
+<div class="icon">
     
-    <a href="/" class="waves-effect waves-light">
-      
-      <i class="fas fa-home" style="zoom: 0.6;"></i>
-      
-      <span>Index</span>
-    </a>
-    
-  </li>
-  
-  <li class="hide-on-med-and-down nav-item">
-    
-    <a href="/tags" class="waves-effect waves-light">
-      
-      <i class="fas fa-tags" style="zoom: 0.6;"></i>
-      
-      <span>Tags</span>
-    </a>
-    
-  </li>
-  
-  <li class="hide-on-med-and-down nav-item">
-    
-    <a href="/categories" class="waves-effect waves-light">
-      
-      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
-      
-      <span>Categories</span>
-    </a>
-    
-  </li>
-  
-  <li class="hide-on-med-and-down nav-item">
-    
-    <a href="/archives" class="waves-effect waves-light">
-      
-      <i class="fas fa-archive" style="zoom: 0.6;"></i>
-      
-      <span>Archives</span>
-    </a>
-    
-  </li>
-  
-  <li class="hide-on-med-and-down nav-item">
-    
-    <a href="/about" class="waves-effect waves-light">
-      
-      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
-      
-      <span>About</span>
-    </a>
-    
-  </li>
-  
-  <li class="hide-on-med-and-down nav-item">
-    
-    <a href="/contact" class="waves-effect waves-light">
-      
-      <i class="fas fa-comments" style="zoom: 0.6;"></i>
-      
-      <span>Contact</span>
-    </a>
-    
-  </li>
-  
-  <li class="hide-on-med-and-down nav-item">
-    
-    <a href="/friends" class="waves-effect waves-light">
-      
-      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
-      
-      <span>Friends</span>
-    </a>
-    
-  </li>
-  
-  <li>
-    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
-      <i id="searchIcon" class="fas fa-search" title="Search" style="zoom: 0.85;"></i>
-    </a>
-  </li>
-</ul>
-
-
-<div id="mobile-nav" class="side-nav sidenav">
-
-    <div class="mobile-head bg-color">
         
-        <img src="/medias/logo.png" class="logo-img circle responsive-img">
-        
-        <div class="logo-name">Hexo</div>
-        <div class="logo-desc">
-            
-            Never really desperate, only the lost of the soul.
-            
-        </div>
-    </div>
-
-    
-
-    <ul class="menu-list mobile-menu-list">
-        
-        <li class="m-nav-item">
-	  
-		<a href="/" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-home"></i>
-			
-			Index
-		</a>
-          
-        </li>
-        
-        <li class="m-nav-item">
-	  
-		<a href="/tags" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-tags"></i>
-			
-			Tags
-		</a>
-          
-        </li>
-        
-        <li class="m-nav-item">
-	  
-		<a href="/categories" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-bookmark"></i>
-			
-			Categories
-		</a>
-          
-        </li>
-        
-        <li class="m-nav-item">
-	  
-		<a href="/archives" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-archive"></i>
-			
-			Archives
-		</a>
-          
-        </li>
-        
-        <li class="m-nav-item">
-	  
-		<a href="/about" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-user-circle"></i>
-			
-			About
-		</a>
-          
-        </li>
-        
-        <li class="m-nav-item">
-	  
-		<a href="/contact" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-comments"></i>
-			
-			Contact
-		</a>
-          
-        </li>
-        
-        <li class="m-nav-item">
-	  
-		<a href="/friends" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-address-book"></i>
-			
-			Friends
-		</a>
-          
-        </li>
-        
-        
-        <li><div class="divider"></div></li>
-        <li>
-            <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light" target="_blank">
-                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            <a title="rss"
+               href="/atom.xml"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-rss"></use>
+                    </svg>
+                
             </a>
-        </li>
         
-    </ul>
+    
+        
+            <a title="github"
+               href="https://github.com/yelog"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-github"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="facebook"
+               href="https://www.facebook.com/faker.tops"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-facebook"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+    
+        
+    
+        
+            <a title="instagram"
+               href="https://www.facebook.com/faker.tops"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-instagram"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="reddit"
+               href="https://www.reddit.com/user/yelog/"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-reddit"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="weibo"
+               href="http://weibo.com/u/2307534817"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-weibo"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="jianshu"
+               href="https://www.jianshu.com/u/ff56736de7cf"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-jianshu"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="zhihu"
+               href="https://www.zhihu.com/people/jaytp/activities"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-zhihu"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+    
+        
+            <a title="oschina"
+               href="https://my.oschina.net/yelog"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-oschina"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+    
+        
+            <a title="email"
+               href="mailto:jaytp@qq.com"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-email"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="qq"
+               href="http://wpa.qq.com/msgrd?v=3&uin=872336115&site=qq&menu=yes"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-qq"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="kugou"
+               href="https://www.kugou.com/"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-kugou"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="neteasemusic"
+               href="https://music.163.com/#/user/home?id=88151013"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-neteasemusic"></use>
+                    </svg>
+                
+            </a>
+        
+    
 </div>
 
 
-        </div>
 
+
+
+<ul>
+    <li>
+        <div class="all active" data-rel="All">All
+            
+                <small>(10)</small>
+            
+        </div>
+    </li>
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
         
-            <style>
-    .nav-transparent .github-corner {
+            
+            
+            
+    </div>
+    <div>
+        
+            <a class="about  hasFriend  site_url"
+               
+               href="/about">About</a>
+        
+        <a style="width: 50%"
+                
+                                           class="friends">Friends</a>
+        
+    </div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="10">
+
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        Links
+        <i class="iconfont icon-left"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+            <li><a target="_blank" href="http://yelog.org/">叶落阁</a></li>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <div class="right-top">
+        <div id="default-panel">
+            <i class="iconfont icon-search" data-title="search shortcut key i"></i>
+            <div class="right-title">All</div>
+            <i class="iconfont icon-file-tree" data-title="switch to outline view shortcut key w"></i>
+        </div>
+        <div id="search-panel">
+            <i class="iconfont icon-left" data-title="return"></i>
+            <input id="local-search-input" autocomplete="off"/>
+            <label class="border-line" for="input"></label>
+            <i class="iconfont icon-case-sensitive" data-title="case sensitive"></i>
+            <i class="iconfont icon-tag" data-title="label"></i>
+        </div>
+        <div id="outline-panel" style="display: none">
+            <div class="right-title">outline</div>
+            <i class="iconfont icon-list" data-title="switch to article list"></i>
+        </div>
+    </div>
+
+    <div class="tags-list">
+    <input id="tag-search" />
+    <div class="tag-wrapper">
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>练习题，面试题</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>java和vue开发中遇到的错误以及如何改正和对他们的理解整理(参加的项目)</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Java学习</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>JavaWeb</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Linux Error</a>
+            </li>
+        
+    </div>
+
+</div>
+
+    
+    <nav id="title-list-nav">
+        
+        
+        <a  class="All "
+           href="/2024/05/02/JavaWeb%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/"
+           data-tag="JavaWeb"
+           data-author="" >
+            <span class="post-title" title="JavaWeb开发学习">JavaWeb开发学习</span>
+            <span class="post-date" title="2024-05-02 17:41:21">2024/05/02</span>
+        </a>
+        
+        
+        <a  class="All "
+           href="/2024/04/25/Java%E7%BB%83%E4%B9%A0%E9%A2%98/"
+           data-tag="练习题，面试题"
+           data-author="" >
+            <span class="post-title" title="Java练习题">Java练习题</span>
+            <span class="post-date" title="2024-04-25 12:48:53">2024/04/25</span>
+        </a>
+        
+        
+        <a  class="All "
+           href="/2024/04/08/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"
+           data-tag="Java学习"
+           data-author="" >
+            <span class="post-title" title="Java学习笔记">Java学习笔记</span>
+            <span class="post-date" title="2024-04-08 14:56:32">2024/04/08</span>
+        </a>
+        
+        
+        <a  class="All "
+           href="/2024/03/30/%E8%AE%B0%E5%BD%95Hadoop%E4%B8%ADHDFS%E5%91%BD%E4%BB%A4%E7%BB%9F%E8%AE%A1%E8%AF%8D%E9%A2%91%E9%94%99%E8%AF%AF/"
+           data-tag="Linux Error"
+           data-author="" >
+            <span class="post-title" title="记录Hadoop中HDFS命令统计词频错误">记录Hadoop中HDFS命令统计词频错误</span>
+            <span class="post-date" title="2024-03-30 18:07:41">2024/03/30</span>
+        </a>
+        
+        
+        <a  class="All "
+           href="/2024/03/21/%E5%BC%80%E5%8F%91-%E5%9F%BA%E4%BA%8Eruoyiui-%E7%AC%94%E8%AE%B0/"
+           data-tag="java和vue开发中遇到的错误以及如何改正和对他们的理解整理(参加的项目)"
+           data-author="" >
+            <span class="post-title" title="开发(基于ruoyiui)笔记">开发(基于ruoyiui)笔记</span>
+            <span class="post-date" title="2024-03-21 15:30:34">2024/03/21</span>
+        </a>
+        
+        
+        <a  class="All "
+           href="/2023/12/10/SpingCloud%E5%AD%A6%E4%B9%A0/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="SpingCloud学习">SpingCloud学习</span>
+            <span class="post-date" title="2023-12-10 10:04:18">2023/12/10</span>
+        </a>
+        
+        
+        <a  class="All "
+           href="/2023/12/06/%E5%9F%BA%E4%BA%8Eruoyi%E6%A1%86%E6%9E%B6%E7%9A%84%E5%BC%80%E5%8F%91%E7%AC%94%E8%AE%B0/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="后端获取图片数据的开发文档">后端获取图片数据的开发文档</span>
+            <span class="post-date" title="2023-12-06 21:42:11">2023/12/06</span>
+        </a>
+        
+        
+        <a  class="All "
+           href="/2023/12/04/SpringBoot%E5%AD%A6%E4%B9%A0/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="SpringBoot学习">SpringBoot学习</span>
+            <span class="post-date" title="2023-12-04 18:27:49">2023/12/04</span>
+        </a>
+        
+        
+        <a  class="All "
+           href="/2023/12/04/hello-world/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="Hello World">Hello World</span>
+            <span class="post-date" title="2023-12-04 17:46:55">2023/12/04</span>
+        </a>
+        
+        
+        <a  class="All "
+           href="/2023/12/04/Springboot%E6%A8%A1%E5%9D%97%E5%AD%A6%E4%B9%A02/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title=""></span>
+            <span class="post-date" title="2023-12-04 16:59:28">2023/12/04</span>
+        </a>
+        
+        <div id="no-item-tips">
+
+        </div>
+    </nav>
+    <div id="outline-list">
+    </div>
+</div>
+
+    </div>
+    <div class="hide-list">
+        <div class="semicircle" data-title="Toggle full screen shortcut key s">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div id="post">
+    <div class="pjax">
+        <article id="post-JavaWeb开发学习" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">JavaWeb开发学习</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color3">JavaWeb</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+            Created At : <time class="date" title='Updated At: 2024-05-30 19:52:33'>2024-05-02 17:41</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        <span id="busuanzi_container_page_pv">
+            Views 👀 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Chapter-%E4%B8%80-%E2%80%94%E2%80%94%E5%89%8D%E7%AB%AF"><span class="toc-text">Chapter(一)——前端</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-HTML%E7%AC%94%E8%AE%B0"><span class="toc-text">(1)HTML笔记</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-JavaScript%E7%AC%94%E8%AE%B0"><span class="toc-text">(2)JavaScript笔记</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%EF%BC%89JS%E5%BC%95%E5%85%A5%E6%96%B9%E5%BC%8F"><span class="toc-text">1）JS引入方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%EF%BC%89JS%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95"><span class="toc-text">2）JS基础语法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1%E3%80%81%E4%B9%A6%E5%86%99%E8%AF%AD%E6%B3%95"><span class="toc-text">1、书写语法</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%BE%93%E5%87%BA%E8%AF%AD%E5%8F%A5"><span class="toc-text">输出语句</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2%E3%80%81%E5%8F%98%E9%87%8F"><span class="toc-text">2、变量</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3%E3%80%81%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-text">3、数据类型</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%8E%9F%E5%A7%8B%E7%B1%BB%E5%9E%8B"><span class="toc-text">原始类型</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-text">运算符</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4%E3%80%81%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6"><span class="toc-text">4、流程控制</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%EF%BC%89JS%E5%87%BD%E6%95%B0"><span class="toc-text">3）JS函数</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1%E3%80%81%E5%87%BD%E6%95%B0%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="toc-text">1、函数的定义</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4%EF%BC%89JS%E5%AF%B9%E8%B1%A1"><span class="toc-text">4）JS对象</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#Array-%E6%95%B0%E7%BB%84%E5%AF%B9%E8%B1%A1"><span class="toc-text">Array(数组对象)</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#String%E5%AF%B9%E8%B1%A1"><span class="toc-text">String对象</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#json%E5%AF%B9%E8%B1%A1"><span class="toc-text">json对象</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#BOM%E5%AF%B9%E8%B1%A1"><span class="toc-text">BOM对象</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#Window%E5%AF%B9%E8%B1%A1"><span class="toc-text">Window对象</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#Location%E5%AF%B9%E8%B1%A1"><span class="toc-text">Location对象</span></a></li></ol></li><li class="toc-item toc-level-5"><a class="toc-link" href="#DOM%E5%AF%B9%E8%B1%A1"><span class="toc-text">DOM对象</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5%EF%BC%89JS%E4%BA%8B%E4%BB%B6%E7%9B%91%E5%90%AC"><span class="toc-text">5）JS事件监听</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%8B%E4%BB%B6%E7%BB%91%E5%AE%9A"><span class="toc-text">事件绑定</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E4%BA%8B%E4%BB%B6"><span class="toc-text">常见事件</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-Vue%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4"><span class="toc-text">(3)Vue常用指令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-Ajax"><span class="toc-text">(4)Ajax</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E5%8E%9F%E7%94%9FAjax%E8%AF%B7%E6%B1%82%E5%8F%91%E9%80%81"><span class="toc-text">1、原生Ajax请求发送</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81Ajax%E2%80%94%E2%80%94Axios"><span class="toc-text">2、Ajax——Axios</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-HTTP%E5%8D%8F%E8%AE%AE"><span class="toc-text">(2)HTTP协议</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#HTTP%E2%80%94%E2%80%94%E8%AF%B7%E6%B1%82%E6%95%B0%E6%8D%AE%E6%A0%BC%E5%BC%8F"><span class="toc-text">HTTP——请求数据格式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#HTTP%E2%80%94%E2%80%94%E5%93%8D%E5%BA%94%E6%A0%BC%E5%BC%8F"><span class="toc-text">HTTP——响应格式</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-Web%E6%9C%8D%E5%8A%A1%E5%99%A8%E2%80%94%E2%80%94Tomcat"><span class="toc-text">(3)Web服务器——Tomcat</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Tomcat%E7%9B%AE%E5%BD%95%E8%AF%B4%E6%98%8E"><span class="toc-text">Tomcat目录说明</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E8%AF%B7%E6%B1%82%E5%92%8C%E5%93%8D%E5%BA%94%E6%A6%82%E8%BF%B0"><span class="toc-text">(4)请求和响应概述</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%881%EF%BC%89BS%E6%9E%B6%E6%9E%84%E5%92%8CCS%E6%9E%B6%E6%9E%84"><span class="toc-text">（1）BS架构和CS架构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%882%EF%BC%89%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95%E7%9A%84%E5%B7%A5%E5%85%B7"><span class="toc-text">（2）接口测试的工具</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%883%EF%BC%89-%E7%AE%80%E5%8D%95%E5%8F%82%E6%95%B0"><span class="toc-text">（3） 简单参数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%884%EF%BC%89%E5%AE%9E%E4%BD%93%E5%8F%82%E6%95%B0"><span class="toc-text">（4）实体参数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%885%EF%BC%89%E6%95%B0%E7%BB%84%E9%9B%86%E5%90%88%E5%8F%82%E6%95%B0"><span class="toc-text">（5）数组集合参数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%886%EF%BC%89%E6%97%A5%E6%9C%9F%E5%8F%82%E6%95%B0"><span class="toc-text">（6）日期参数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%887%EF%BC%89Json%E5%8F%82%E6%95%B0"><span class="toc-text">（7）Json参数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%888%EF%BC%89%E8%B7%AF%E5%BE%84%E5%8F%82%E6%95%B0"><span class="toc-text">（8）路径参数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%889%EF%BC%89%E5%93%8D%E5%BA%94%E6%95%B0%E6%8D%AE-%E4%BB%8B%E7%BB%8D%E6%B3%A8%E8%A7%A3-ResponseBody"><span class="toc-text">（9）响应数据(介绍注解**@ResponseBody**)</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Chapter-%E5%9B%9B-%E2%80%94%E2%80%94%E5%88%86%E5%B1%82%E8%A7%A3%E8%80%A6"><span class="toc-text">Chapter(四)——分层解耦</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%881%EF%BC%89%E4%B8%89%E5%B1%82%E6%9E%B6%E6%9E%84"><span class="toc-text">（1）三层架构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%882%EF%BC%89%E5%88%86%E5%B1%82%E8%A7%A3%E8%80%A6"><span class="toc-text">（2）分层解耦</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%883%EF%BC%89IOC-DI%E5%85%A5%E9%97%A8"><span class="toc-text">（3）IOC&amp;DI入门</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%884%EF%BC%89IOC%E8%AF%A6%E8%A7%A3-%E6%8E%A7%E5%88%B6%E5%8F%8D%E8%BD%AC"><span class="toc-text">（4）IOC详解(控制反转)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%885%EF%BC%89DI%E8%AF%A6%E8%A7%A3-%E4%BE%9D%E8%B5%96%E6%B3%A8%E5%85%A5"><span class="toc-text">（5）DI详解(依赖注入)</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Chapter-%E4%BA%94-%E2%80%94%E2%80%94Mysql"><span class="toc-text">Chapter(五)——Mysql</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%881%EF%BC%89Mysql%E2%80%94%E2%80%94%E6%9F%A5%E8%AF%A2"><span class="toc-text">（1）Mysql——查询</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%881%EF%BC%89Mysql%E2%80%94%E2%80%94%E5%9F%BA%E6%9C%AC%E6%9F%A5%E8%AF%A2"><span class="toc-text">（1）Mysql——基本查询</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%882%EF%BC%89Mysql%E2%80%94%E2%80%94%E6%9D%A1%E4%BB%B6%E6%9F%A5%E8%AF%A2"><span class="toc-text">（2）Mysql——条件查询</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%883%EF%BC%89Mysql%E2%80%94%E2%80%94%E8%81%9A%E5%90%88%E5%87%BD%E6%95%B0"><span class="toc-text">（3）Mysql——聚合函数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%884%EF%BC%89Mysql%E2%80%94%E2%80%94%E5%88%86%E7%BB%84%E6%9F%A5%E8%AF%A2"><span class="toc-text">（4）Mysql——分组查询</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%885%EF%BC%89Mysql%E2%80%94%E2%80%94%E6%8E%92%E5%BA%8F%E6%9F%A5%E8%AF%A2"><span class="toc-text">（5）Mysql——排序查询</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%886%EF%BC%89Mysql%E2%80%94%E2%80%94%E5%88%86%E9%A1%B5%E6%9F%A5%E8%AF%A2"><span class="toc-text">（6）Mysql——分页查询</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%881%EF%BC%89%E5%AD%90%E6%9F%A5%E8%AF%A2"><span class="toc-text">（1）子查询</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%EF%BC%882%EF%BC%89%E6%A0%87%E9%87%8F%E5%AD%90%E6%9F%A5%E8%AF%A2"><span class="toc-text">（2）标量子查询</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%EF%BC%883%EF%BC%89%E5%88%97%E5%AD%90%E6%9F%A5%E8%AF%A2"><span class="toc-text">（3）列子查询</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%EF%BC%884%EF%BC%89%E8%A1%8C%E5%AD%90%E6%9F%A5%E8%AF%A2"><span class="toc-text">（4）行子查询</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%EF%BC%885%EF%BC%89%E8%A1%A8%E5%AD%90%E6%9F%A5%E8%AF%A2"><span class="toc-text">（5）表子查询</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%884%EF%BC%89Mysql%E2%80%94%E2%80%94%E4%BA%8B%E5%8A%A1"><span class="toc-text">（4）Mysql——事务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%885%EF%BC%89Mysql%E2%80%94%E2%80%94%E7%B4%A2%E5%BC%95-%E5%AF%B9%E6%95%B0%E6%8D%AE%E5%BA%93%E6%9F%A5%E8%AF%A2%E6%95%88%E7%8E%87%E8%BF%9B%E8%A1%8C%E4%BC%98%E5%8C%96%E7%9A%84%E6%89%8B%E6%AE%B5"><span class="toc-text">（5）Mysql——索引(对数据库查询效率进行优化的手段 )</span></a></li></ol></li></ol></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-3 i,
+    .toc-level-3 ol {
         display: none !important;
     }
-
-    .github-corner {
-        position: absolute;
-        z-index: 10;
-        top: 0;
-        right: 0;
-        border: 0;
-        transform: scale(1.1);
-    }
-
-    .github-corner svg {
-        color: #0f9d58;
-        fill: #fff;
-        height: 64px;
-        width: 64px;
-    }
-
-    .github-corner:hover .octo-arm {
-        animation: a 0.56s ease-in-out;
-    }
-
-    .github-corner .octo-arm {
-        animation: none;
-    }
-
-    @keyframes a {
-        0%,
-        to {
-            transform: rotate(0);
-        }
-        20%,
-        60% {
-            transform: rotate(-25deg);
-        }
-        40%,
-        80% {
-            transform: rotate(10deg);
-        }
-    }
 </style>
-
-<a href="https://github.com/blinkfox/hexo-theme-matery" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
-   data-tooltip="Fork Me" data-position="left" data-delay="50">
-    <svg viewBox="0 0 250 250" aria-hidden="true">
-        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
-        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
-              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
-        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
-              fill="currentColor" class="octo-body"></path>
-    </svg>
-</a>
-        
-    </nav>
-
-</header>
-
-    
-
-
-
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/5.jpg')">
-    <div class="container" style="right: 0px;left: 0px;">
-        <div class="row">
-            <div class="col s12 m12 l12">
-                <div class="brand">
-                    <h1 class="description center-align post-title">JavaWeb开发学习</h1>
-                </div>
-            </div>
-        </div>
-    </div>
 </div>
-
-
-
-
-<main class="post-container content">
-
     
-    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
-<style>
-    #articleContent h1::before,
-    #articleContent h2::before,
-    #articleContent h3::before,
-    #articleContent h4::before,
-    #articleContent h5::before,
-    #articleContent h6::before {
-        display: block;
-        content: " ";
-        height: 100px;
-        margin-top: -100px;
-        visibility: hidden;
-    }
-
-    #articleContent :focus {
-        outline: none;
-    }
-
-    .toc-fixed {
-        position: fixed;
-        top: 64px;
-    }
-
-    .toc-widget {
-        width: 345px;
-        padding-left: 20px;
-    }
-
-    .toc-widget .toc-title {
-        padding: 35px 0 15px 17px;
-        font-size: 1.5rem;
-        font-weight: bold;
-        line-height: 1.5rem;
-    }
-
-    .toc-widget ol {
-        padding: 0;
-        list-style: none;
-    }
-
-    #toc-content {
-        padding-bottom: 30px;
-        overflow: auto;
-    }
-
-    #toc-content ol {
-        padding-left: 10px;
-    }
-
-    #toc-content ol li {
-        padding-left: 10px;
-    }
-
-    #toc-content .toc-link:hover {
-        color: #42b983;
-        font-weight: 700;
-        text-decoration: underline;
-    }
-
-    #toc-content .toc-link::before {
-        background-color: transparent;
-        max-height: 25px;
-
-        position: absolute;
-        right: 23.5vw;
-        display: block;
-    }
-
-    #toc-content .is-active-link {
-        color: #42b983;
-    }
-
-    #floating-toc-btn {
-        position: fixed;
-        right: 15px;
-        bottom: 76px;
-        padding-top: 15px;
-        margin-bottom: 0;
-        z-index: 998;
-    }
-
-    #floating-toc-btn .btn-floating {
-        width: 48px;
-        height: 48px;
-    }
-
-    #floating-toc-btn .btn-floating i {
-        line-height: 48px;
-        font-size: 1.4rem;
-    }
-</style>
-<div class="row">
-    <div id="main-content" class="col s12 m12 l9">
-        <!-- 文章内容详情 -->
-<div id="artDetail">
-    <div class="card">
-        <div class="card-content article-info">
-            <div class="row tag-cate">
-                <div class="col s7">
-                    
-                    <div class="article-tag">
-                        
-                            <a href="/tags/JavaWeb/">
-                                <span class="chip bg-color">JavaWeb</span>
-                            </a>
-                        
-                    </div>
-                    
-                </div>
-                <div class="col s5 right-align">
-                    
-                </div>
-            </div>
-
-            <div class="post-info">
-                
-                <div class="post-date info-break-policy">
-                    <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2024-05-02
-                </div>
-                
-
-                
-
-                
-
-                
-
-                
-            </div>
-        </div>
-        <hr class="clearfix">
-
-        
-
-        
-
-        <div class="card-content article-card-content">
-            <div id="articleContent">
-                <h1 id="Chapter-一-——前端"><a href="#Chapter-一-——前端" class="headerlink" title="Chapter(一)——前端"></a>Chapter(一)——前端</h1><h2 id="1-HTML笔记"><a href="#1-HTML笔记" class="headerlink" title="(1)HTML笔记"></a>(1)HTML笔记</h2><ul>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Chapter-一-——前端"><a href="#Chapter-一-——前端" class="headerlink" title="Chapter(一)——前端"></a>Chapter(一)——前端</h1><h2 id="1-HTML笔记"><a href="#1-HTML笔记" class="headerlink" title="(1)HTML笔记"></a>(1)HTML笔记</h2><ul>
 <li>HTML大致格式：</li>
 </ul>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">HTML</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">title</span>&gt;</span>标题<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">        内容</span><br><span class="line">    <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">HTML</span>&gt;</span></span><br></pre></td></tr></table></figure>
@@ -910,7 +946,7 @@ return &quot;ok;&quot;
 </li>
 </ul>
 <h3 id="（4）实体参数"><a href="#（4）实体参数" class="headerlink" title="（4）实体参数"></a>（4）实体参数</h3><ul>
-<li><p>简单实体对象：请求参数名与形参对象属性名相同，定义POJO接收即可。</p>
+<li><p>简单实体对象：请求参数名与形参对象属性名相同，定义POJO接收即可。(query参数)</p>
 <ul>
 <li><p><img src="/2024/05/02/JavaWeb%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/image-20240518170137745.png" alt="image-20240518170137745"></p>
 </li>
@@ -1064,8 +1100,10 @@ return &quot;ok;&quot;
 <li><p>穿插一道面试题：</p>
 <ul>
 <li>@AutoWried与@Resource注解的区别 ：<ul>
-<li>@Autowired 是spring框架提供的注解。而@Resource是JDK提供的注解。</li>
-<li>@Autowired 默认是按照类型注入，而@Resource默认是按照名称注入。</li>
+<li><p>@Autowired 是spring框架提供的注解。而@Resource是JDK提供的注解。</p>
+</li>
+<li><p>@Autowired 默认是按照类型注入，而@Resource默认是按照名称注入。</p>
+</li>
 </ul>
 </li>
 </ul>
@@ -1129,637 +1167,321 @@ return &quot;ok;&quot;
 <li><p>语法：</p>
 <ul>
 <li><pre><code class="sql">select 字段列表 from 表名 limit 起始索引,查询记录数;
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">* 起始索引从0开始。起始索引 = (页码－1) * 5</span><br><span class="line"></span><br><span class="line">* 注意事项：</span><br><span class="line"></span><br><span class="line">  ![image-20240521202744500](./JavaWeb%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/image-20240521202744500.png)</span><br><span class="line"></span><br><span class="line">### （2）Mysql——多表设计</span><br><span class="line"></span><br><span class="line">#### （1）一对多</span><br><span class="line"></span><br><span class="line">* 实现：在数据库表中多的一方，添加字段，来关联一的一方的主键</span><br><span class="line">* 实现关联可以通过添加外键约束：</span><br><span class="line">  * 外键语法：</span><br><span class="line">    * ![image-20240521204007417](./JavaWeb%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/image-20240521204007417.png)</span><br><span class="line"></span><br><span class="line">#### （2）一对一</span><br><span class="line"></span><br><span class="line">* 案例：用户与身份证的关系</span><br><span class="line">* 关系：一对一关系，用于单表拆分，将一张表的基础字段放在一张表中，其他字段放在另一张表中，以此来提升操作效率。</span><br><span class="line">* 图例：![image-20240525190504774](./JavaWeb%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/image-20240525190504774.png)</span><br><span class="line"></span><br><span class="line">#### （3）多对多</span><br><span class="line"></span><br><span class="line">* 案例：学生和课程之间的关系</span><br><span class="line">* 关系：一门课程可以有多个学生选修，而一个学生也可以选修多门课程</span><br><span class="line">* 实现：建立一张第三表(中间表)，**中间表至少包含两个外键**，**分别关联两边的主键**。</span><br><span class="line">  * 示例：![image-20240525190728405](./JavaWeb%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/image-20240525190728405.png)</span><br><span class="line"></span><br><span class="line">### （3）Mysql——多表查询</span><br><span class="line"></span><br><span class="line">* 概念：从多张表中查询数据。</span><br><span class="line"></span><br><span class="line">* 笛卡尔积：笛卡尔积是指在数学中，两个集合(两张表)的所有组合情况，而多表查询的结果符合笛卡尔积。</span><br><span class="line"></span><br><span class="line">  * 语法：</span><br><span class="line"></span><br><span class="line">    ```sql</span><br><span class="line">    Select * from 表名1,表名2 where 表1.字段名 = 表2.字段名。</span><br></pre></td></tr></table></figure>
 </code></pre>
 </li>
-</ul>
-</li>
-<li><p>起始索引从0开始。起始索引 &#x3D; (页码－1) * 5</p>
-</li>
-<li><p>注意事项：</p>
-<p><img src="/2024/05/02/JavaWeb%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/image-20240521202744500.png" alt="image-20240521202744500"></p>
-</li>
-</ul>
-<h3 id="（2）Mysql——多表设计"><a href="#（2）Mysql——多表设计" class="headerlink" title="（2）Mysql——多表设计"></a>（2）Mysql——多表设计</h3><h4 id="（1）一对多"><a href="#（1）一对多" class="headerlink" title="（1）一对多"></a>（1）一对多</h4><ul>
-<li>实现：在数据库表中多的一方，添加字段，来关联一的一方的主键</li>
-<li>实现关联可以通过添加外键约束：<ul>
-<li>外键语法：<ul>
-<li><img src="/2024/05/02/JavaWeb%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/image-20240521204007417.png" alt="image-20240521204007417"></li>
-</ul>
+<li><p>这里要注意的是：where后的条件是指表1表2中都有的字段。</p>
 </li>
 </ul>
 </li>
+<li><p>分类：</p>
+<ul>
+<li><p>连接查询</p>
+<ul>
+<li><p>内连接：相当于查询A，B交集部分数据</p>
+</li>
+<li><p>外连接：</p>
+<ul>
+<li><p>左外连接：查询左表所有数据(包括两张表交集部分数据)</p>
+</li>
+<li><p>右外连接 ：查询有表所有数据(包括两张表交集部分)</p>
+</li>
+<li><p>图示：<img src="/2024/05/02/JavaWeb%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/image-20240525192226776.png" alt="image-20240525192226776"></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>内连接：</p>
+<ul>
+<li>隐式内连接：<strong>Select</strong> 字段列表 <strong>from</strong> 表1，表2 <strong>where</strong> 条件…；</li>
+<li>显示内连接：<strong>Select</strong> 字段列表 <strong>from [inner] join</strong> 表2 <strong>on</strong>  连接条件..</li>
+</ul>
+</li>
+<li><p>外连接 ： </p>
+<ul>
+<li>左外连接(会把在左表中而不在右表中的数据查出)：<strong>Select</strong> 字段列表 <strong>from</strong> 表1 <strong>left [outer] join</strong> 表2 <strong>on</strong> 连接条件….；</li>
+<li>右外连接(会把在右表中而不在左表中的数据查出)：<strong>select</strong> 字段列表 <strong>from</strong> 表1 <strong>left [outer] join</strong> 表2 <strong>on</strong> 连接条件…</li>
+</ul>
+</li>
+</ul>
+<h4 id="（1）子查询"><a href="#（1）子查询" class="headerlink" title="（1）子查询"></a>（1）子查询</h4><ul>
+<li>介绍：sql语句中嵌套select查询，称为嵌套查询，又称子查询。</li>
+<li>形式 ：select  * from 表1 where 字段1 &#x3D;(select 字段1 from 表2)；</li>
+<li>子查询外部的语句可以是insert &#x2F; update &#x2F; delete &#x2F; select 的任何一个。最常见的是select。</li>
+<li>分类 ：<ul>
+<li>标量子查询:子查询返回的结果为单个值</li>
+<li>列子查询:子查询返回的结果为一列</li>
+<li>行子查询:子查询返回的结果为一行</li>
+<li>表子查询:子查询返回的结果为多行多列</li>
+</ul>
+</li>
+</ul>
+<h5 id="（2）标量子查询"><a href="#（2）标量子查询" class="headerlink" title="（2）标量子查询"></a>（2）标量子查询</h5><ul>
+<li><p>子查询返回的结果是单个值(数字、字符串、日期等)，最简单</p>
+<p>的形式。</p>
+</li>
+<li><p>常用的操作符:  &#x3D;    &lt;&gt;      &gt;    &gt;&#x3D;     &lt;    &lt;&#x3D;</p>
+</li>
+</ul>
+<h5 id="（3）列子查询"><a href="#（3）列子查询" class="headerlink" title="（3）列子查询"></a>（3）列子查询</h5><ul>
+<li><p>子查询返回的结果是一列(可以是多行)。</p>
+</li>
+<li><p>常用操作符：in、not in 等</p>
+</li>
+</ul>
+<h5 id="（4）行子查询"><a href="#（4）行子查询" class="headerlink" title="（4）行子查询"></a>（4）行子查询</h5><ul>
+<li><p>子查询返回的结果是一行(可以是多列)</p>
+</li>
+<li><p>常用操作符：&#x3D;  、 &lt;&gt;  、 in  、 not in。</p>
+</li>
+<li><p>示例：<img src="/2024/05/02/JavaWeb%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/image-20240530170210204.png" alt="image-20240530170210204"></p>
+</li>
+</ul>
+<p>这里需要注意的是，<strong>当返回多个字段，(多列)时，可以使用括号，将要返回的字段括起来，并用逗号隔开，里面字段顺序和子查询中的字段顺序一致。</strong></p>
+<h5 id="（5）表子查询"><a href="#（5）表子查询" class="headerlink" title="（5）表子查询"></a>（5）表子查询</h5><ul>
+<li>子查询返回的结果是多行多列，把它作为临时表来使用。</li>
+<li>常用操作符：in</li>
+</ul>
+<h3 id="（4）Mysql——事务"><a href="#（4）Mysql——事务" class="headerlink" title="（4）Mysql——事务"></a>（4）Mysql——事务</h3><ul>
+<li><p>概念：</p>
+<ul>
+<li>事务 是一组操作的集合，它是一个不可分割的工作单位。事务会把所有的操作作为一个整体一起向系统提交或撤销操作请求，即这些<br>操作 <strong>要么同时成功，要么同时失败。</strong></li>
+</ul>
+</li>
+<li><p>事务控制：</p>
+<ul>
+<li>开启事务：start transaction; &#x2F; begin ;</li>
+<li>提交事务：commit;</li>
+<li>回滚事务：rollback;</li>
+</ul>
+</li>
+<li><p>示例：依次运行。</p>
+<ul>
+<li><img src="/2024/05/02/JavaWeb%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/image-20240530173434039.png" alt="image-20240530173434039"></li>
+</ul>
+</li>
+<li><p>事务的四大特性(ACID)：</p>
+<ul>
+<li>原子性：事务是不可分割的最小单元，<br>要么全部成功，要么全部失败</li>
+<li>一致性：事务完成时，必须使所有的数据都<br>保持一致状态</li>
+<li>隔离性：数据库系统提供的隔离机制，保<br>证事务在不受外部并发操作影响<br>的独立环境下运行</li>
+<li>持久性：事务一旦提交或回滚，它对数据<br>库中的数据的改变就是永久的</li>
+</ul>
+</li>
+</ul>
+<h3 id="（5）Mysql——索引-对数据库查询效率进行优化的手段"><a href="#（5）Mysql——索引-对数据库查询效率进行优化的手段" class="headerlink" title="（5）Mysql——索引(对数据库查询效率进行优化的手段 )"></a>（5）Mysql——索引(对数据库查询效率进行优化的手段 )</h3><ul>
+<li><p>索引的概念：是帮助数据库高效获取数据的数据结构(构建红黑二叉树)。</p>
+<ul>
+<li><p>当一张表没有建立索引的时候，默认查找方法是进行全表扫描，数据量越大，性能越低。</p>
+</li>
+<li><p>索引的示例：<img src="/2024/05/02/JavaWeb%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/image-20240530175027804.png" alt="image-20240530175027804"></p>
+</li>
+<li><p>索引的优缺点：</p>
+<ul>
+<li>优点：<img src="/2024/05/02/JavaWeb%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/image-20240530175145211.png" alt="image-20240530175145211"></li>
+<li>缺点：<img src="/2024/05/02/JavaWeb%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/image-20240530175155625.png" alt="image-20240530175155625"></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>索引结构：</p>
+<ul>
+<li>MySQL数据库支持的索引结构有很多，如:Hash索引、B+Tree索引、Full-Text索引等。我们平常所说的索引，如果没<br>有特别指明，都是指默认的 <strong>B+Tree</strong> 结构组织的索引。</li>
+</ul>
+</li>
 </ul>
 
-                
-            </div>
-            <hr/>
-
-            
-
-    <div class="reprint" id="reprint-statement">
-        
-            <div class="reprint__author">
-                <span class="reprint-meta" style="font-weight: bold;">
-                    <i class="fas fa-user">
-                        Author:
-                    </i>
-                </span>
-                <span class="reprint-info">
-                    <a href="/about" rel="external nofollow noreferrer">John Doe</a>
-                </span>
-            </div>
-            <div class="reprint__type">
-                <span class="reprint-meta" style="font-weight: bold;">
-                    <i class="fas fa-link">
-                        Link:
-                    </i>
-                </span>
-                <span class="reprint-info">
-                    <a href="http://example.com/2024/05/02/JavaWeb%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/">http://example.com/2024/05/02/JavaWeb%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/</a>
-                </span>
-            </div>
-            <div class="reprint__notice">
-                <span class="reprint-meta" style="font-weight: bold;">
-                    <i class="fas fa-copyright">
-                        Reprint policy:
-                    </i>
-                </span>
-                <span class="reprint-info">
-                    All articles in this blog are used except for special statements
-                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
-                    reprint polocy. If reproduced, please indicate source
-                    <a href="/about" target="_blank">John Doe</a>
-                    !
-                </span>
-            </div>
-        
-    </div>
-
-    <script async defer>
-      document.addEventListener("copy", function (e) {
-        let toastHTML = '<span>Copied successfully, please follow the reprint policy of this article</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">more</a>';
-        M.toast({html: toastHTML})
-      });
-
-      function navToReprintStatement() {
-        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
-      }
-    </script>
-
-
-
-            <div class="tag_share" style="display: block;">
-                <div class="post-meta__tag-list" style="display: inline-block;">
-                    
-                        <div class="article-tag">
-                            
-                                <a href="/tags/JavaWeb/">
-                                    <span class="chip bg-color">JavaWeb</span>
-                                </a>
-                            
-                        </div>
-                    
-                </div>
-                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
-                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
-<div id="article-share">
-
-    
-    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
-    <script src="/libs/share/js/social-share.min.js"></script>
-    
-
-    
-
-</div>
-
-                </div>
-            </div>
-            
-        </div>
-    </div>
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-<article id="prenext-posts" class="prev-next articles">
-    <div class="row article-row">
-        
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
-            <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;Current
-            </div>
-            <div class="card">
-                <a href="/2024/05/02/JavaWeb%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="JavaWeb开发学习">
-                        
-                        <span class="card-title">JavaWeb开发学习</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2024-05-02
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            John Doe
-                            
-                        </span>
-                    </div>
-                </div>
-
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/JavaWeb/">
-                        <span class="chip bg-color">JavaWeb</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                Next&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2024/04/25/Java%E7%BB%83%E4%B9%A0%E9%A2%98/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="Java练习题">
-                        
-                        <span class="card-title">Java练习题</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2024-04-25
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            John Doe
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E7%BB%83%E4%B9%A0%E9%A2%98%EF%BC%8C%E9%9D%A2%E8%AF%95%E9%A2%98/">
-                        <span class="chip bg-color">练习题，面试题</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>
     </div>
 </article>
 
-</div>
+
+<p>
+    <a  class="dashang" onclick="dashangToggle()">💰</a>
+</p>
 
 
 
-<!-- 代码块功能依赖 -->
-<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
-
-<!-- 代码语言 -->
-
-<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
 
 
-<!-- 代码块复制 -->
 
-<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+    
 
 
-<!-- 代码块收缩 -->
-
-<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
 
 
     </div>
-    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
-        <div class="toc-widget card" style="background-color: white;">
-            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;TOC</div>
-            <div id="toc-content"></div>
+    <div class="copyright">
+        <p class="footer-entry">
+    ©2016-2020 Yelog
+</p>
+<p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
+
+    </div>
+    <div class="full-toc">
+        <button class="full" data-title="Toggle full screen shortcut key s"><span class="min "></span></button>
+<a class="" id="rocket" ></a>
+
+    </div>
+</div>
+
+<div class="hide_box" onclick="dashangToggle()"></div>
+<div class="shang_box">
+    <a class="shang_close"  onclick="dashangToggle()">×</a>
+    <div class="shang_tit">
+        <p>Help us with donation</p>
+    </div>
+    <div class="shang_payimg">
+        <div class="pay_img">
+            <img src="/img/alipay.jpg" class="alipay" title="扫码支持">
+            <img src="/img/weixin.jpg" class="weixin" title="扫码支持">
         </div>
     </div>
-</div>
-
-<!-- TOC 悬浮按钮. -->
-
-<div id="floating-toc-btn" class="hide-on-med-and-down">
-    <a class="btn-floating btn-large bg-color">
-        <i class="fas fa-list-ul"></i>
-    </a>
+    <div class="shang_payselect">
+        <span><label><input type="radio" name="pay" checked value="alipay">alipay</label></span><span><label><input type="radio" name="pay" value="weixin">weixin</label></span>
+    </div>
 </div>
 
 
-<script src="/libs/tocbot/tocbot.min.js"></script>
+</body>
+<script src="/js/jquery.pjax.js?v=1.1.0" ></script>
+
+<script src="/js/script.js?v=1.1.0" ></script>
 <script>
-    $(function () {
-        tocbot.init({
-            tocSelector: '#toc-content',
-            contentSelector: '#articleContent',
-            headingsOffset: -($(window).height() * 0.4 - 45),
-            collapseDepth: Number('0'),
-            headingSelector: 'h2, h3, h4'
-        });
+    var img_resize = 'default';
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $("#post .pjax table").addClass("green_title");
+        
 
-        // modify the toc link href to support Chinese.
-        let i = 0;
-        let tocHeading = 'toc-heading-';
-        $('#toc-content a').each(function () {
-            $(this).attr('href', '#' + tocHeading + (++i));
-        });
-
-        // modify the heading title id to support Chinese.
-        i = 0;
-        $('#articleContent').children('h2, h3, h4').each(function () {
-            $(this).attr('id', tocHeading + (++i));
-        });
-
-        // Set scroll toc fixed.
-        let tocHeight = parseInt($(window).height() * 0.4 - 64);
-        let $tocWidget = $('.toc-widget');
-        $(window).scroll(function () {
-            let scroll = $(window).scrollTop();
-            /* add post toc fixed. */
-            if (scroll > tocHeight) {
-                $tocWidget.addClass('toc-fixed');
+        /*渲染打赏样式*/
+        
+        $("input[name=pay]").on("click", function () {
+            if($("input[name=pay]:checked").val()=="weixin"){
+                $(".shang_box .shang_payimg .pay_img").addClass("weixin_img");
             } else {
-                $tocWidget.removeClass('toc-fixed');
+                $(".shang_box .shang_payimg .pay_img").removeClass("weixin_img");
             }
-        });
+        })
+        
+
+        /*高亮代码块行号*/
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
 
         
-        /* 修复文章卡片 div 的宽度. */
-        let fixPostCardWidth = function (srcId, targetId) {
-            let srcDiv = $('#' + srcId);
-            if (srcDiv.length === 0) {
-                return;
-            }
-
-            let w = srcDiv.width();
-            if (w >= 450) {
-                w = w + 21;
-            } else if (w >= 350 && w < 450) {
-                w = w + 18;
-            } else if (w >= 300 && w < 350) {
-                w = w + 16;
-            } else {
-                w = w + 14;
-            }
-            $('#' + targetId).width(w);
-        };
-
-        // 切换TOC目录展开收缩的相关操作.
-        const expandedClass = 'expanded';
-        let $tocAside = $('#toc-aside');
-        let $mainContent = $('#main-content');
-        $('#floating-toc-btn .btn-floating').click(function () {
-            if ($tocAside.hasClass(expandedClass)) {
-                $tocAside.removeClass(expandedClass).hide();
-                $mainContent.removeClass('l9');
-            } else {
-                $tocAside.addClass(expandedClass).show();
-                $mainContent.addClass('l9');
-            }
-            fixPostCardWidth('artDetail', 'prenext-posts');
-        });
         
-    });
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+    function dashangToggle() {
+        $(".shang_box").fadeToggle();
+        $(".hide_box").fadeToggle();
+    }
+    
+
 </script>
 
-    
+<!--加入行号的高亮代码块样式-->
 
-</main>
-
-
-
-
-    <footer class="page-footer bg-color">
-    
-        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<!--自定义样式设置-->
 <style>
-    .aplayer .aplayer-lrc p {
-        
-        display: none;
-        
-        font-size: 12px;
-        font-weight: 700;
-        line-height: 16px !important;
-    }
-
-    .aplayer .aplayer-lrc p.aplayer-lrc-current {
-        
-        display: none;
-        
-        font-size: 15px;
-        color: #42b983;
-    }
-
     
-    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
-        left: -66px !important;
+    
+    .nav {
+        width: 542px;
     }
+    .nav.fullscreen {
+        margin-left: -542px;
+    }
+    .nav-left {
+        width: 120px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 492px;
+        }
+        .nav.fullscreen {
+            margin-left: -492px;
+        }
+        .nav-left {
+            width: 100px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 492px;
+            margin-left: -492px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
 
-    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
-        left: 0px !important;
-    }
+    /*列表样式*/
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
 
     
 </style>
-<div class="">
-    
-    <div class="row">
-        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
-                   server="netease"
-                   type="playlist"
-                   id="503838841"
-                   fixed='true'
-                   autoplay='false'
-                   theme='#42b983'
-                   loop='all'
-                   order='random'
-                   preload='auto'
-                   volume='0.7'
-                   list-folded='true'
-        >
-        </meting-js>
-    </div>
-</div>
-
-<script src="/libs/aplayer/APlayer.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
-
-    
-    <div class="container row center-align" style="margin-bottom: 0px !important;">
-        <div class="col s12 m8 l8 copy-right">
-            Copyright&nbsp;&copy;
-            
-                <span id="year">2024</span>
-            
-            <span id="year">2024</span>
-            <a href="/about" target="_blank">John Doe</a>
-            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
-            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
-            <br>
-            
-            
-            
-            
-            
-            
-            <span id="busuanzi_container_site_pv">
-                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
-                    class="white-color"></span>&nbsp;次
-            </span>
-            
-            
-            <span id="busuanzi_container_site_uv">
-                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
-                    class="white-color"></span>&nbsp;人
-            </span>
-            
-            <br>
-            
-            <br>
-            
-        </div>
-        <div class="col s12 m4 l4 social-link social-statis">
-    <a href="https://github.com/NewerProduct/newerProduct.github.io" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
-        <i class="fab fa-github"></i>
-    </a>
-
-
-
-    <a href="mailto:485312009@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
-        <i class="fas fa-envelope-open"></i>
-    </a>
 
 
 
 
 
 
-
-    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=485312009" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 485312009" data-position="top" data-delay="50">
-        <i class="fab fa-qq"></i>
-    </a>
-
-
-
-
-
-
-
-    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
-        <i class="fas fa-rss"></i>
-    </a>
-
-</div>
-    </div>
-</footer>
-
-<div class="progress-bar"></div>
-
-
-    <!-- 搜索遮罩框 -->
-<div id="searchModal" class="modal">
-    <div class="modal-content">
-        <div class="search-header">
-            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;Search</span>
-            <input type="search" id="searchInput" name="s" placeholder="Please enter a search keyword"
-                   class="search-input">
-        </div>
-        <div id="searchResult"></div>
-    </div>
-</div>
-
-<script type="text/javascript">
-$(function () {
-    var searchFunc = function (path, search_id, content_id) {
-        'use strict';
-        $.ajax({
-            url: path,
-            dataType: "xml",
-            success: function (xmlResponse) {
-                // get the contents from search data
-                var datas = $("entry", xmlResponse).map(function () {
-                    return {
-                        title: $("title", this).text(),
-                        content: $("content", this).text(),
-                        url: $("url", this).text()
-                    };
-                }).get();
-                var $input = document.getElementById(search_id);
-                var $resultContent = document.getElementById(content_id);
-                $input.addEventListener('input', function () {
-                    var str = '<ul class=\"search-result-list\">';
-                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
-                    $resultContent.innerHTML = "";
-                    if (this.value.trim().length <= 0) {
-                        return;
-                    }
-                    // perform local searching
-                    datas.forEach(function (data) {
-                        var isMatch = true;
-                        var data_title = data.title.trim().toLowerCase();
-                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
-                        var data_url = data.url;
-                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
-                        var index_title = -1;
-                        var index_content = -1;
-                        var first_occur = -1;
-                        // only match artiles with not empty titles and contents
-                        if (data_title !== '' && data_content !== '') {
-                            keywords.forEach(function (keyword, i) {
-                                index_title = data_title.indexOf(keyword);
-                                index_content = data_content.indexOf(keyword);
-                                if (index_title < 0 && index_content < 0) {
-                                    isMatch = false;
-                                } else {
-                                    if (index_content < 0) {
-                                        index_content = 0;
-                                    }
-                                    if (i === 0) {
-                                        first_occur = index_content;
-                                    }
-                                }
-                            });
-                        }
-                        // show search results
-                        if (isMatch) {
-                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
-                            var content = data.content.trim().replace(/<[^>]+>/g, "");
-                            if (first_occur >= 0) {
-                                // cut out 100 characters
-                                var start = first_occur - 20;
-                                var end = first_occur + 80;
-                                if (start < 0) {
-                                    start = 0;
-                                }
-                                if (start === 0) {
-                                    end = 100;
-                                }
-                                if (end > content.length) {
-                                    end = content.length;
-                                }
-                                var match_content = content.substr(start, end);
-                                // highlight all keywords
-                                keywords.forEach(function (keyword) {
-                                    var regS = new RegExp(keyword, "gi");
-                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
-                                });
-
-                                str += "<p class=\"search-result\">" + match_content + "...</p>"
-                            }
-                            str += "</li>";
-                        }
-                    });
-                    str += "</ul>";
-                    $resultContent.innerHTML = str;
-                });
-            }
-        });
-    };
-
-    searchFunc('/search.xml', 'searchInput', 'searchResult');
-});
-</script>
-
-    <!-- 回到顶部按钮 -->
-<div id="backTop" class="top-scroll">
-    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
-        <i class="fas fa-arrow-up"></i>
-    </a>
-</div>
-
-
-    <script src="/libs/materialize/materialize.min.js"></script>
-    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
-    <script src="/libs/aos/aos.js"></script>
-    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
-    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
-    <script src="/js/matery.js"></script>
-
-    <!-- Baidu Analytics -->
-
-    <!-- Baidu Push -->
-
-<script>
-    (function () {
-        var bp = document.createElement('script');
-        var curProtocol = window.location.protocol.split(':')[0];
-        if (curProtocol === 'https') {
-            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
-        } else {
-            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-        }
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(bp, s);
-    })();
-</script>
-
-    
-    <script src="/libs/others/clicklove.js" async="async"></script>
-    
-    
-    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
-    
-
-    
-
-    
-
-	
-    
-
-    
-
-    
-
-    
-    <script src="/libs/instantpage/instantpage.js" type="module"></script>
-    
-
-</body>
 
 </html>
