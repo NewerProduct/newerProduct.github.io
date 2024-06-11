@@ -1748,12 +1748,30 @@ return &quot;ok;&quot;
 <p>在输出的日志中，我们动态传入的参数会被?代替，这其实是Mysql的预编译SQL</p>
 <p>对于预编译SQL他的：</p>
 <ul>
-<li>优势：性能更高，更安全。（可以防止SQL注入）</li>
-<li><img src="/2024/05/02/JavaWeb%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/image-20240609173337968.png" alt="image-20240609173337968"></li>
-<li>使用Java在执行SQL语句的过程</li>
-<li><img src="/2024/05/02/JavaWeb%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/image-20240609173815486.png" alt="image-20240609173815486"></li>
+<li><p>优势：性能更高，更安全。（可以防止SQL注入）</p>
+</li>
+<li><p><img src="/2024/05/02/JavaWeb%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/image-20240609173337968.png" alt="image-20240609173337968"></p>
+</li>
+<li><p>使用Java在执行SQL语句的过程</p>
+</li>
+<li><p><img src="/2024/05/02/JavaWeb%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/image-20240609173815486.png" alt="image-20240609173815486"></p>
+</li>
+<li><p>参数占位符</p>
+<ul>
+<li><img src="/2024/05/02/JavaWeb%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/image-20240611181831441.png" alt="image-20240611181831441"></li>
 </ul>
-<h2 id="MyBatis——动态SQL"><a href="#MyBatis——动态SQL" class="headerlink" title="MyBatis——动态SQL"></a>MyBatis——动态SQL</h2><p><em><strong>动态SQL标签以及关键属性的概述：</strong></em></p>
+</li>
+</ul>
+<h3 id="2-新增员工"><a href="#2-新增员工" class="headerlink" title="2.新增员工"></a>2.新增员工</h3><ul>
+<li>采用@Insert注解来进行插入操作，现在来看在mapper接口里面的方法。<strong>这里的对应指的是#{}中参数名称要和java实体类的属性名队友</strong></li>
+<li><img src="/2024/05/02/JavaWeb%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/image-20240611182830079.png" alt="image-20240611182830079"></li>
+<li>新增(主键返回)<ul>
+<li>描述:在数据添加成功后，需要获取插入数据库数据的主键。如:添加套餐数据时，还需要维护套餐菜品关系表数据。</li>
+<li><img src="/2024/05/02/JavaWeb%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/image-20240611183306064.png" alt="image-20240611183306064"></li>
+</ul>
+</li>
+</ul>
+<h3 id="3-更新操作"><a href="#3-更新操作" class="headerlink" title="3.更新操作"></a>3.更新操作</h3><h2 id="MyBatis——动态SQL"><a href="#MyBatis——动态SQL" class="headerlink" title="MyBatis——动态SQL"></a>MyBatis——动态SQL</h2><p><em><strong>动态SQL标签以及关键属性的概述：</strong></em></p>
 <p>动态SQL在MyBatis中是一组非常强大的功能，允许你根据运行时的条件动态地构建SQL语句。以下是MyBatis中动态SQL标签及其关键属性的概述：</p>
 <ol>
 <li><p><strong><code>&lt;if&gt;</code></strong></p>
