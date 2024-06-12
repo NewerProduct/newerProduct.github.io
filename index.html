@@ -1763,7 +1763,7 @@ return &quot;ok;&quot;
 </li>
 </ul>
 <h3 id="2-新增员工"><a href="#2-新增员工" class="headerlink" title="2.新增员工"></a>2.新增员工</h3><ul>
-<li>采用@Insert注解来进行插入操作，现在来看在mapper接口里面的方法。<strong>这里的对应指的是#{}中参数名称要和java实体类的属性名队友</strong></li>
+<li>采用@Insert注解来进行插入操作，现在来看在mapper接口里面的方法。<strong>这里的对应指的是#{}中参数名称要和java实体类的属性名对应</strong></li>
 <li><img src="/2024/05/02/JavaWeb%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/image-20240611182830079.png" alt="image-20240611182830079"></li>
 <li>新增(主键返回)<ul>
 <li>描述:在数据添加成功后，需要获取插入数据库数据的主键。如:添加套餐数据时，还需要维护套餐菜品关系表数据。</li>
@@ -1771,81 +1771,52 @@ return &quot;ok;&quot;
 </ul>
 </li>
 </ul>
-<h3 id="3-更新操作"><a href="#3-更新操作" class="headerlink" title="3.更新操作"></a>3.更新操作</h3><h2 id="MyBatis——动态SQL"><a href="#MyBatis——动态SQL" class="headerlink" title="MyBatis——动态SQL"></a>MyBatis——动态SQL</h2><p><em><strong>动态SQL标签以及关键属性的概述：</strong></em></p>
-<p>动态SQL在MyBatis中是一组非常强大的功能，允许你根据运行时的条件动态地构建SQL语句。以下是MyBatis中动态SQL标签及其关键属性的概述：</p>
-<ol>
-<li><p><strong><code>&lt;if&gt;</code></strong></p>
+<h3 id="3-更新操作"><a href="#3-更新操作" class="headerlink" title="3.更新操作"></a>3.更新操作</h3><p> 在Mapper接口中写入更新的方法 采用@Update注解</p>
 <ul>
-<li>**<code>test</code>**：表达式，用于测试条件。如果表达式计算为true，则执行if体内的SQL语句。</li>
+<li><img src="/2024/05/02/JavaWeb%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/image-20240612200404391.png" alt="image-20240612200404391"></li>
+<li><img src="/2024/05/02/JavaWeb%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/image-20240612200612889.png" alt="image-20240612200612889"></li>
+<li>执行更新操作，在测试类中操作bean对象调用上面定义的update方法。</li>
 </ul>
+<h3 id="4-查询操作"><a href="#4-查询操作" class="headerlink" title="4 .查询操作"></a>4 .查询操作</h3><ul>
+<li><p>由于在进行查询操作时候，通过某个条件查询出来我们想要的数据，那这时候就要选择封装该数据的方法，有很多，下面展示将返回来的某一个员工信息封装在对象中</p>
 </li>
-<li><p><strong><code>&lt;choose&gt;</code></strong>, <strong><code>&lt;when&gt;</code></strong>, <strong><code>&lt;otherwise&gt;</code></strong></p>
+<li><p>方法：<img src="/2024/05/02/JavaWeb%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/image-20240612201104446.png" alt="image-20240612201104446"></p>
+</li>
+<li><p>在Test类中调用方法getByid，动态的传入值如下</p>
 <ul>
-<li>**<code>choose</code>**：类似于Java中的switch语句，用于多个条件的选择。</li>
-<li>**<code>when</code>**：每个<code>&lt;when&gt;</code>元素都包含一个<code>test</code>属性，当测试条件满足时，执行其中的SQL语句。</li>
-<li>**<code>otherwise</code>**：当所有的<code>&lt;when&gt;</code>条件都不满足时，执行<code>&lt;otherwise&gt;</code>中的SQL语句。</li>
+<li><img src="/2024/05/02/JavaWeb%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/image-20240612202138502.png" alt="image-20240612202138502"></li>
+<li><img src="/2024/05/02/JavaWeb%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/image-20240612202227476.png" alt="image-20240612202227476"></li>
 </ul>
 </li>
-<li><p><strong><code>&lt;where&gt;</code></strong></p>
+<li><p>下面来介绍一下再MyBatis中的数据封装</p>
 <ul>
-<li>自动在前面添加“WHERE”关键字，如果已经有“WHERE”关键字，则不会重复添加。还会移除前导的AND或OR关键字。</li>
-</ul>
+<li><p><strong>实体类属性名 和 数据库表查询返回(注意是返回来的数据)的字段名一致，mybatis会自动封装</strong>。</p>
 </li>
-<li><p><strong><code>&lt;set&gt;</code></strong></p>
+<li><p><strong>如果实体类属性名 和 数据库表查询返回的字段名不一致，不能自动封装</strong></p>
+</li>
+<li><p><img src="/2024/05/02/JavaWeb%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/image-20240612202719952.png" alt="image-20240612202719952"></p>
+</li>
+<li><p>解决方法如下：</p>
 <ul>
-<li>用于UPDATE语句中，只会在有至少一个字段需要更新的情况下添加“SET”关键字，并移除尾部的逗号。</li>
-</ul>
+<li><p><img src="/2024/05/02/JavaWeb%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/image-20240612202913693.png" alt="image-20240612202913693"></p>
 </li>
-<li><p><strong><code>&lt;foreach&gt;</code></strong></p>
+<li><p><img src="/2024/05/02/JavaWeb%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/image-20240612203157140.png" alt="image-20240612203157140"></p>
+</li>
+<li><p>方案三：MyBatis的驼峰命名自动映射开关 比如数据库字段为a_Cloumn 会被解析为 aCloumn</p>
+</li>
+<li><p>开启方式：在配置文件中添加如下代码：</p>
 <ul>
-<li>**<code>collection</code>**：指定要遍历的集合或数组的名称。</li>
-<li>**<code>item</code>**：当前元素的变量名。</li>
-<li>**<code>index</code>**：可选，表示当前元素的索引。</li>
-<li>**<code>open</code>**：开始符号，如左括号。</li>
-<li>**<code>close</code>**：结束符号，如右括号。</li>
-<li>**<code>separator</code>**：元素间的分隔符。</li>
-</ul>
-</li>
-<li><p><strong><code>&lt;trim&gt;</code></strong></p>
-<ul>
-<li>**<code>prefix</code>**：添加到内部SQL语句的开头的前缀。</li>
-<li>**<code>suffix</code>**：添加到内部SQL语句的结尾的后缀。</li>
-<li>**<code>prefixOverrides</code>**：从内部SQL语句开头移除的字符串。</li>
-<li>**<code>suffixOverrides</code>**：从内部SQL语句结尾移除的字符串。</li>
-</ul>
-</li>
-<li><p><strong><code>&lt;bind&gt;</code></strong></p>
-<ul>
-<li>**<code>name</code>**：定义的变量名。</li>
-<li>**<code>value</code>**：变量的值，可以是一个表达式。</li>
-</ul>
-</li>
-<li><p><strong><code>&lt;sql&gt;</code></strong> 和 <strong><code>&lt;include&gt;</code></strong></p>
-<ul>
-<li>**<code>&lt;sql&gt;</code>**：用于定义可重用的SQL片段。</li>
-<li>**<code>&lt;include&gt;</code>**：用于包含由<code>&lt;sql&gt;</code>定义的SQL片段。</li>
-<li>**<code>refid</code>**：在<code>&lt;include&gt;</code>标签中引用<code>&lt;sql&gt;</code>片段的ID。</li>
-</ul>
-</li>
-<li><p><strong><code>&lt;when&gt;</code></strong> 和 <strong><code>&lt;otherwise&gt;</code></strong> 在 <strong><code>&lt;choose&gt;</code></strong> 内部使用，已经提到过。</p>
-</li>
-</ol>
-<p>每个标签都有自己的用途和特定的属性，这些属性帮助你控制SQL语句的动态生成过程。在实际应用中，这些标签通常会被组合使用，以生成复杂和灵活的SQL查询。例如，<code>&lt;if&gt;</code>标签可以嵌套在<code>&lt;foreach&gt;</code>标签中，或者<code>&lt;where&gt;</code>和<code>&lt;set&gt;</code>标签可以包含<code>&lt;if&gt;</code>或<code>&lt;choose&gt;</code>结构来进一步定制输出的SQL语句。</p>
-<h3 id="1-foreach-标签的关键属性"><a href="#1-foreach-标签的关键属性" class="headerlink" title="1.foreach 标签的关键属性"></a>1.<code>foreach</code> 标签的关键属性</h3><ul>
-<li><p>**<code>collection</code>**：指定要迭代的集合或数组的名称。如果你传递的是一个单一的List或数组参数，<code>collection</code>属性可以省略，MyBatis会自动识别。对于Map类型的参数，需要明确指定Map中的键名作为<code>collection</code>属性的值。</p>
-</li>
-<li><p>**<code>item</code>**：表示每次迭代中当前元素的变量名。</p>
-</li>
-<li><p>**<code>index</code>**：表示当前元素在集合中的索引位置的变量名，这个属性是可选的。</p>
-</li>
-<li><p><strong><code>open</code></strong> 和 **<code>close</code>**：分别指定开始和结束符号，常用于构建SQL语句的括号。</p>
-</li>
-<li><p>**<code>separator</code>**：指定迭代元素之间的分隔符，如逗号。</p>
+<li><pre><code class="properties">mybatis.configuration.map-underscore-to-camel-case=true
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">### 5.查询操作(条件查询)</span><br><span class="line"></span><br><span class="line">即SQL语法中where关键字后面的内容，这里举例子如下</span><br><span class="line"></span><br><span class="line">* 当然，在进行查询的时候难免会遇到下面这种情况</span><br><span class="line">* ![image-20240612204731922](./JavaWeb%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/image-20240612204731922.png)</span><br><span class="line">* concat方法：该方法会把里面包括的字符串拼接成一个字符串，那么就可解决上面的办法啦，如下，?即是我们的#&#123;name&#125;占位符、</span><br><span class="line">* ![image-20240612205413989](./JavaWeb%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/image-20240612205413989.png)</span><br><span class="line">* 正确的代码是这样的：![image-20240612205517715](./JavaWeb%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/image-20240612205517715.png)</span><br><span class="line"></span><br><span class="line">#### 参数名说明</span><br><span class="line"></span><br><span class="line">![image-20240612205655793](./JavaWeb%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/image-20240612205655793.png)</span><br><span class="line"></span><br><span class="line">## MyBait——XML映射文件</span><br><span class="line"></span><br><span class="line">* 规范：</span><br><span class="line">  * XML映射文件的名称与Mapper接口名称一致，并且将XML映射文件和Mapper接口放置在相同包下(同包同名)</span><br><span class="line">  * XML映射文件的namespace属性为Mapper接口全限定名一致。</span><br><span class="line">  * XML映射文件中sql语句的id与Mapper接口中的方法名一致，并保持返回类型一致。</span><br><span class="line">  * ![image-20240612205928624](./JavaWeb%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/image-20240612205928624.png)</span><br><span class="line"></span><br><span class="line">## MyBatis——动态SQL</span><br><span class="line"></span><br><span class="line">***动态SQL标签以及关键属性的概述：***</span><br><span class="line"></span><br><span class="line">动态SQL在MyBatis中是一组非常强大的功能，允许你根据运行时的条件动态地构建SQL语句。以下是MyBatis中动态SQL标签及其关键属性的概述：</span><br><span class="line"></span><br><span class="line">1. **`&lt;if&gt;`**</span><br><span class="line">   - **`test`**：表达式，用于测试条件。如果表达式计算为true，则执行if体内的SQL语句。</span><br><span class="line"></span><br><span class="line">2. **`&lt;choose&gt;`**, **`&lt;when&gt;`**, **`&lt;otherwise&gt;`**</span><br><span class="line">   - **`choose`**：类似于Java中的switch语句，用于多个条件的选择。</span><br><span class="line">   - **`when`**：每个`&lt;when&gt;`元素都包含一个`test`属性，当测试条件满足时，执行其中的SQL语句。</span><br><span class="line">   - **`otherwise`**：当所有的`&lt;when&gt;`条件都不满足时，执行`&lt;otherwise&gt;`中的SQL语句。</span><br><span class="line"></span><br><span class="line">3. **`&lt;where&gt;`**</span><br><span class="line">   - 自动在前面添加“WHERE”关键字，如果已经有“WHERE”关键字，则不会重复添加。还会移除前导的AND或OR关键字。</span><br><span class="line"></span><br><span class="line">4. **`&lt;set&gt;`**</span><br><span class="line">   - 用于UPDATE语句中，只会在有至少一个字段需要更新的情况下添加“SET”关键字，并移除尾部的逗号。</span><br><span class="line"></span><br><span class="line">5. **`&lt;foreach&gt;`**</span><br><span class="line">   - **`collection`**：指定要遍历的集合或数组的名称。</span><br><span class="line">   - **`item`**：当前元素的变量名。</span><br><span class="line">   - **`index`**：可选，表示当前元素的索引。</span><br><span class="line">   - **`open`**：开始符号，如左括号。</span><br><span class="line">   - **`close`**：结束符号，如右括号。</span><br><span class="line">   - **`separator`**：元素间的分隔符。</span><br><span class="line"></span><br><span class="line">6. **`&lt;trim&gt;`**</span><br><span class="line">   - **`prefix`**：添加到内部SQL语句的开头的前缀。</span><br><span class="line">   - **`suffix`**：添加到内部SQL语句的结尾的后缀。</span><br><span class="line">   - **`prefixOverrides`**：从内部SQL语句开头移除的字符串。</span><br><span class="line">   - **`suffixOverrides`**：从内部SQL语句结尾移除的字符串。</span><br><span class="line"></span><br><span class="line">7. **`&lt;bind&gt;`**</span><br><span class="line">   - **`name`**：定义的变量名。</span><br><span class="line">   - **`value`**：变量的值，可以是一个表达式。</span><br><span class="line"></span><br><span class="line">8. **`&lt;sql&gt;`** 和 **`&lt;include&gt;`**</span><br><span class="line">   - **`&lt;sql&gt;`**：用于定义可重用的SQL片段。</span><br><span class="line">   - **`&lt;include&gt;`**：用于包含由`&lt;sql&gt;`定义的SQL片段。</span><br><span class="line">   - **`refid`**：在`&lt;include&gt;`标签中引用`&lt;sql&gt;`片段的ID。</span><br><span class="line"></span><br><span class="line">9. **`&lt;when&gt;`** 和 **`&lt;otherwise&gt;`** 在 **`&lt;choose&gt;`** 内部使用，已经提到过。</span><br><span class="line"></span><br><span class="line">每个标签都有自己的用途和特定的属性，这些属性帮助你控制SQL语句的动态生成过程。在实际应用中，这些标签通常会被组合使用，以生成复杂和灵活的SQL查询。例如，`&lt;if&gt;`标签可以嵌套在`&lt;foreach&gt;`标签中，或者`&lt;where&gt;`和`&lt;set&gt;`标签可以包含`&lt;if&gt;`或`&lt;choose&gt;`结构来进一步定制输出的SQL语句。</span><br><span class="line"></span><br><span class="line">### 1.`foreach` 标签的关键属性</span><br><span class="line"></span><br><span class="line">- **`collection`**：指定要迭代的集合或数组的名称。如果你传递的是一个单一的List或数组参数，`collection`属性可以省略，MyBatis会自动识别。对于Map类型的参数，需要明确指定Map中的键名作为`collection`属性的值。</span><br><span class="line"></span><br><span class="line">- **`item`**：表示每次迭代中当前元素的变量名。</span><br><span class="line"></span><br><span class="line">- **`index`**：表示当前元素在集合中的索引位置的变量名，这个属性是可选的。</span><br><span class="line"></span><br><span class="line">- **`open`** 和 **`close`**：分别指定开始和结束符号，常用于构建SQL语句的括号。</span><br><span class="line"></span><br><span class="line">- **`separator`**：指定迭代元素之间的分隔符，如逗号。</span><br><span class="line"></span><br><span class="line">#### 示例</span><br><span class="line"></span><br><span class="line">假设你有一个方法，接受一个整数列表，并且你想根据这些ID查询数据库中的记录：</span><br><span class="line"></span><br><span class="line">#### Java接口定义</span><br><span class="line"></span><br><span class="line">```java</span><br><span class="line">public interface UserMapper &#123;</span><br><span class="line">    List&lt;User&gt; findUsersByIds(@Param(&quot;ids&quot;) List&lt;Integer&gt; ids);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</code></pre>
 </li>
 </ul>
-<h4 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h4><p>假设你有一个方法，接受一个整数列表，并且你想根据这些ID查询数据库中的记录：</p>
-<h4 id="Java接口定义"><a href="#Java接口定义" class="headerlink" title="Java接口定义"></a>Java接口定义</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title class_">UserMapper</span> &#123;</span><br><span class="line">    List&lt;User&gt; <span class="title function_">findUsersByIds</span><span class="params">(<span class="meta">@Param(&quot;ids&quot;)</span> List&lt;Integer&gt; ids)</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 <h4 id="映射文件中的SQL语句"><a href="#映射文件中的SQL语句" class="headerlink" title="映射文件中的SQL语句"></a>映射文件中的SQL语句</h4><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">&quot;findUsersByIds&quot;</span> <span class="attr">resultType</span>=<span class="string">&quot;User&quot;</span>&gt;</span></span><br><span class="line">    SELECT * FROM user WHERE id IN</span><br><span class="line">    <span class="tag">&lt;<span class="name">foreach</span> <span class="attr">collection</span>=<span class="string">&quot;ids&quot;</span> <span class="attr">item</span>=<span class="string">&quot;id&quot;</span> <span class="attr">open</span>=<span class="string">&quot;(&quot;</span> <span class="attr">close</span>=<span class="string">&quot;)&quot;</span> <span class="attr">separator</span>=<span class="string">&quot;,&quot;</span>&gt;</span></span><br><span class="line">        #&#123;id&#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">foreach</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <p>在这个例子中：</p>
@@ -1883,7 +1854,7 @@ return &quot;ok;&quot;
 <li><p><strong>VALUES子句的动态构建</strong>：<br>在INSERT语句中，<code>&lt;trim&gt;</code>可以帮助构建动态的列名和值列表。</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">trim</span> <span class="attr">prefix</span>=<span class="string">&quot;(&quot;</span> <span class="attr">suffix</span>=<span class="string">&quot;)&quot;</span> <span class="attr">suffixOverrides</span>=<span class="string">&quot;,&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;name != null&quot;</span>&gt;</span> name, <span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;age != null&quot;</span>&gt;</span> age, <span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">trim</span>&gt;</span></span><br><span class="line">VALUES</span><br><span class="line"><span class="tag">&lt;<span class="name">trim</span> <span class="attr">prefix</span>=<span class="string">&quot;(&quot;</span> <span class="attr">suffix</span>=<span class="string">&quot;)&quot;</span> <span class="attr">suffixOverrides</span>=<span class="string">&quot;,&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;name != null&quot;</span>&gt;</span> #&#123;name&#125;, <span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;age != null&quot;</span>&gt;</span> #&#123;age&#125;, <span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">trim</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
 </ol>
-<h4 id="示例-1"><a href="#示例-1" class="headerlink" title="示例"></a>示例</h4><p>假设我们有以下需求：构建一个动态的SQL查询，如果<code>userId</code>和<code>username</code>都有值，则需要包含这两个字段的查询条件；如果没有值，则不包含。</p>
+<h4 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h4><p>假设我们有以下需求：构建一个动态的SQL查询，如果<code>userId</code>和<code>username</code>都有值，则需要包含这两个字段的查询条件；如果没有值，则不包含。</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">&quot;selectUsersByCriteria&quot;</span> <span class="attr">resultType</span>=<span class="string">&quot;User&quot;</span>&gt;</span></span><br><span class="line">    SELECT * FROM users</span><br><span class="line">    <span class="tag">&lt;<span class="name">trim</span> <span class="attr">prefix</span>=<span class="string">&quot;WHERE&quot;</span> <span class="attr">prefixOverrides</span>=<span class="string">&quot;AND&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;userId != null&quot;</span>&gt;</span> AND id = #&#123;userId&#125; <span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;username != null&quot;</span>&gt;</span> AND username = #&#123;username&#125; <span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">trim</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <p>这样，即使某些条件未被满足，SQL语句也不会出错，因为<code>&lt;trim&gt;</code>标签会确保正确的语法。</p>
