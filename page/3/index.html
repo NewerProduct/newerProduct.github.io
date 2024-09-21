@@ -59,7 +59,7 @@
   isHome: true,
   isHighlightShrink: false,
   isToc: false,
-  postUpdate: '2024-09-18 17:34:22',
+  postUpdate: '2024-09-21 13:01:46',
   postMainColor: '',
 }</script><noscript><style type="text/css">
   #nav {
@@ -238,20 +238,22 @@ if (true) {
         开发总结
       </a>
     </div>
-    </div><div class="category-bar-next" id="category-bar-next" onclick="anzhiyu.scrollCategoryBarToRight()"><i class="anzhiyufont anzhiyu-icon-angle-double-right"></i></div><a class="catalog-more" href="/categories/">更多</a></div></div></div><div class="recent-post-item lastestpost-item" onclick="pjax.loadUrl('/2024/07/17/Vuex/')"><div class="recent-post-info no-cover"><div class="recent-post-info-top"><div class="recent-post-info-top-tips"><div class="article-categories-original">前端开发</div><a class="unvisited-post" href="/2024/07/17/Vuex/" title="Vuex">未读</a></div><a class="article-title" href="/2024/07/17/Vuex/" title="Vuex">Vuex</a></div><div class="article-meta-wrap"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-history" style="font-size: 15px; display:none"></i><span class="article-meta-label">更新于</span><time datetime="2024-07-22T06:12:48.903Z" title="更新于 2024-07-22 14:12:48" time="2024-07-22 14:12:48">2024-07-22</time><time class="time_hidden" datetime="2024-07-17T10:18:47.000Z" title="发表于 2024-07-17 18:18:47" time="2024-07-17 18:18:47">2024-07-17</time></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/%E7%8A%B6%E6%80%81%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7-vue2-js/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>状态管理工具(vue2.js)</span></a></span></div><div class="content">1.Vuex 是什么？Vuex 是一个专为 Vue.js 应用程序开发的状态管理模式。它采用集中式存储管理应用的所有组件的状态，并以相应的规则保证状态以一种可预测的方式发生变化。是一个状态共享框架
+    </div><div class="category-bar-next" id="category-bar-next" onclick="anzhiyu.scrollCategoryBarToRight()"><i class="anzhiyufont anzhiyu-icon-angle-double-right"></i></div><a class="catalog-more" href="/categories/">更多</a></div></div></div><div class="recent-post-item lastestpost-item" onclick="pjax.loadUrl('/2024/07/26/uni-app%E6%A1%86%E6%9E%B6%E4%B9%8B%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90/')"><div class="recent-post-info no-cover"><div class="recent-post-info-top"><div class="recent-post-info-top-tips"><a class="unvisited-post" href="/2024/07/26/uni-app%E6%A1%86%E6%9E%B6%E4%B9%8B%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90/" title="uni-app框架之网易云音乐">未读</a></div><a class="article-title" href="/2024/07/26/uni-app%E6%A1%86%E6%9E%B6%E4%B9%8B%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90/" title="uni-app框架之网易云音乐">uni-app框架之网易云音乐</a></div><div class="article-meta-wrap"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-history" style="font-size: 15px; display:none"></i><span class="article-meta-label">更新于</span><time datetime="2024-07-27T22:54:48.934Z" title="更新于 2024-07-28 06:54:48" time="2024-07-28 06:54:48">2024-07-28</time><time class="time_hidden" datetime="2024-07-26T09:29:13.000Z" title="发表于 2024-07-26 17:29:13" time="2024-07-26 17:29:13">2024-07-26</time></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/uni-app%E6%A1%86%E6%9E%B6/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>uni-app框架</span></a></span></div><div class="content">前排提示，该学习教程省略了开发软件的安装，和网易云音乐接口的配置与启动。本教程直接从新建项目开始
+新建项目1.点击文件–&gt;新建–&gt;项目
 
-Vuex是采用集中式管理组件依赖的共享数据的一个工具，可以解决不同组件数据共享的问题
+2.设置详情
 
+3.项目结构
 
-2.vuex基础-初始化功能每一个 Vuex 应用的核心就是 store（仓库）。“store”基本上就是一个容器，它包含着你的应用中大部分的**状态 (state)**。Vuex 和单纯的全局对象有以下两点不同：
+填写微信小程序ID(建议)建议大家前往小程序网站，注册并填写小程序ID，以防止有些功能无法实现
+小程序网站：https://mp.weixin.qq.com/
+在网站页面左侧菜单栏点击开发管理，复制你的小程序ID
 
-Vuex 的状态存储是响应式的。当 Vue 组件从 store 中读取状态的时候，若 store 中的状态发生变化，那么相应的组件也会相应地得到高效更新。
-你不能直接改变 store 中的状态。改变 store 中的状态的唯一途径就是显式地提交 (commit) mutation。这样使得我们可以方便地跟踪每一个状态的变化，从而让我们能够实现一些工具帮助我们更好地了解我们的应用。
+回到开发工具中，按照如下勾选即可
 
-建立一个新的脚手架项目, 在项目中应用vuex
-1$ vue create  learnvuex
-
-初始化 ...</div></div></div><div class="recent-post-item" onclick="pjax.loadUrl('/2024/05/02/JavaWeb%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/')"><div class="recent-post-info no-cover"><div class="recent-post-info-top"><div class="recent-post-info-top-tips"><div class="article-categories-original">前端开发</div><a class="unvisited-post" href="/2024/05/02/JavaWeb%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/" title="JavaWeb开发学习">未读</a></div><a class="article-title" href="/2024/05/02/JavaWeb%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/" title="JavaWeb开发学习">JavaWeb开发学习</a></div><div class="article-meta-wrap"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-history" style="font-size: 15px; display:none"></i><span class="article-meta-label">更新于</span><time datetime="2024-07-21T12:19:01.127Z" title="更新于 2024-07-21 20:19:01" time="2024-07-21 20:19:01">2024-07-21</time><time class="time_hidden" datetime="2024-05-02T09:41:21.000Z" title="发表于 2024-05-02 17:41:21" time="2024-05-02 17:41:21">2024-05-02</time></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/JavaWeb/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>JavaWeb</span></a></span></div><div class="content">Maven
+字体和图标字体建议使用uniapp默认即可，图标建议使用uniapp官方提供的图标库插件，下载地址：https://uniapp.dcloud.net.cn/component/uniui/uni-icons.html#uni-icons-%E5%9B%BE%E6%A0%87
+开始头部导航栏编写头部组件中
+12345678910111213141516171819&lt;template&gt;	&lt;view&gt;		&#123;&#123;title&#125;&#125;	&lt;/view&gt;&lt;/template&gt;&lt;scrip ...</div></div></div><div class="recent-post-item" onclick="pjax.loadUrl('/2024/05/02/JavaWeb%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/')"><div class="recent-post-info no-cover"><div class="recent-post-info-top"><div class="recent-post-info-top-tips"><div class="article-categories-original">前端开发</div><a class="unvisited-post" href="/2024/05/02/JavaWeb%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/" title="JavaWeb开发学习">未读</a></div><a class="article-title" href="/2024/05/02/JavaWeb%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/" title="JavaWeb开发学习">JavaWeb开发学习</a></div><div class="article-meta-wrap"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-history" style="font-size: 15px; display:none"></i><span class="article-meta-label">更新于</span><time datetime="2024-07-21T12:19:01.127Z" title="更新于 2024-07-21 20:19:01" time="2024-07-21 20:19:01">2024-07-21</time><time class="time_hidden" datetime="2024-05-02T09:41:21.000Z" title="发表于 2024-05-02 17:41:21" time="2024-05-02 17:41:21">2024-05-02</time></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/JavaWeb/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>JavaWeb</span></a></span></div><div class="content">Maven
 Maven是apache旗下的一个开源项目，是一款用于管理和构建java项目的工具。
 
 maven的作用：
