@@ -59,7 +59,7 @@
   isHome: true,
   isHighlightShrink: false,
   isToc: false,
-  postUpdate: '2024-10-18 22:19:23',
+  postUpdate: '2024-10-22 22:08:07',
   postMainColor: '',
 }</script><noscript><style type="text/css">
   #nav {
@@ -245,18 +245,22 @@ if (true) {
         开发总结
       </a>
     </div>
-    </div><div class="category-bar-next" id="category-bar-next" onclick="anzhiyu.scrollCategoryBarToRight()"><i class="anzhiyufont anzhiyu-icon-angle-double-right"></i></div><a class="catalog-more" href="/categories/">更多</a></div></div></div><div class="recent-post-item lastestpost-item" onclick="pjax.loadUrl('/2024/04/08/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/')"><div class="recent-post-info no-cover"><div class="recent-post-info-top"><div class="recent-post-info-top-tips"><a class="unvisited-post" href="/2024/04/08/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="Java学习笔记">未读</a></div><a class="article-title" href="/2024/04/08/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="Java学习笔记">Java学习笔记</a></div><div class="article-meta-wrap"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-history" style="font-size: 15px; display:none"></i><span class="article-meta-label">更新于</span><time datetime="2024-09-13T01:53:14.441Z" title="更新于 2024-09-13 09:53:14" time="2024-09-13 09:53:14">2024-09-13</time><time class="time_hidden" datetime="2024-04-08T06:56:32.000Z" title="发表于 2024-04-08 14:56:32" time="2024-04-08 14:56:32">2024-04-08</time></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/Java%E5%AD%A6%E4%B9%A0/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>Java学习</span></a></span></div><div class="content">1、如何拿到用户的输入有时候的一些业务是需要用户和系统互动的，这时，我们就需要来接收用户的互动，在java中，通常这么做
-1234//新建一个扫描器对象scScanner sc = new Scanner(System.in);//定义一个变量来接收用户输入，类型要看你接受的是字符串还是数据而变动数据类型 变量 = sc.nextInt();
+    </div><div class="category-bar-next" id="category-bar-next" onclick="anzhiyu.scrollCategoryBarToRight()"><i class="anzhiyufont anzhiyu-icon-angle-double-right"></i></div><a class="catalog-more" href="/categories/">更多</a></div></div></div><div class="recent-post-item lastestpost-item" onclick="pjax.loadUrl('/2024/07/15/WebPack/')"><div class="recent-post-info no-cover"><div class="recent-post-info-top"><div class="recent-post-info-top-tips"><div class="article-categories-original">前端开发</div><a class="unvisited-post" href="/2024/07/15/WebPack/" title="WebPack">未读</a></div><a class="article-title" href="/2024/07/15/WebPack/" title="WebPack">WebPack</a></div><div class="article-meta-wrap"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-history" style="font-size: 15px; display:none"></i><span class="article-meta-label">更新于</span><time datetime="2024-09-14T00:58:33.292Z" title="更新于 2024-09-14 08:58:33" time="2024-09-14 08:58:33">2024-09-14</time><time class="time_hidden" datetime="2024-07-15T10:16:52.000Z" title="发表于 2024-07-15 18:16:52" time="2024-07-15 18:16:52">2024-07-15</time></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/%E6%89%93%E5%8C%85%E5%B7%A5%E5%85%B7%EF%BC%8C%E6%A8%A1%E5%9D%97/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>打包工具，模块</span></a></span></div><div class="content">1.webpack基本概念本质上，webpack 是一个用于现代 JavaScript 应用程序的 静态模块打包工具。当 webpack 处理应用程序时，它会在内部从一个或多个入口点构建一个 依赖图(dependency graph)，然后将你项目中所需的每一个模块组合成一个或多个 bundles，它们均为静态资源，用于展示你的内容。
+2.webpack使用步骤2.1基础使用默认入口: ./src/index.js
+默认出口: ./dist/main.js
+初始化包环境
+1yarn init
 
-举个例子，比如我下面这段代码
-1234Scanner sc = new Scanner(System.in);System.out.println(&quot;请您输出查询的id&quot;);int id = sc.nextInt();operator.searchMovieById(id);
+安装依赖包
+1yarn add webpack webpack-cli -D
 
-很好理解，接收用户输入的数字id然后把他传给operator.searchMovieById(id);方法完成代码逻辑。
-this关键字在java中this关键字的作用是:
+配置scripts
+123&quot;scripts&quot;:&#123;&quot;build&quot;:&quot;webpack&quot;&#125;
 
-this就是一个变量，可以用在方法中，用来拿到当前对象；哪个对象调用方法，this就指向那个对象，也就是拿到那个对象
+新建目录src新建src&#x2F;add&#x2F;add.js - 定义求和函数导出
+1234//导出该函数export const addFun = (a,b)=&gt;&#123;    return a + b&#125;
 
-用来解决对象的成员变量与方法内部变量的名称一样时，导致访 ...</div></div></div><div class="recent-post-item" onclick="pjax.loadUrl('/2024/09/04/%E9%A1%B9%E7%9B%AEAI%E7%BB%98%E7%94%BB%E5%BC%80%E5%8F%91%E6%80%BB%E7%BB%93/')"><div class="recent-post-info no-cover"><div class="recent-post-info-top"><div class="recent-post-info-top-tips"><div class="article-categories-original">开发总结</div><a class="unvisited-post" href="/2024/09/04/%E9%A1%B9%E7%9B%AEAI%E7%BB%98%E7%94%BB%E5%BC%80%E5%8F%91%E6%80%BB%E7%BB%93/" title="项目AI绘画开发总结">未读</a></div><a class="article-title" href="/2024/09/04/%E9%A1%B9%E7%9B%AEAI%E7%BB%98%E7%94%BB%E5%BC%80%E5%8F%91%E6%80%BB%E7%BB%93/" title="项目AI绘画开发总结">项目AI绘画开发总结</a></div><div class="article-meta-wrap"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-history" style="font-size: 15px; display:none"></i><span class="article-meta-label">更新于</span><time datetime="2024-09-11T12:07:35.424Z" title="更新于 2024-09-11 20:07:35" time="2024-09-11 20:07:35">2024-09-11</time><time class="time_hidden" datetime="2024-09-04T00:25:48.000Z" title="发表于 2024-09-04 08:25:48" time="2024-09-04 08:25:48">2024-09-04</time></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/%E5%BC%80%E5%8F%91%E6%80%BB%E7%BB%93/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>开发总结</span></a></span></div><div class="content">数组去重操
+新建src&#x ...</div></div></div><div class="recent-post-item" onclick="pjax.loadUrl('/2024/09/04/%E9%A1%B9%E7%9B%AEAI%E7%BB%98%E7%94%BB%E5%BC%80%E5%8F%91%E6%80%BB%E7%BB%93/')"><div class="recent-post-info no-cover"><div class="recent-post-info-top"><div class="recent-post-info-top-tips"><div class="article-categories-original">开发总结</div><a class="unvisited-post" href="/2024/09/04/%E9%A1%B9%E7%9B%AEAI%E7%BB%98%E7%94%BB%E5%BC%80%E5%8F%91%E6%80%BB%E7%BB%93/" title="项目AI绘画开发总结">未读</a></div><a class="article-title" href="/2024/09/04/%E9%A1%B9%E7%9B%AEAI%E7%BB%98%E7%94%BB%E5%BC%80%E5%8F%91%E6%80%BB%E7%BB%93/" title="项目AI绘画开发总结">项目AI绘画开发总结</a></div><div class="article-meta-wrap"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-history" style="font-size: 15px; display:none"></i><span class="article-meta-label">更新于</span><time datetime="2024-09-11T12:07:35.424Z" title="更新于 2024-09-11 20:07:35" time="2024-09-11 20:07:35">2024-09-11</time><time class="time_hidden" datetime="2024-09-04T00:25:48.000Z" title="发表于 2024-09-04 08:25:48" time="2024-09-04 08:25:48">2024-09-04</time></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/%E5%BC%80%E5%8F%91%E6%80%BB%E7%BB%93/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>开发总结</span></a></span></div><div class="content">数组去重操
 数组去重我们使用：set对象，这是ES6中提出的新语法。
 基本语法： const obj = new Set([1, 2, 3, 3, 4])
 
